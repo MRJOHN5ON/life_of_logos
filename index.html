@@ -10,14 +10,20 @@
         body {
             background-color: #e5e5e5;
             background-image: url("https://www.transparenttextures.com/patterns/concrete-wall.png");
-            cursor: none; overflow-x: hidden; font-family: 'Inter', sans-serif;
+            overflow-x: hidden; font-family: 'Inter', sans-serif;
+        }
+        @media (min-width: 768px) {
+            body { cursor: none; }
         }
         .marker-font { font-family: 'Permanent Marker', cursive; }
         .inter-black { font-family: 'Inter', sans-serif; font-weight: 900; }
         .splatter { position: fixed; border-radius: 50%; filter: blur(80px); z-index: -1; opacity: 0.3; pointer-events: none; }
         .project-card { transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); background: white; border: 4px solid black; }
         .project-card:hover { transform: scale(1.05) rotate(0deg) !important; z-index: 20; box-shadow: 0 0 40px rgba(255, 0, 255, 0.7); }
-        #custom-cursor { width: 24px; height: 24px; background: #ff00ff; border-radius: 50%; position: fixed; pointer-events: none; z-index: 9999; mix-blend-mode: difference; transition: transform 0.15s ease-out; box-shadow: 0 0 15px #ff00ff; }
+        #custom-cursor { display: none; width: 24px; height: 24px; background: #ff00ff; border-radius: 50%; position: fixed; pointer-events: none; z-index: 9999; mix-blend-mode: difference; transition: transform 0.15s ease-out; box-shadow: 0 0 15px #ff00ff; }
+        @media (min-width: 768px) {
+            #custom-cursor { display: block; }
+        }
         .section-tag { background: black; color: white; padding: 10px 20px; display: inline-block; transform: rotate(-2deg); border: 2px solid white; box-shadow: 4px 4px 0px #ff00ff; font-family: 'Permanent Marker', cursive; }
         .concept-carousel { scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
         .concept-carousel::-webkit-scrollbar { display: none; }
@@ -274,13 +280,16 @@
     </footer>
 
     <script>
-        const cursor = document.getElementById('custom-cursor');
-        document.addEventListener('mousemove', (e) => { cursor.style.left = e.clientX + 'px'; cursor.style.top = e.clientY + 'px'; });
-        const interactables = document.querySelectorAll('.project-card, a');
-        interactables.forEach(item => {
-            item.addEventListener('mouseenter', () => { cursor.style.transform = 'scale(3)'; cursor.style.backgroundColor = '#00ffff'; });
-            item.addEventListener('mouseleave', () => { cursor.style.transform = 'scale(1)'; cursor.style.backgroundColor = '#ff00ff'; });
-        });
+        (function() {
+            if (!window.matchMedia('(min-width: 768px)').matches) return;
+            const cursor = document.getElementById('custom-cursor');
+            document.addEventListener('mousemove', (e) => { cursor.style.left = e.clientX + 'px'; cursor.style.top = e.clientY + 'px'; });
+            const interactables = document.querySelectorAll('.project-card, a');
+            interactables.forEach(item => {
+                item.addEventListener('mouseenter', () => { cursor.style.transform = 'scale(3)'; cursor.style.backgroundColor = '#00ffff'; });
+                item.addEventListener('mouseleave', () => { cursor.style.transform = 'scale(1)'; cursor.style.backgroundColor = '#ff00ff'; });
+            });
+        })();
         (function() {
             var carousel = document.getElementById('concept-carousel');
             var prev = document.getElementById('concept-prev');
