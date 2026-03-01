@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Life of Logos | Ryley Johnson</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Inter:wght@400;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #e5e5e5;
+            background-image: url("https://www.transparenttextures.com/patterns/concrete-wall.png");
+            cursor: none; overflow-x: hidden; font-family: 'Inter', sans-serif;
+        }
+        .marker-font { font-family: 'Permanent Marker', cursive; }
+        .inter-black { font-family: 'Inter', sans-serif; font-weight: 900; }
+        .splatter { position: fixed; border-radius: 50%; filter: blur(80px); z-index: -1; opacity: 0.3; pointer-events: none; }
+        .project-card { transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); background: white; border: 4px solid black; }
+        .project-card:hover { transform: scale(1.05) rotate(0deg) !important; z-index: 20; box-shadow: 0 0 40px rgba(255, 0, 255, 0.7); }
+        #custom-cursor { width: 24px; height: 24px; background: #ff00ff; border-radius: 50%; position: fixed; pointer-events: none; z-index: 9999; mix-blend-mode: difference; transition: transform 0.15s ease-out; box-shadow: 0 0 15px #ff00ff; }
+        .section-tag { background: black; color: white; padding: 10px 20px; display: inline-block; transform: rotate(-2deg); border: 2px solid white; box-shadow: 4px 4px 0px #ff00ff; font-family: 'Permanent Marker', cursive; }
+        .concept-carousel { scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+        .concept-carousel::-webkit-scrollbar { display: none; }
+        .concept-slide { scroll-snap-align: start; flex: 0 0 auto; }
+        .concept-card img { object-fit: cover; width: 100%; height: 100%; display: block; }
+        .stickers-carousel { scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+        .stickers-carousel::-webkit-scrollbar { display: none; }
+        .sticker-slide { scroll-snap-align: start; flex: 0 0 auto; }
+    </style>
+</head>
+<body class="p-6 md:p-16 pb-40">
+    <div id="custom-cursor"></div>
+    <div class="splatter bg-fuchsia-600 w-[500px] h-[500px] -top-20 -left-20"></div>
+    <div class="splatter bg-yellow-400 w-[400px] h-[400px] top-1/2 right-0"></div>
+
+    <header class="mb-24 relative z-10 flex flex-col items-start gap-4">
+        <h1 class="inter-black text-[12vw] md:text-[8vw] leading-[0.8] tracking-tighter uppercase italic text-black">
+            LIFE OF <span class="text-fuchsia-600 marker-font lowercase block -mt-2 md:-mt-6 rotate-[-3deg] drop-shadow-[4px_4px_0px_rgba(0,0,0,1)]">Logos</span>
+        </h1>
+        <div class="flex flex-col items-start mt-2 md:mt-4">
+            <p class="marker-font text-3xl md:text-5xl text-gray-800 tracking-widest uppercase leading-none">Ryley Johnson</p>
+            <div class="mt-4 bg-black text-white px-4 py-2 text-xs md:text-sm font-bold tracking-[0.2em] uppercase rotate-[-1deg] inline-block shadow-[4px_4px_0px_#ff00ff]">
+                Logos • Business Cards • Flyers • Websites
+            </div>
+            <p class="mt-4 font-mono text-[10px] md:text-xs font-bold text-gray-400 uppercase tracking-[0.4em]">// 2026 Portfolio</p>
+        </div>
+    </header>
+
+    <div class="mb-8"><div class="section-tag text-xl uppercase tracking-widest">Finished Designs</div></div>
+    
+    <main class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 max-w-[1400px] mx-auto mb-32">
+        <div class="project-card p-4 rotate-1 shadow-[10px_10px_0px_0px_rgba(0,0,0,1)] group">
+            <div class="aspect-square bg-zinc-200 mb-4 border-2 border-black overflow-hidden relative">
+                <img src="assets/images/givens-thumb.png" class="w-full h-full object-cover">
+                <a href="givens.html" class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity">
+                    <span class="marker-font text-white text-xl border-2 border-white p-2 rotate-[-5deg]">VIEW CASE STUDY</span>
+                </a>
+            </div>
+            <h2 class="marker-font text-2xl">Givens Fire & Forestry</h2>
+            <p class="text-xs font-bold text-gray-500 italic">Complete Brand Identity & Web Build</p>
+        </div>
+
+        <div class="project-card p-4 -rotate-1 shadow-[10px_10px_0px_0px_rgba(255,0,255,1)] group">
+            <div class="aspect-square bg-pink-50 mb-4 border-2 border-black overflow-hidden relative">
+                <img src="assets/images/boutique-thumb.png" class="w-full h-full object-cover">
+                <a href="your-place-or-mine.html" class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity">
+                    <span class="marker-font text-white text-xl border-2 border-white p-2 rotate-[-5deg]">VIEW CASE STUDY</span>
+                </a>
+            </div>
+            <h2 class="marker-font text-2xl text-fuchsia-600">Your Place or Mine?</h2>
+            <p class="text-xs font-bold text-gray-500 italic">Boutique Syringe Wand Logos</p>
+        </div>
+
+        <div class="project-card p-4 rotate-2 shadow-[10px_10px_0px_0px_rgba(0,255,255,1)] group">
+            <div class="aspect-square bg-cyan-50 mb-4 border-2 border-black overflow-hidden relative">
+                <img src="assets/images/social-qa-thumb.png" class="w-full h-full object-cover">
+                <a href="social-qa.html" class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity">
+                    <span class="marker-font text-white text-xl border-2 border-white p-2 rotate-[-5deg]">VIEW CASE STUDY</span>
+                </a>
+            </div>
+            <h2 class="marker-font text-2xl">Social QA Bootcamp</h2>
+            <p class="text-xs font-bold text-gray-500 italic">Typography & Infinity Branding</p>
+        </div>
+
+        <div class="project-card p-4 -rotate-2 shadow-[10px_10px_0px_0px_rgba(0,0,0,1)] group">
+            <div class="aspect-square bg-yellow-50 mb-4 border-2 border-black overflow-hidden relative">
+                <img src="assets/images/container-fix-thumb.png" class="w-full h-full object-cover">
+                <a href="container-fix.html" class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity">
+                    <span class="marker-font text-white text-xl border-2 border-white p-2 rotate-[-5deg]">VIEW CASE STUDY</span>
+                </a>
+            </div>
+            <h2 class="marker-font text-2xl">Container Fix</h2>
+            <p class="text-xs font-bold text-gray-500 italic">Novosibirsk Industrial Logistics</p>
+        </div>
+
+        <div class="project-card p-4 rotate-1 shadow-[10px_10px_0px_0px_rgba(249,115,22,1)] group">
+            <div class="aspect-square bg-orange-50 mb-4 border-2 border-black overflow-hidden relative">
+                <img src="assets/images/outlawz-thumb.png" class="w-full h-full object-cover">
+                <a href="outlawz.html" class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity">
+                    <span class="marker-font text-white text-xl border-2 border-white p-2 rotate-[-5deg]">VIEW CASE STUDY</span>
+                </a>
+            </div>
+            <h2 class="marker-font text-2xl">Outlawz Kerrville</h2>
+            <p class="text-xs font-bold text-gray-500 italic">Western Rebrands & Rideshare</p>
+        </div>
+
+        <div class="project-card p-4 -rotate-1 shadow-[10px_10px_0px_0px_rgba(34,197,94,1)] group">
+            <div class="aspect-square bg-zinc-800 mb-4 border-2 border-black overflow-hidden relative">
+                <img src="assets/images/qa-cards-thumb.png" class="w-full h-full object-cover">
+                <a href="r-johnson-qa.html" class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity">
+                    <span class="marker-font text-white text-xl border-2 border-white p-2 rotate-[-5deg]">VIEW CASE STUDY</span>
+                </a>
+            </div>
+            <h2 class="marker-font text-2xl"><span class="text-green-500">[R]</span> Johnson · QA Engineer</h2>
+            <p class="text-xs font-bold text-gray-500 italic">Personal brand · Biz cards, LinkedIn banner & portfolio</p>
+        </div>
+
+        <div class="project-card p-4 rotate-2 shadow-[10px_10px_0px_0px_rgba(236,72,153,0.8)] group">
+            <div class="aspect-square bg-rose-950 mb-4 border-2 border-black overflow-hidden relative">
+                <img src="assets/images/angels-empire-thumb.png" class="w-full h-full object-cover">
+                <a href="angels-empire.html" class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity">
+                    <span class="marker-font text-white text-xl border-2 border-white p-2 rotate-[-5deg]">VIEW CASE STUDY</span>
+                </a>
+            </div>
+            <h2 class="marker-font text-2xl text-pink-400">Angel's Empire</h2>
+            <p class="text-xs font-bold text-gray-500 italic">Cam Studio · Ad campaign · Siberia, Russia</p>
+        </div>
+
+        <div class="project-card p-4 -rotate-2 shadow-[10px_10px_0px_0px_rgba(13,148,136,0.9)] group">
+            <div class="aspect-square bg-teal-50 mb-4 border-2 border-black overflow-hidden relative">
+                <img src="assets/images/rideshare-cory-thumb.png" class="w-full h-full object-cover">
+                <a href="rideshare-cory.html" class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity">
+                    <span class="marker-font text-white text-xl border-2 border-white p-2 rotate-[-5deg]">VIEW CASE STUDY</span>
+                </a>
+            </div>
+            <h2 class="marker-font text-2xl text-teal-700">Rideshare with Cory</h2>
+            <p class="text-xs font-bold text-gray-500 italic">Biz cards & logo · Colombia-style taxi</p>
+        </div>
+
+        <div class="project-card p-4 rotate-1 shadow-[10px_10px_0px_0px_rgba(180,83,9,0.9)] group">
+            <div class="aspect-square bg-amber-50 mb-4 border-2 border-black overflow-hidden relative">
+                <img src="assets/images/chernakovo-thumb.png" class="w-full h-full object-cover">
+                <a href="chernakovo.html" class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity">
+                    <span class="marker-font text-white text-xl border-2 border-white p-2 rotate-[-5deg]">VIEW CASE STUDY</span>
+                </a>
+            </div>
+            <h2 class="marker-font text-2xl text-amber-800">Chernakovo LLC</h2>
+            <p class="text-xs font-bold text-gray-500 italic">Train company · Siberia · 2024 · Letterheads & labels</p>
+        </div>
+    </main>
+
+    <div class="mb-8"><div class="section-tag text-xl uppercase tracking-widest">Concept Designs</div></div>
+    <div class="relative max-w-[1400px] mx-auto mb-32">
+        <div id="concept-carousel" class="concept-carousel flex gap-6 overflow-x-auto pb-4 px-1" style="scroll-behavior: smooth;">
+            <div class="concept-slide w-[280px] md:w-[320px] shrink-0">
+                <div class="project-card concept-card p-2 rotate-2 h-full"><div class="aspect-square border border-black overflow-hidden"><img src="assets/images/concept-sushi.png" alt="Sushi World concept"></div><p class="marker-font text-sm mt-2">Sushi World</p></div>
+            </div>
+            <div class="concept-slide w-[280px] md:w-[320px] shrink-0">
+                <div class="project-card concept-card p-2 -rotate-3 h-full"><div class="aspect-square border border-black overflow-hidden"><img src="assets/images/concept-ramen.png" alt="Samurai Ramen concept"></div><p class="marker-font text-sm mt-2">Samurai Ramen</p></div>
+            </div>
+            <div class="concept-slide w-[280px] md:w-[320px] shrink-0">
+                <div class="project-card concept-card p-2 rotate-1 h-full"><div class="aspect-square border border-black overflow-hidden"><img src="assets/images/concept-mower.png" alt="Mower Man concept"></div><p class="marker-font text-sm mt-2">Mower Man</p></div>
+            </div>
+            <div class="concept-slide w-[280px] md:w-[320px] shrink-0">
+                <div class="project-card concept-card p-2 -rotate-2 h-full"><div class="aspect-square border border-black overflow-hidden"><img src="assets/images/concept-empire.png" alt="Nerd Consulting concept"></div><p class="marker-font text-sm mt-2">Nerd Consulting</p></div>
+            </div>
+            <div class="concept-slide w-[280px] md:w-[320px] shrink-0">
+                <div class="project-card concept-card p-2 rotate-2 h-full"><div class="aspect-square border border-black overflow-hidden bg-zinc-200"><img src="assets/images/concept-5.png" alt="Concept 5" onerror="this.style.display='none'"></div><p class="marker-font text-sm mt-2">Basic Bish</p></div>
+            </div>
+            <div class="concept-slide w-[280px] md:w-[320px] shrink-0">
+                <div class="project-card concept-card p-2 -rotate-1 h-full"><div class="aspect-square border border-black overflow-hidden bg-zinc-200"><img src="assets/images/concept-6.png" alt="Concept 6" onerror="this.style.display='none'"></div><p class="marker-font text-sm mt-2">Basic Bish 2.0</p></div>
+            </div>
+            <div class="concept-slide w-[280px] md:w-[320px] shrink-0">
+                <div class="project-card concept-card p-2 rotate-3 h-full"><div class="aspect-square border border-black overflow-hidden bg-zinc-200"><img src="assets/images/concept-7.png" alt="Keys to the city 1 concept" onerror="this.style.display='none'"></div><p class="marker-font text-sm mt-2">Keys to the city 1</p></div>
+            </div>
+            <div class="concept-slide w-[280px] md:w-[320px] shrink-0">
+                <div class="project-card concept-card p-2 -rotate-2 h-full"><div class="aspect-square border border-black overflow-hidden bg-zinc-200"><img src="assets/images/concept-8.png" alt="Keys to the city 2 concept" onerror="this.style.display='none'"></div><p class="marker-font text-sm mt-2">Keys to the city 2</p></div>
+            </div>
+            <div class="concept-slide w-[280px] md:w-[320px] shrink-0">
+                <div class="project-card concept-card p-2 rotate-1 h-full"><div class="aspect-square border border-black overflow-hidden bg-zinc-200"><img src="assets/images/concept-9.png" alt="fruit pups concept" onerror="this.style.display='none'"></div><p class="marker-font text-sm mt-2">Fruit Pups</p></div>
+            </div>
+            <div class="concept-slide w-[280px] md:w-[320px] shrink-0">
+                <div class="project-card concept-card p-2 -rotate-3 h-full"><div class="aspect-square border border-black overflow-hidden bg-zinc-200"><img src="assets/images/concept-10.png" alt="Language learning concept 1" onerror="this.style.display='none'"></div><p class="marker-font text-sm mt-2">Language Learning</p></div>
+            </div>
+            <div class="concept-slide w-[280px] md:w-[320px] shrink-0">
+                <div class="project-card concept-card p-2 rotate-2 h-full"><div class="aspect-square border border-black overflow-hidden bg-zinc-200"><img src="assets/images/concept-11.png" alt="Language learning concept 2" onerror="this.style.display='none'"></div><p class="marker-font text-sm mt-2">Language Learning 2</p></div>
+            </div>
+            <div class="concept-slide w-[280px] md:w-[320px] shrink-0">
+                <div class="project-card concept-card p-2 -rotate-1 h-full"><div class="aspect-square border border-black overflow-hidden bg-zinc-200"><img src="assets/images/concept-12.png" alt="Language learning concept 3" onerror="this.style.display='none'"></div><p class="marker-font text-sm mt-2">Language Learning 3</p></div>
+            </div>
+            <div class="concept-slide w-[280px] md:w-[320px] shrink-0">
+                <div class="project-card concept-card p-2 rotate-1 h-full"><div class="aspect-square border border-black overflow-hidden bg-zinc-200"><img src="assets/images/concept-13.png" alt="Alaska Snow Scoopers concept" onerror="this.style.display='none'"></div><p class="marker-font text-sm mt-2">Alaska Snow Scoopers</p></div>
+            </div>
+            <div class="concept-slide w-[280px] md:w-[320px] shrink-0">
+                <div class="project-card concept-card p-2 -rotate-2 h-full"><div class="aspect-square border border-black overflow-hidden bg-zinc-200"><img src="assets/images/concept-14.png" alt="Software testing university concept 1" onerror="this.style.display='none'"></div><p class="marker-font text-sm mt-2">Software Testing University 1</p></div>
+            </div>
+            <div class="concept-slide w-[280px] md:w-[320px] shrink-0">
+                <div class="project-card concept-card p-2 rotate-3 h-full"><div class="aspect-square border border-black overflow-hidden bg-zinc-200"><img src="assets/images/concept-15.png" alt="Software testing university concept 2" onerror="this.style.display='none'"></div><p class="marker-font text-sm mt-2">Software Testing University 2</p></div>
+            </div>
+            <div class="concept-slide w-[280px] md:w-[320px] shrink-0">
+                <div class="project-card concept-card p-2 -rotate-1 h-full"><div class="aspect-square border border-black overflow-hidden bg-zinc-200"><img src="assets/images/concept-16.png" alt="Concept 16" onerror="this.style.display='none'"></div><p class="marker-font text-sm mt-2">Women's Hair Academy</p></div>
+            </div>
+            <div class="concept-slide w-[280px] md:w-[320px] shrink-0">
+                <div class="project-card concept-card p-2 rotate-2 h-full"><div class="aspect-square border border-black overflow-hidden bg-zinc-200"><img src="assets/images/concept-17.png" alt="Juicy Vapes concept" onerror="this.style.display='none'"></div><p class="marker-font text-sm mt-2">Juicy Vapes</p></div>
+            </div>
+            <div class="concept-slide w-[280px] md:w-[320px] shrink-0">
+                <div class="project-card concept-card p-2 -rotate-3 h-full"><div class="aspect-square border border-black overflow-hidden bg-zinc-200"><img src="assets/images/concept-18.png" alt="Concept 18" onerror="this.style.display='none'"></div><p class="marker-font text-sm mt-2">Scrum master concept</p></div>
+            </div>
+        </div>
+        <button type="button" id="concept-prev" class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-2 md:-translate-x-4 z-10 w-12 h-12 rounded-full bg-black text-white border-4 border-fuchsia-500 shadow-lg hover:bg-fuchsia-600 transition-colors text-2xl leading-none" aria-label="Previous concepts">←</button>
+        <button type="button" id="concept-next" class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-2 md:translate-x-4 z-10 w-12 h-12 rounded-full bg-black text-white border-4 border-fuchsia-500 shadow-lg hover:bg-fuchsia-600 transition-colors text-2xl leading-none" aria-label="Next concepts">→</button>
+    </div>
+
+    <div class="mb-6"><div class="section-tag text-xl uppercase tracking-widest" style="background: #ff00ff;">Software Stickers</div></div>
+    <p class="text-sm font-bold text-gray-600 uppercase tracking-widest mb-1">aka laptop slaps</p>
+    <p class="text-gray-700 max-w-3xl mb-8 leading-relaxed">
+        Funny stickers for software nerds—a side project by me. I launched a <a href="https://www.redbubble.com/people/SoftwareSticker" class="text-fuchsia-600 font-bold hover:underline">Redbubble store</a> with one-of-a-kind designs: mostly stickers, sometimes mugs, tee shirts, tote bags, and hats.
+    </p>
+    <div class="mb-10 max-w-[1400px] mx-auto">
+        <img src="assets/images/stickers-banner.png" alt="Software Stickers Redbubble store" class="w-full border-4 border-black shadow-[8px_8px_0px_#ff00ff] max-h-[320px] object-cover">
+    </div>
+    <p class="text-xs font-bold text-gray-500 uppercase tracking-widest mb-4">Featured designs · click to view on Redbubble</p>
+    <div class="relative max-w-[1400px] mx-auto mb-48">
+        <div id="stickers-carousel" class="stickers-carousel flex gap-6 overflow-x-auto pb-4 px-1" style="scroll-behavior: smooth;">
+            <div class="sticker-slide w-[200px] md:w-[240px] shrink-0">
+                <a href="https://www.redbubble.com/i/sticker/MAKE-AGILE-GREAT-AGAIN-The-Devs-Have-Spoken-by-SoftwareSticker/171127306.EJUG5" target="_blank" rel="noopener noreferrer" class="block project-card p-2 bg-yellow-300 -rotate-2 hover:z-20"><img src="assets/images/sticker-1.png" class="border border-black w-full aspect-square object-cover" alt="Make Agile Great Again"></a>
+                <p class="marker-font text-xs mt-2 text-center">Make Agile Great Again</p>
+            </div>
+            <div class="sticker-slide w-[200px] md:w-[240px] shrink-0">
+                <a href="https://www.redbubble.com/i/t-shirt/YouTube-university-by-SoftwareSticker/171479362.D681C" target="_blank" rel="noopener noreferrer" class="block project-card p-2 bg-cyan-300 rotate-3 hover:z-20"><img src="assets/images/sticker-2.png" class="border border-black w-full aspect-square object-cover" alt="YouTube University"></a>
+                <p class="marker-font text-xs mt-2 text-center">YouTube University</p>
+            </div>
+            <div class="sticker-slide w-[200px] md:w-[240px] shrink-0">
+                <a href="https://www.redbubble.com/i/pin/Google-Girl-by-SoftwareSticker/170989102.NP9QY" target="_blank" rel="noopener noreferrer" class="block project-card p-2 bg-fuchsia-300 -rotate-1 hover:z-20"><img src="assets/images/sticker-3.png" class="border border-black w-full aspect-square object-cover" alt="Google Girl"></a>
+                <p class="marker-font text-xs mt-2 text-center">Google Girl</p>
+            </div>
+            <div class="sticker-slide w-[200px] md:w-[240px] shrink-0">
+                <a href="https://www.redbubble.com/i/sticker/Hot-Fix-Bandaid-by-SoftwareSticker/170849768.EJUG5" target="_blank" rel="noopener noreferrer" class="block project-card p-2 bg-green-300 rotate-2 hover:z-20"><img src="assets/images/sticker-4.png" class="border border-black w-full aspect-square object-cover" alt="Hot Fix Bandaid"></a>
+                <p class="marker-font text-xs mt-2 text-center">Hot Fix Bandaid</p>
+            </div>
+            <div class="sticker-slide w-[200px] md:w-[240px] shrink-0">
+                <a href="https://www.redbubble.com/i/sticker/Yo-Mama-So-Fat-Docker-Panicked-by-SoftwareSticker/170795265.EJUG5" target="_blank" rel="noopener noreferrer" class="block project-card p-2 bg-orange-300 -rotate-3 hover:z-20"><img src="assets/images/sticker-5.png" class="border border-black w-full aspect-square object-cover" alt="Yo Mama So Fat Docker Panicked"></a>
+                <p class="marker-font text-xs mt-2 text-center">Yo Mama So Fat Docker Panicked</p>
+            </div>
+            <div class="sticker-slide w-[200px] md:w-[240px] shrink-0">
+                <a href="https://www.redbubble.com/i/sticker/Now-That-s-What-I-Call-a-10x-Engineer-by-SoftwareSticker/171418352.EJUG5" target="_blank" rel="noopener noreferrer" class="block project-card p-2 bg-pink-300 rotate-1 hover:z-20"><img src="assets/images/sticker-6.png" class="border border-black w-full aspect-square object-cover" alt="Now That's What I Call a 10x Engineer"></a>
+                <p class="marker-font text-xs mt-2 text-center">10x Engineer</p>
+            </div>
+            <div class="sticker-slide w-[200px] md:w-[240px] shrink-0">
+                <a href="https://www.redbubble.com/i/hat/Sorry-We-re-Debugging-by-SoftwareSticker/170914302/fce2" target="_blank" rel="noopener noreferrer" class="block project-card p-2 bg-lime-300 -rotate-2 hover:z-20"><img src="assets/images/sticker-7.png" class="border border-black w-full aspect-square object-cover" alt="Sorry We're Debugging"></a>
+                <p class="marker-font text-xs mt-2 text-center">Sorry We're Debugging</p>
+            </div>
+            <div class="sticker-slide w-[200px] md:w-[240px] shrink-0">
+                <a href="https://www.redbubble.com/i/iphone-case/Hello-Worldosaurus-Baby-Dev-Dino-Sticker-by-SoftwareSticker/170914207.5HT9M" target="_blank" rel="noopener noreferrer" class="block project-card p-2 bg-violet-300 rotate-2 hover:z-20"><img src="assets/images/sticker-8.png" class="border border-black w-full aspect-square object-cover" alt="Hello Worldosaurus Baby Dev Dino"></a>
+                <p class="marker-font text-xs mt-2 text-center">Hello Worldosaurus</p>
+            </div>
+            <div class="sticker-slide w-[200px] md:w-[240px] shrink-0">
+                <a href="https://www.redbubble.com/i/sticker/Sanity-Testing-in-Progress-by-SoftwareSticker/171122948.EJUG5" target="_blank" rel="noopener noreferrer" class="block project-card p-2 bg-amber-300 -rotate-1 hover:z-20"><img src="assets/images/sticker-9.png" class="border border-black w-full aspect-square object-cover" alt="Sanity Testing in Progress"></a>
+                <p class="marker-font text-xs mt-2 text-center">Sanity Testing in Progress</p>
+            </div>
+            <div class="sticker-slide w-[200px] md:w-[240px] shrink-0">
+                <a href="https://www.redbubble.com/i/sticker/Fork-Me-I-m-Git-ty-by-SoftwareSticker/170792955.EJUG5" target="_blank" rel="noopener noreferrer" class="block project-card p-2 bg-rose-300 rotate-3 hover:z-20"><img src="assets/images/sticker-10.png" class="border border-black w-full aspect-square object-cover" alt="Fork Me I'm Git-ty"></a>
+                <p class="marker-font text-xs mt-2 text-center">Fork Me I'm Git-ty</p>
+            </div>
+        </div>
+        <button type="button" id="stickers-prev" class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-2 md:-translate-x-4 z-10 w-10 h-10 rounded-full bg-black text-white border-4 border-fuchsia-500 shadow-lg hover:bg-fuchsia-600 transition-colors text-xl leading-none" aria-label="Previous stickers">←</button>
+        <button type="button" id="stickers-next" class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-2 md:translate-x-4 z-10 w-10 h-10 rounded-full bg-black text-white border-4 border-fuchsia-500 shadow-lg hover:bg-fuchsia-600 transition-colors text-xl leading-none" aria-label="Next stickers">→</button>
+    </div>
+
+    <footer class="fixed bottom-0 left-0 w-full bg-yellow-400 border-t-8 border-black z-[100] p-4 flex flex-wrap justify-center gap-6 md:gap-12">
+        <a href="about.html" class="inter-black text-lg md:text-xl hover:text-fuchsia-600 uppercase italic">About Me</a>
+        <a href="https://www.redbubble.com/people/SoftwareSticker" target="_blank" rel="noopener noreferrer" class="inter-black text-lg md:text-xl hover:text-fuchsia-600 uppercase italic">Software Stickers</a>
+        <a href="contact.html" class="inter-black text-lg md:text-xl hover:text-fuchsia-600 uppercase italic">Contact Me</a>
+    </footer>
+
+    <script>
+        const cursor = document.getElementById('custom-cursor');
+        document.addEventListener('mousemove', (e) => { cursor.style.left = e.clientX + 'px'; cursor.style.top = e.clientY + 'px'; });
+        const interactables = document.querySelectorAll('.project-card, a');
+        interactables.forEach(item => {
+            item.addEventListener('mouseenter', () => { cursor.style.transform = 'scale(3)'; cursor.style.backgroundColor = '#00ffff'; });
+            item.addEventListener('mouseleave', () => { cursor.style.transform = 'scale(1)'; cursor.style.backgroundColor = '#ff00ff'; });
+        });
+        (function() {
+            var carousel = document.getElementById('concept-carousel');
+            var prev = document.getElementById('concept-prev');
+            var next = document.getElementById('concept-next');
+            if (!carousel || !prev || !next) return;
+            function scrollBy(amount) { carousel.scrollBy({ left: amount, behavior: 'smooth' }); }
+            prev.addEventListener('click', function() {
+                var w = carousel.querySelector('.concept-slide');
+                scrollBy(-(w ? w.offsetWidth + 24 : 304));
+            });
+            next.addEventListener('click', function() {
+                var w = carousel.querySelector('.concept-slide');
+                scrollBy(w ? w.offsetWidth + 24 : 304);
+            });
+        })();
+        (function() {
+            var carousel = document.getElementById('stickers-carousel');
+            var prev = document.getElementById('stickers-prev');
+            var next = document.getElementById('stickers-next');
+            if (!carousel || !prev || !next) return;
+            function scrollBy(amount) { carousel.scrollBy({ left: amount, behavior: 'smooth' }); }
+            prev.addEventListener('click', function() {
+                var w = carousel.querySelector('.sticker-slide');
+                scrollBy(-(w ? w.offsetWidth + 24 : 224));
+            });
+            next.addEventListener('click', function() {
+                var w = carousel.querySelector('.sticker-slide');
+                scrollBy(w ? w.offsetWidth + 24 : 224);
+            });
+        })();
+    </script>
+</body>
+</html>

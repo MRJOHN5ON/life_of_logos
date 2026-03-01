@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rideshare with Cory | Biz Cards & Logo · Colombia Style</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #e5e5e5;
+            background-image: url("https://www.transparenttextures.com/patterns/concrete-wall.png");
+            cursor: none;
+            overflow-x: hidden;
+            font-family: 'Inter', sans-serif;
+        }
+        .marker-font { font-family: 'Permanent Marker', cursive; }
+        .inter-black { font-family: 'Inter', sans-serif; font-weight: 900; }
+        .splatter { position: fixed; border-radius: 50%; filter: blur(90px); z-index: -1; pointer-events: none; opacity: 0.3; }
+        #custom-cursor {
+            width: 24px; height: 24px;
+            background: #0d9488;
+            border-radius: 50%;
+            position: fixed;
+            pointer-events: none;
+            z-index: 9999;
+            transition: transform 0.15s ease-out;
+            box-shadow: 0 0 20px rgba(13, 148, 136, 0.7);
+        }
+        .section-tag-cory {
+            background: black;
+            color: #facc15;
+            padding: 10px 20px;
+            display: inline-block;
+            transform: rotate(-1deg);
+            border: 3px solid #0d9488;
+            box-shadow: 6px 6px 0 #dc2626;
+            font-family: 'Permanent Marker', cursive;
+        }
+        .card-cory {
+            border: 4px solid black;
+            background: white;
+            box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.8);
+        }
+        .colombia-stripe { background: linear-gradient(90deg, #facc15 0%, #facc15 33%, #0d9488 33%, #0d9488 66%, #dc2626 66%, #dc2626 100%); height: 6px; }
+    </style>
+</head>
+<body class="p-6 md:p-16 pb-40">
+    <div id="custom-cursor"></div>
+    <div class="splatter bg-yellow-400 w-[500px] h-[500px] -top-24 -right-20"></div>
+    <div class="splatter bg-teal-400 w-[400px] h-[400px] bottom-0 left-0"></div>
+    <div class="splatter bg-red-400 w-[300px] h-[300px] top-1/2 left-1/3 opacity-40"></div>
+
+    <a href="index.html" class="inline-block mb-12 bg-black text-white px-6 py-3 marker-font rotate-[-2deg] hover:bg-teal-600 transition-colors border-2 border-teal-500 shadow-[6px_6px_0px_#0d9488]">← BACK TO GALLERY</a>
+
+    <header class="mb-16">
+        <div class="colombia-stripe rounded-full mb-6 w-full max-w-2xl"></div>
+        <h1 class="inter-black text-[8vw] md:text-[5.5vw] leading-none uppercase italic text-black">
+            Rideshare with <span class="marker-font lowercase text-teal-600 block -mt-2 md:-mt-4 rotate-[-2deg] mb-2">Cory</span>
+        </h1>
+        <p class="text-sm font-bold text-gray-600 mt-8 md:mt-10 uppercase tracking-widest">Biz cards & logo · Colombia-style taxi vibe</p>
+    </header>
+
+    <!-- Main logo at top -->
+    <section class="mb-20">
+        <div class="mb-8">
+            <span class="section-tag-cory text-lg uppercase tracking-widest">The logo</span>
+        </div>
+        <div class="flex justify-center">
+            <div class="card-cory p-8 md:p-12 max-w-md -rotate-1">
+                <img src="assets/images/rideshare-cory/logo.png" alt="Rideshare with Cory logo" class="w-full h-auto bg-teal-50 min-h-[160px] object-contain">
+                <p class="marker-font text-center mt-4 text-sm text-teal-700 uppercase tracking-wider">Main mark</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blurb -->
+    <section class="mb-24 max-w-4xl">
+        <div class="mb-8">
+            <span class="section-tag-cory text-lg uppercase tracking-widest">The project</span>
+        </div>
+        <div class="card-cory p-8 md:p-12 rotate-[0.5deg]">
+            <p class="text-gray-800 text-lg leading-relaxed">
+                These <strong class="text-teal-700">colorful, bilingual business cards</strong> were created for Cory, a rideshare driver who spent a decade in Colombia and proudly speaks Spanish. The illustrated Honda features <strong class="text-teal-700">bold stripes reminiscent of the Colombian flag</strong>, highlighting Cory’s personal story and the car he drives.
+            </p>
+            <p class="text-gray-800 text-lg leading-relaxed mt-6">
+                A clean <strong class="text-teal-700">teal-and-black layout</strong> showcases easy-to-read contact info, along with Spanish messaging (<em>¡Yo hablo español!</em>) to welcome both English- and Spanish-speaking riders. QR codes for Venmo and Cash App provide a convenient touch, making these cards both visually engaging and practical for on-the-go customers.
+            </p>
+        </div>
+    </section>
+
+    <!-- Front and back of card -->
+    <section class="mb-48">
+        <div class="mb-8">
+            <span class="section-tag-cory text-lg uppercase tracking-widest">Business cards</span>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-4xl">
+            <div class="card-cory p-4 rotate-1 overflow-hidden">
+                <img src="assets/images/rideshare-cory/card-front.png" alt="Rideshare with Cory business card front" class="w-full h-auto bg-stone-100 min-h-[280px] object-contain">
+                <p class="marker-font text-center mt-4 text-sm text-teal-700 uppercase tracking-wider">Front</p>
+            </div>
+            <div class="card-cory p-4 -rotate-1 overflow-hidden">
+                <img src="assets/images/rideshare-cory/card-back.png" alt="Rideshare with Cory business card back" class="w-full h-auto bg-stone-100 min-h-[280px] object-contain">
+                <p class="marker-font text-center mt-4 text-sm text-teal-700 uppercase tracking-wider">Back</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="fixed bottom-0 left-0 w-full bg-black border-t-4 border-teal-500 z-[100] p-4 flex flex-wrap justify-center gap-6 md:gap-12">
+        <a href="index.html" class="text-teal-400 inter-black text-lg md:text-xl hover:text-teal-300 uppercase italic">Home</a>
+        <a href="about.html" class="text-teal-400 inter-black text-lg md:text-xl hover:text-teal-300 uppercase italic">About Me</a>
+        <a href="https://www.redbubble.com/people/SoftwareSticker" target="_blank" rel="noopener noreferrer" class="text-teal-400 inter-black text-lg md:text-xl hover:text-teal-300 uppercase italic">Software Stickers</a>
+        <a href="contact.html" class="text-teal-400 inter-black text-lg md:text-xl hover:text-teal-300 uppercase italic">Contact Me</a>
+    </footer>
+
+    <script>
+        const cursor = document.getElementById('custom-cursor');
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+        });
+        document.querySelectorAll('a, .card-cory').forEach(el => {
+            el.addEventListener('mouseenter', () => { cursor.style.transform = 'scale(2.5)'; });
+            el.addEventListener('mouseleave', () => { cursor.style.transform = 'scale(1)'; });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social QA Bootcamp | Typography & Infinity Branding</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Inter:wght@400;700;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #0a0a0a;
+            background-image:
+                linear-gradient(rgba(250, 237, 16, 0.04) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(250, 237, 16, 0.04) 1px, transparent 1px);
+            background-size: 24px 24px;
+            cursor: none;
+            overflow-x: hidden;
+            font-family: 'Inter', sans-serif;
+            color: #e5e5e5;
+        }
+        .marker-font { font-family: 'Permanent Marker', cursive; }
+        .inter-black { font-family: 'Inter', sans-serif; font-weight: 900; }
+        .mono { font-family: 'JetBrains Mono', monospace; }
+        .splatter { position: fixed; border-radius: 50%; filter: blur(120px); z-index: -1; pointer-events: none; opacity: 0.2; }
+        #custom-cursor {
+            width: 24px; height: 24px;
+            background: #faed10;
+            border-radius: 50%;
+            position: fixed;
+            pointer-events: none;
+            z-index: 9999;
+            transition: transform 0.15s ease-out;
+            box-shadow: 0 0 25px rgba(250, 237, 16, 0.8);
+        }
+        .section-tag-tech {
+            background: #000;
+            color: #faed10;
+            padding: 10px 20px;
+            display: inline-block;
+            transform: rotate(-1deg);
+            border: 2px solid #faed10;
+            box-shadow: 6px 6px 0 rgba(250, 237, 16, 0.3);
+            font-family: 'Permanent Marker', cursive;
+        }
+        .card-tech {
+            border: 2px solid #27272a;
+            background: #18181b;
+            box-shadow: 0 0 0 1px rgba(250, 237, 16, 0.1), 8px 8px 0 rgba(250, 237, 16, 0.15);
+        }
+        .glow-accent { box-shadow: 0 0 30px rgba(250, 237, 16, 0.2); }
+        .link-accent:hover { color: #fef34a; text-decoration: underline; }
+    </style>
+</head>
+<body class="p-6 md:p-16 pb-40">
+    <div id="custom-cursor"></div>
+    <div class="splatter w-[500px] h-[500px] -top-32 right-0 opacity-40" style="background:#faed10"></div>
+    <div class="splatter w-[400px] h-[400px] bottom-0 left-0 opacity-30" style="background:#b8a80d"></div>
+
+    <a href="index.html" class="inline-block mb-12 bg-white text-black px-6 py-3 marker-font rotate-[-2deg] hover:bg-[#faed10] hover:text-black transition-colors border-2 shadow-[6px_6px_0px_#faed10]" style="border-color:#faed10">← BACK TO GALLERY</a>
+
+    <header class="mb-16">
+        <h1 class="inter-black text-[9vw] md:text-[6vw] leading-none uppercase italic text-white">
+            Social QA <span class="marker-font lowercase block -mt-2 md:-mt-4 rotate-[-2deg]" style="color:#faed10">Bootcamp</span>
+        </h1>
+        <p class="mono text-sm md:text-base mt-4 tracking-widest uppercase" style="color:rgba(250,237,16,0.9)">Typography & Infinity branding</p>
+    </header>
+
+    <!-- Project link + blurb -->
+    <section class="mb-20">
+        <div class="card-tech p-8 md:p-10 rotate-[0.5deg] glow-accent">
+            <p class="text-gray-300 text-lg mb-6 leading-relaxed">
+                Created for <strong class="text-white">The Social QA</strong>—a QA bootcamp that helps people level up from tutorial hell to real-world skills. The client already had an “Infinity QA” logo but needed typography that complemented it, along with some overall refinement.
+            </p>
+            <a href="https://thesocialqa.hashnode.dev/creating-my-first-qa-bootcamp" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 mono text-sm md:text-base border px-4 py-3 transition-colors link-accent hover:bg-[#faed10]/10" style="color:#faed10;border-color:rgba(250,237,16,0.5)">
+                <span>→</span> Read about the bootcamp on Hashnode
+            </a>
+        </div>
+    </section>
+
+    <!-- Role / deliverables -->
+    <section class="mb-24">
+        <div class="mb-10">
+            <span class="section-tag-tech text-lg uppercase tracking-widest">My role</span>
+        </div>
+        <div class="card-tech p-8 md:p-12 -rotate-[0.5deg] max-w-4xl">
+            <p class="text-gray-300 text-lg md:text-xl leading-relaxed">
+                I enhanced the original design, scaled it for higher resolution, and created matching typographic elements. I provided <strong style="color:#faed10">multiple high-resolution variants</strong>, a <strong style="color:#faed10">custom banner</strong>, and a <strong style="color:#faed10">transparent PNG</strong> to ensure seamless branding across the client’s various platforms.
+            </p>
+        </div>
+    </section>
+
+    <!-- Two designs in use -->
+    <section class="mb-24">
+        <div class="mb-10">
+            <span class="section-tag-tech text-lg uppercase tracking-widest">Designs in use</span>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl">
+            <div class="card-tech p-4 rotate-1 overflow-hidden">
+                <img src="assets/images/social-qa/design-1.png" alt="Social QA design variant 1" class="w-full h-auto bg-zinc-800 min-h-[200px] object-contain">
+                <p class="mono text-center mt-3 text-xs uppercase tracking-wider" style="color:rgba(250,237,16,0.8)">Variant 1</p>
+            </div>
+            <div class="card-tech p-4 -rotate-1 overflow-hidden">
+                <img src="assets/images/social-qa/design-2.png" alt="Social QA design variant 2" class="w-full h-auto bg-zinc-800 min-h-[200px] object-contain">
+                <p class="mono text-center mt-3 text-xs uppercase tracking-wider" style="color:rgba(250,237,16,0.8)">Variant 2</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Student + certificate templates -->
+    <section class="mb-24">
+        <div class="mb-10">
+            <span class="section-tag-tech text-lg uppercase tracking-widest">Student & certificates</span>
+        </div>
+        <div class="card-tech p-8 md:p-10 mb-12 rotate-[0.5deg] max-w-4xl">
+            <p class="text-gray-300 text-lg leading-relaxed">
+                I was also a <strong class="text-white">student</strong> of this course, bettering my QA automation knowledge. Because my logo designs were liked so much, I was asked to create the <strong style="color:#faed10">completion certificate templates</strong> used for graduates. Here’s the result.
+            </p>
+        </div>
+        <div class="flex justify-center">
+            <div class="card-tech p-4 md:p-6 max-w-3xl w-full -rotate-1 glow-accent">
+                <img src="assets/images/social-qa/certificate.png" alt="Social QA Bootcamp completion certificate template" class="w-full h-auto bg-zinc-800 min-h-[360px] object-contain">
+                <p class="mono text-center mt-4 text-sm uppercase tracking-wider" style="color:rgba(250,237,16,0.8)">Completion certificate template</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Content writing + Gen AI imagery -->
+    <section class="mb-24">
+        <div class="mb-10">
+            <span class="section-tag-tech text-lg uppercase tracking-widest">Content & Gen AI</span>
+        </div>
+        <div class="card-tech p-8 md:p-10 mb-12 rotate-[-0.5deg] max-w-4xl">
+            <p class="text-gray-300 text-lg leading-relaxed">
+                Part of the course was learning <strong class="text-white">content writing for social media engagement</strong>. On my own, I decided to leverage Gen AI to create high-quality images to go along with some of my posts. Using various tools—<strong style="color:#faed10">Canva</strong>, <strong style="color:#faed10">Midjourney</strong>, <strong style="color:#faed10">Stable Diffusion</strong>, and others—I created visuals that complemented my content and boosted engagement.
+            </p>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-4xl">
+            <div class="card-tech p-3 overflow-hidden -rotate-1">
+                <img src="assets/images/social-qa/genaifirst.webp" alt="Gen AI created image for social post" class="w-full h-auto bg-zinc-800 min-h-[200px] object-cover">
+            </div>
+            <div class="card-tech p-3 overflow-hidden rotate-1">
+                <img src="assets/images/social-qa/genaisecond.webp" alt="Gen AI created image for social post" class="w-full h-auto bg-zinc-800 min-h-[200px] object-cover">
+            </div>
+            <div class="card-tech p-3 overflow-hidden rotate-1">
+                <img src="assets/images/social-qa/genai3.png" alt="Gen AI created image for social post" class="w-full h-auto bg-zinc-800 min-h-[200px] object-cover">
+            </div>
+            <div class="card-tech p-3 overflow-hidden -rotate-1">
+                <img src="assets/images/social-qa/genai4.png" alt="Gen AI created image for social post" class="w-full h-auto bg-zinc-800 min-h-[200px] object-cover">
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog post CTA -->
+    <section class="mb-48">
+        <div class="mb-10">
+            <span class="section-tag-tech text-lg uppercase tracking-widest">From the blog</span>
+        </div>
+        <div class="card-tech p-8 md:p-12" style="border-color:rgba(250,237,16,0.3)">
+            <h2 class="inter-black text-2xl md:text-3xl text-white mb-4 uppercase">My experience with the bootcamp</h2>
+            <p class="text-gray-400 text-lg mb-6 leading-relaxed">
+                I wrote about going from tutorial hell to 10K+ LinkedIn views—and how The Social QA bootcamp helped get me there. If you’re curious about the course from a student (and designer) perspective, give it a read.
+            </p>
+            <a href="https://wary-ethernet-059.notion.site/How-I-Went-From-Tutorial-Hell-to-10K-LinkedIn-Views-b312daaec4db4489896fa8b4748ed43f?source=copy_link" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-black px-6 py-4 inter-black transition-colors border-2 shadow-[6px_6px_0px_rgba(250,237,16,0.5)] hover:opacity-90" style="background:#faed10;border-color:#faed10">
+                Read the post on Notion →
+            </a>
+        </div>
+    </section>
+
+    <footer class="fixed bottom-0 left-0 w-full bg-black border-t-2 z-[100] p-4 flex flex-wrap justify-center gap-6 md:gap-12" style="border-color:#faed10">
+        <a href="index.html" class="inter-black text-lg md:text-xl uppercase italic hover:opacity-80 transition-opacity" style="color:#faed10">Home</a>
+        <a href="about.html" class="inter-black text-lg md:text-xl uppercase italic hover:opacity-80 transition-opacity" style="color:#faed10">About Me</a>
+        <a href="https://www.redbubble.com/people/SoftwareSticker" target="_blank" rel="noopener noreferrer" class="inter-black text-lg md:text-xl uppercase italic hover:opacity-80 transition-opacity" style="color:#faed10">Software Stickers</a>
+        <a href="contact.html" class="inter-black text-lg md:text-xl uppercase italic hover:opacity-80 transition-opacity" style="color:#faed10">Contact Me</a>
+    </footer>
+
+    <script>
+        const cursor = document.getElementById('custom-cursor');
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+        });
+        document.querySelectorAll('a, .card-tech').forEach(el => {
+            el.addEventListener('mouseenter', () => { cursor.style.transform = 'scale(2.5)'; });
+            el.addEventListener('mouseleave', () => { cursor.style.transform = 'scale(1)'; });
+        });
+    </script>
+</body>
+</html>

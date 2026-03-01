@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>R. Johnson · QA Engineer | Personal Brand & Business Cards</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Inter:wght@400;700;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f0f9ff;
+            background-image:
+                linear-gradient(rgba(59, 130, 246, 0.06) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(59, 130, 246, 0.06) 1px, transparent 1px);
+            background-size: 20px 20px;
+            cursor: none;
+            overflow-x: hidden;
+            font-family: 'Inter', sans-serif;
+        }
+        .marker-font { font-family: 'Permanent Marker', cursive; }
+        .inter-black { font-family: 'Inter', sans-serif; font-weight: 900; }
+        .mono { font-family: 'JetBrains Mono', monospace; }
+        .splatter { position: fixed; border-radius: 50%; filter: blur(100px); z-index: -1; pointer-events: none; opacity: 0.25; }
+        #custom-cursor {
+            width: 24px; height: 24px;
+            background: #2563eb;
+            border-radius: 50%;
+            position: fixed;
+            pointer-events: none;
+            z-index: 9999;
+            transition: transform 0.15s ease-out;
+            box-shadow: 0 0 20px rgba(37, 99, 235, 0.6);
+        }
+        .section-tag-qa {
+            background: #1e40af;
+            color: white;
+            padding: 10px 20px;
+            display: inline-block;
+            transform: rotate(-1deg);
+            border: 2px solid #3b82f6;
+            box-shadow: 6px 6px 0 rgba(30, 64, 175, 0.4);
+            font-family: 'Permanent Marker', cursive;
+        }
+        .card-qa {
+            border: 3px solid #1e40af;
+            background: white;
+            box-shadow: 8px 8px 0 rgba(30, 64, 175, 0.2);
+        }
+        .bracket { font-family: 'JetBrains Mono', monospace; color: #1e40af; font-weight: 600; }
+    </style>
+</head>
+<body class="p-6 md:p-16 pb-40">
+    <div id="custom-cursor"></div>
+    <div class="splatter bg-blue-300 w-[500px] h-[500px] -top-24 -right-20"></div>
+    <div class="splatter bg-blue-100 w-[400px] h-[400px] bottom-0 left-0"></div>
+
+    <a href="index.html" class="inline-block mb-12 bg-[#1e40af] text-white px-6 py-3 marker-font rotate-[-2deg] hover:bg-blue-600 transition-colors border-2 border-blue-400 shadow-[6px_6px_0px_#3b82f6]">← BACK TO GALLERY</a>
+
+    <!-- Hero: photo + AI brag -->
+    <header class="mb-20 flex flex-col md:flex-row md:items-center gap-10">
+        <div class="flex-shrink-0">
+            <div class="w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden border-4 border-[#1e40af] shadow-[8px_8px_0_rgba(30,64,175,0.3)] rotate-[-2deg]">
+                <img src="assets/images/qa-cards/me.png" alt="Ryley Johnson" class="w-full h-full object-cover">
+            </div>
+        </div>
+        <div>
+            <h1 class="inter-black text-[8vw] md:text-[5vw] leading-none text-[#1e40af]">
+                <span class="bracket">[</span>R<span class="bracket">]</span> Johnson
+            </h1>
+            <p class="marker-font text-2xl md:text-3xl text-blue-600 mt-2">QA Engineer · Bug Hunter</p>
+            <p class="text-blue-900/80 text-sm md:text-base mt-4 max-w-xl italic">
+                Yes, that’s really me—but I used AI to give myself more hair on top and a suit. I don’t even own a suit.
+            </p>
+        </div>
+    </header>
+
+    <!-- Business cards -->
+    <section class="mb-24">
+        <div class="mb-10">
+            <span class="section-tag-qa text-lg uppercase tracking-widest">Business cards</span>
+        </div>
+        <div class="card-qa p-8 md:p-10 mb-10 rotate-[0.5deg] max-w-4xl">
+            <p class="text-gray-800 text-lg leading-relaxed">
+                I designed these business cards to highlight my work as a <strong class="text-[#1e40af]">QA engineer and bug hunter</strong>. I used the <span class="bracket">code brackets</span> around the “R” to give it a programming vibe, and stuck with a <strong class="text-[#1e40af]">clean blue color scheme</strong> for a professional look. The <strong class="text-[#1e40af]">QR code leads straight to my portfolio</strong> (Beacons landing page), so it’s super convenient at networking events—people can just scan it to learn more about what I do.
+            </p>
+            <a href="https://beacons.ai/ryleyjohnson" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 mono text-sm mt-4 text-[#1e40af] font-semibold hover:underline">
+                → My Beacons landing page (scan the QR)
+            </a>
+        </div>
+        <div class="mb-8">
+            <p class="mono text-sm text-blue-700 uppercase tracking-wider mb-4">Card face · Screenshot</p>
+            <div class="card-qa p-4 max-w-md rotate-1 overflow-hidden">
+                <img src="assets/images/qa-cards/card-face-screenshot.png" alt="R. Johnson QA business card face" class="w-full h-auto bg-slate-100 min-h-[240px] object-contain">
+            </div>
+        </div>
+        <div>
+            <p class="mono text-sm text-blue-700 uppercase tracking-wider mb-4">In hand · Front & back</p>
+            <div class="card-qa p-3 max-w-2xl -rotate-1 overflow-hidden">
+                <img src="assets/images/qa-cards/card-front-back-photo.png" alt="Business card front and back photo" class="w-full h-auto bg-slate-100 min-h-[220px] object-contain">
+            </div>
+        </div>
+    </section>
+
+    <!-- LinkedIn banner -->
+    <section class="mb-24">
+        <div class="mb-10">
+            <span class="section-tag-qa text-lg uppercase tracking-widest">LinkedIn banner</span>
+        </div>
+        <div class="card-qa p-4 mb-4 -rotate-[0.5deg] max-w-4xl">
+            <p class="text-gray-800 text-base leading-relaxed">
+                I created this long horizontal banner in Gen AI for my LinkedIn profile—same blue, code-bracket vibe so my personal brand stays consistent across print and digital.
+            </p>
+        </div>
+        <div class="card-qa p-2 overflow-hidden rotate-[0.5deg] max-w-4xl">
+            <img src="assets/images/qa-cards/linkedin-banner.png" alt="R. Johnson LinkedIn banner" class="w-full h-auto bg-slate-100 object-contain min-h-[120px]">
+        </div>
+    </section>
+
+    <!-- QA portfolio site -->
+    <section class="mb-48">
+        <div class="mb-10">
+            <span class="section-tag-qa text-lg uppercase tracking-widest">QA portfolio site</span>
+        </div>
+        <div class="card-qa p-8 md:p-10 max-w-4xl rotate-[0.5deg]">
+            <h2 class="inter-black text-xl md:text-2xl text-[#1e40af] mb-4">Designed & vibe-coded</h2>
+            <p class="text-gray-800 text-lg leading-relaxed mb-4">
+                My personal QA portfolio at <strong class="text-[#1e40af]">mrjohn5on.github.io</strong> is fully designed and built by me—no template. I <strong class="text-[#1e40af]">vibe-coded</strong> the whole thing to showcase my path from retired firefighter to QA engineer (TripleTen bootcamp, internships at Supernova MGU and Everykey, plus Testlio and Uber), my skills (Playwright, TypeScript, Postman, API testing, and more), and a full projects section—from E2E ride-booking tests to mobile beta testing and automation work. There’s a clean contact block for recruiters and hiring managers, and the footer even shouts out <em>Life of Logos</em>. One site, one vibe.
+            </p>
+            <a href="https://mrjohn5on.github.io/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-[#1e40af] text-white px-6 py-4 inter-black hover:bg-blue-600 transition-colors border-2 border-blue-700 shadow-[6px_6px_0_rgba(30,64,175,0.4)]">
+                Visit my QA portfolio →
+            </a>
+        </div>
+    </section>
+
+    <footer class="fixed bottom-0 left-0 w-full bg-[#1e40af] border-t-4 border-blue-300 z-[100] p-4 flex flex-wrap justify-center gap-6 md:gap-12">
+        <a href="index.html" class="text-blue-100 inter-black text-lg md:text-xl hover:text-white uppercase italic">Home</a>
+        <a href="about.html" class="text-blue-100 inter-black text-lg md:text-xl hover:text-white uppercase italic">About Me</a>
+        <a href="https://www.redbubble.com/people/SoftwareSticker" target="_blank" rel="noopener noreferrer" class="text-blue-100 inter-black text-lg md:text-xl hover:text-white uppercase italic">Software Stickers</a>
+        <a href="contact.html" class="text-blue-100 inter-black text-lg md:text-xl hover:text-white uppercase italic">Contact Me</a>
+    </footer>
+
+    <script>
+        const cursor = document.getElementById('custom-cursor');
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+        });
+        document.querySelectorAll('a, .card-qa').forEach(el => {
+            el.addEventListener('mouseenter', () => { cursor.style.transform = 'scale(2.5)'; });
+            el.addEventListener('mouseleave', () => { cursor.style.transform = 'scale(1)'; });
+        });
+    </script>
+</body>
+</html>
