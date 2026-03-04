@@ -13,15 +13,18 @@
                 linear-gradient(rgba(59, 130, 246, 0.06) 1px, transparent 1px),
                 linear-gradient(90deg, rgba(59, 130, 246, 0.06) 1px, transparent 1px);
             background-size: 20px 20px;
-            cursor: none;
             overflow-x: hidden;
             font-family: 'Inter', sans-serif;
+        }
+        @media (min-width: 768px) and (pointer: fine) {
+            body { cursor: none; }
         }
         .marker-font { font-family: 'Permanent Marker', cursive; }
         .inter-black { font-family: 'Inter', sans-serif; font-weight: 900; }
         .mono { font-family: 'JetBrains Mono', monospace; }
         .splatter { position: fixed; border-radius: 50%; filter: blur(100px); z-index: -1; pointer-events: none; opacity: 0.25; }
         #custom-cursor {
+            display: none !important;
             width: 24px; height: 24px;
             background: #2563eb;
             border-radius: 50%;
@@ -30,6 +33,9 @@
             z-index: 9999;
             transition: transform 0.15s ease-out;
             box-shadow: 0 0 20px rgba(37, 99, 235, 0.6);
+        }
+        @media (min-width: 768px) and (pointer: fine) {
+            #custom-cursor { display: block !important; }
         }
         .section-tag-qa {
             background: #1e40af;
@@ -140,15 +146,18 @@
     </footer>
 
     <script>
-        const cursor = document.getElementById('custom-cursor');
-        document.addEventListener('mousemove', (e) => {
-            cursor.style.left = e.clientX + 'px';
-            cursor.style.top = e.clientY + 'px';
-        });
-        document.querySelectorAll('a, .card-qa').forEach(el => {
-            el.addEventListener('mouseenter', () => { cursor.style.transform = 'scale(2.5)'; });
-            el.addEventListener('mouseleave', () => { cursor.style.transform = 'scale(1)'; });
-        });
+        (function() {
+            if (!window.matchMedia('(min-width: 768px)').matches || !window.matchMedia('(pointer: fine)').matches) return;
+            const cursor = document.getElementById('custom-cursor');
+            document.addEventListener('mousemove', (e) => {
+                cursor.style.left = e.clientX + 'px';
+                cursor.style.top = e.clientY + 'px';
+            });
+            document.querySelectorAll('a, .card-qa').forEach(el => {
+                el.addEventListener('mouseenter', () => { cursor.style.transform = 'scale(2.5)'; });
+                el.addEventListener('mouseleave', () => { cursor.style.transform = 'scale(1)'; });
+            });
+        })();
     </script>
 </body>
 </html>

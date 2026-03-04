@@ -4,6 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Life of Logos | Ryley Johnson</title>
+    <meta property="og:title" content="Life of Logos | Ryley Johnson">
+    <meta property="og:description" content="Logos • Business Cards • Flyers • Websites — Portfolio by Ryley Johnson">
+    <meta property="og:image" content="assets/images/ogimage.jpg">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Life of Logos | Ryley Johnson">
+    <meta name="twitter:description" content="Logos • Business Cards • Flyers • Websites — Portfolio by Ryley Johnson">
+    <meta name="twitter:image" content="assets/images/ogimage.jpg">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Inter:wght@400;900&display=swap" rel="stylesheet">
     <style>
@@ -12,7 +20,8 @@
             background-image: url("https://www.transparenttextures.com/patterns/concrete-wall.png");
             overflow-x: hidden; font-family: 'Inter', sans-serif;
         }
-        @media (min-width: 768px) {
+        /* Custom cursor and cursor:none only on desktop with mouse (not touch/mobile) */
+        @media (min-width: 768px) and (pointer: fine) {
             body { cursor: none; }
         }
         .marker-font { font-family: 'Permanent Marker', cursive; }
@@ -20,9 +29,9 @@
         .splatter { position: fixed; border-radius: 50%; filter: blur(80px); z-index: -1; opacity: 0.3; pointer-events: none; }
         .project-card { transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); background: white; border: 4px solid black; }
         .project-card:hover { transform: scale(1.05) rotate(0deg) !important; z-index: 20; box-shadow: 0 0 40px rgba(255, 0, 255, 0.7); }
-        #custom-cursor { display: none; width: 24px; height: 24px; background: #ff00ff; border-radius: 50%; position: fixed; pointer-events: none; z-index: 9999; mix-blend-mode: difference; transition: transform 0.15s ease-out; box-shadow: 0 0 15px #ff00ff; }
-        @media (min-width: 768px) {
-            #custom-cursor { display: block; }
+        #custom-cursor { display: none !important; width: 24px; height: 24px; background: #ff00ff; border-radius: 50%; position: fixed; pointer-events: none; z-index: 9999; mix-blend-mode: difference; transition: transform 0.15s ease-out; box-shadow: 0 0 15px #ff00ff; }
+        @media (min-width: 768px) and (pointer: fine) {
+            #custom-cursor { display: block !important; }
         }
         .section-tag { background: black; color: white; padding: 10px 20px; display: inline-block; transform: rotate(-2deg); border: 2px solid white; box-shadow: 4px 4px 0px #ff00ff; font-family: 'Permanent Marker', cursive; }
         .concept-carousel { scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
@@ -32,6 +41,11 @@
         .stickers-carousel { scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
         .stickers-carousel::-webkit-scrollbar { display: none; }
         .sticker-slide { scroll-snap-align: start; flex: 0 0 auto; }
+        .carousel-scroll-hint { display: none; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: #6b7280; margin-bottom: 0.5rem; }
+        @media (pointer: coarse) {
+            .carousel-scroll-hint { display: block; }
+        }
+        .carousel-scroll-hint.carousel-scroll-hint--dismissed { opacity: 0; pointer-events: none; transition: opacity 0.4s ease; }
     </style>
 </head>
 <body class="p-6 md:p-16 pb-40">
@@ -157,7 +171,8 @@
 
     <div class="mb-8"><div class="section-tag text-xl uppercase tracking-widest">Concept Designs</div></div>
     <div class="relative max-w-[1400px] mx-auto mb-32">
-        <div id="concept-carousel" class="concept-carousel flex gap-6 overflow-x-auto pb-4 px-1" style="scroll-behavior: smooth;">
+        <p id="concept-carousel-hint" class="carousel-scroll-hint" aria-hidden="true">← Swipe or use arrow keys to scroll →</p>
+        <div id="concept-carousel" class="concept-carousel flex gap-6 overflow-x-auto pb-4 px-1" style="scroll-behavior: smooth;" tabindex="0" role="region" aria-label="Concept designs carousel. Use left and right arrow keys to scroll.">
             <div class="concept-slide w-[280px] md:w-[320px] shrink-0">
                 <div class="project-card concept-card p-2 rotate-2 h-full"><div class="aspect-square border border-black overflow-hidden"><img src="assets/images/concept-sushi.png" alt="Sushi World concept"></div><p class="marker-font text-sm mt-2">Sushi World</p></div>
             </div>
@@ -227,7 +242,8 @@
     </div>
     <p class="text-xs font-bold text-gray-500 uppercase tracking-widest mb-4">Featured designs · click to view on Redbubble</p>
     <div class="relative max-w-[1400px] mx-auto mb-48">
-        <div id="stickers-carousel" class="stickers-carousel flex gap-6 overflow-x-auto pb-4 px-1" style="scroll-behavior: smooth;">
+        <p id="stickers-carousel-hint" class="carousel-scroll-hint" aria-hidden="true">← Swipe or use arrow keys to scroll →</p>
+        <div id="stickers-carousel" class="stickers-carousel flex gap-6 overflow-x-auto pb-4 px-1" style="scroll-behavior: smooth;" tabindex="0" role="region" aria-label="Software stickers carousel. Use left and right arrow keys to scroll.">
             <div class="sticker-slide w-[200px] md:w-[240px] shrink-0">
                 <a href="https://www.redbubble.com/i/sticker/MAKE-AGILE-GREAT-AGAIN-The-Devs-Have-Spoken-by-SoftwareSticker/171127306.EJUG5" target="_blank" rel="noopener noreferrer" class="block project-card p-2 bg-yellow-300 -rotate-2 hover:z-20"><img src="assets/images/sticker-1.png" class="border border-black w-full aspect-square object-cover" alt="Make Agile Great Again"></a>
                 <p class="marker-font text-xs mt-2 text-center">Make Agile Great Again</p>
@@ -281,7 +297,8 @@
 
     <script>
         (function() {
-            if (!window.matchMedia('(min-width: 768px)').matches) return;
+            var useCursor = window.matchMedia('(min-width: 768px)').matches && window.matchMedia('(pointer: fine)').matches;
+            if (!useCursor) return;
             const cursor = document.getElementById('custom-cursor');
             document.addEventListener('mousemove', (e) => { cursor.style.left = e.clientX + 'px'; cursor.style.top = e.clientY + 'px'; });
             const interactables = document.querySelectorAll('.project-card, a');
@@ -294,31 +311,41 @@
             var carousel = document.getElementById('concept-carousel');
             var prev = document.getElementById('concept-prev');
             var next = document.getElementById('concept-next');
+            var hint = document.getElementById('concept-carousel-hint');
             if (!carousel || !prev || !next) return;
+            function getStep() { var w = carousel.querySelector('.concept-slide'); return w ? w.offsetWidth + 24 : 304; }
             function scrollBy(amount) { carousel.scrollBy({ left: amount, behavior: 'smooth' }); }
-            prev.addEventListener('click', function() {
-                var w = carousel.querySelector('.concept-slide');
-                scrollBy(-(w ? w.offsetWidth + 24 : 304));
+            prev.addEventListener('click', function() { scrollBy(-getStep()); });
+            next.addEventListener('click', function() { scrollBy(getStep()); });
+            carousel.addEventListener('keydown', function(e) {
+                if (e.key === 'ArrowLeft') { scrollBy(-getStep()); e.preventDefault(); }
+                else if (e.key === 'ArrowRight') { scrollBy(getStep()); e.preventDefault(); }
             });
-            next.addEventListener('click', function() {
-                var w = carousel.querySelector('.concept-slide');
-                scrollBy(w ? w.offsetWidth + 24 : 304);
-            });
+            if (hint) {
+                carousel.addEventListener('scroll', function() {
+                    hint.classList.add('carousel-scroll-hint--dismissed');
+                }, { once: true });
+            }
         })();
         (function() {
             var carousel = document.getElementById('stickers-carousel');
             var prev = document.getElementById('stickers-prev');
             var next = document.getElementById('stickers-next');
+            var hint = document.getElementById('stickers-carousel-hint');
             if (!carousel || !prev || !next) return;
+            function getStep() { var w = carousel.querySelector('.sticker-slide'); return w ? w.offsetWidth + 24 : 224; }
             function scrollBy(amount) { carousel.scrollBy({ left: amount, behavior: 'smooth' }); }
-            prev.addEventListener('click', function() {
-                var w = carousel.querySelector('.sticker-slide');
-                scrollBy(-(w ? w.offsetWidth + 24 : 224));
+            prev.addEventListener('click', function() { scrollBy(-getStep()); });
+            next.addEventListener('click', function() { scrollBy(getStep()); });
+            carousel.addEventListener('keydown', function(e) {
+                if (e.key === 'ArrowLeft') { scrollBy(-getStep()); e.preventDefault(); }
+                else if (e.key === 'ArrowRight') { scrollBy(getStep()); e.preventDefault(); }
             });
-            next.addEventListener('click', function() {
-                var w = carousel.querySelector('.sticker-slide');
-                scrollBy(w ? w.offsetWidth + 24 : 224);
-            });
+            if (hint) {
+                carousel.addEventListener('scroll', function() {
+                    hint.classList.add('carousel-scroll-hint--dismissed');
+                }, { once: true });
+            }
         })();
     </script>
 </body>

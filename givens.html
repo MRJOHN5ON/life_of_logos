@@ -7,11 +7,17 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Inter:wght@400;900&display=swap" rel="stylesheet">
     <style>
-        body { background-color: #e5e5e5; background-image: url("https://www.transparenttextures.com/patterns/concrete-wall.png"); cursor: none; overflow-x: hidden; font-family: 'Inter', sans-serif; }
+        body { background-color: #e5e5e5; background-image: url("https://www.transparenttextures.com/patterns/concrete-wall.png"); overflow-x: hidden; font-family: 'Inter', sans-serif; }
+        @media (min-width: 768px) and (pointer: fine) {
+            body { cursor: none; }
+        }
         .marker-font { font-family: 'Permanent Marker', cursive; }
         .inter-black { font-family: 'Inter', sans-serif; font-weight: 900; }
         .splatter { position: fixed; border-radius: 50%; filter: blur(80px); z-index: -1; opacity: 0.25; pointer-events: none; }
-        #custom-cursor { width: 24px; height: 24px; background: #22c55e; border-radius: 50%; position: fixed; pointer-events: none; z-index: 9999; mix-blend-mode: exclusion; transition: transform 0.15s ease-out; }
+        #custom-cursor { display: none !important; width: 24px; height: 24px; background: #22c55e; border-radius: 50%; position: fixed; pointer-events: none; z-index: 9999; mix-blend-mode: exclusion; transition: transform 0.15s ease-out; }
+        @media (min-width: 768px) and (pointer: fine) {
+            #custom-cursor { display: block !important; }
+        }
     </style>
 </head>
 <body class="p-6 md:p-16 pb-40">
@@ -137,8 +143,11 @@
     </footer>
 
     <script>
-        const cursor = document.getElementById('custom-cursor');
-        document.addEventListener('mousemove', (e) => { cursor.style.left = e.clientX + 'px'; cursor.style.top = e.clientY + 'px'; });
+        (function() {
+            if (!window.matchMedia('(min-width: 768px)').matches || !window.matchMedia('(pointer: fine)').matches) return;
+            const cursor = document.getElementById('custom-cursor');
+            document.addEventListener('mousemove', (e) => { cursor.style.left = e.clientX + 'px'; cursor.style.top = e.clientY + 'px'; });
+        })();
     </script>
 </body>
 </html>

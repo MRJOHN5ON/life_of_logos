@@ -10,14 +10,19 @@
         body {
             background-color: #e5e5e5;
             background-image: url("https://www.transparenttextures.com/patterns/concrete-wall.png");
-            cursor: none;
             overflow-x: hidden;
             font-family: 'Inter', sans-serif;
+        }
+        @media (min-width: 768px) and (pointer: fine) {
+            body { cursor: none; }
         }
         .marker-font { font-family: 'Permanent Marker', cursive; }
         .inter-black { font-family: 'Inter', sans-serif; font-weight: 900; }
         .splatter { position: fixed; border-radius: 50%; filter: blur(100px); z-index: -1; opacity: 0.3; pointer-events: none; }
-        #custom-cursor { width: 24px; height: 24px; background: #ff00ff; border-radius: 50%; position: fixed; pointer-events: none; z-index: 9999; mix-blend-mode: exclusion; transition: transform 0.15s ease-out; box-shadow: 0 0 15px #ff00ff; }
+        #custom-cursor { display: none !important; width: 24px; height: 24px; background: #ff00ff; border-radius: 50%; position: fixed; pointer-events: none; z-index: 9999; mix-blend-mode: exclusion; transition: transform 0.15s ease-out; box-shadow: 0 0 15px #ff00ff; }
+        @media (min-width: 768px) and (pointer: fine) {
+            #custom-cursor { display: block !important; }
+        }
         .bio-card { border: 4px solid black; background: white; box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.8); }
         .gallery-card { border: 4px solid black; background: white; box-shadow: 6px 6px 0 #ff00ff; cursor: pointer; }
         .gallery-card:hover { box-shadow: 8px 8px 0 #ff00ff; }
@@ -124,12 +129,15 @@
     </footer>
 
     <script>
-        var cursor = document.getElementById('custom-cursor');
-        document.addEventListener('mousemove', function(e) { cursor.style.left = e.clientX + 'px'; cursor.style.top = e.clientY + 'px'; });
-        document.querySelectorAll('a').forEach(function(el) {
-            el.addEventListener('mouseenter', function() { cursor.style.transform = 'scale(3)'; cursor.style.backgroundColor = '#00ffff'; });
-            el.addEventListener('mouseleave', function() { cursor.style.transform = 'scale(1)'; cursor.style.backgroundColor = '#ff00ff'; });
-        });
+        (function() {
+            if (!window.matchMedia('(min-width: 768px)').matches || !window.matchMedia('(pointer: fine)').matches) return;
+            var cursor = document.getElementById('custom-cursor');
+            document.addEventListener('mousemove', function(e) { cursor.style.left = e.clientX + 'px'; cursor.style.top = e.clientY + 'px'; });
+            document.querySelectorAll('a').forEach(function(el) {
+                el.addEventListener('mouseenter', function() { cursor.style.transform = 'scale(3)'; cursor.style.backgroundColor = '#00ffff'; });
+                el.addEventListener('mouseleave', function() { cursor.style.transform = 'scale(1)'; cursor.style.backgroundColor = '#ff00ff'; });
+            });
+        })();
         (function() {
             var lightbox = document.getElementById('ai-lightbox');
             var lightboxImg = document.getElementById('ai-lightbox-img');

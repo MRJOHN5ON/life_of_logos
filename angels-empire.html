@@ -12,10 +12,12 @@
             background-image:
                 radial-gradient(ellipse 100% 80% at 50% -20%, rgba(190, 24, 93, 0.15), transparent 50%),
                 radial-gradient(ellipse 60% 40% at 80% 60%, rgba(251, 191, 36, 0.08), transparent 40%);
-            cursor: none;
             overflow-x: hidden;
             font-family: 'Inter', sans-serif;
             color: #fce7f3;
+        }
+        @media (min-width: 768px) and (pointer: fine) {
+            body { cursor: none; }
         }
         .marker-font { font-family: 'Permanent Marker', cursive; }
         .inter-black { font-family: 'Inter', sans-serif; font-weight: 900; }
@@ -23,6 +25,7 @@
         .elegant { font-family: 'Cormorant Garamond', serif; }
         .splatter { position: fixed; border-radius: 50%; filter: blur(120px); z-index: -1; pointer-events: none; }
         #custom-cursor {
+            display: none !important;
             width: 24px; height: 24px;
             background: linear-gradient(135deg, #ec4899, #f59e0b);
             border-radius: 50%;
@@ -31,6 +34,9 @@
             z-index: 9999;
             transition: transform 0.15s ease-out;
             box-shadow: 0 0 25px rgba(236, 72, 153, 0.7);
+        }
+        @media (min-width: 768px) and (pointer: fine) {
+            #custom-cursor { display: block !important; }
         }
         .section-tag-ae {
             background: linear-gradient(135deg, #9d174d, #7f1d1d);
@@ -153,15 +159,18 @@
     </footer>
 
     <script>
-        const cursor = document.getElementById('custom-cursor');
-        document.addEventListener('mousemove', (e) => {
-            cursor.style.left = e.clientX + 'px';
-            cursor.style.top = e.clientY + 'px';
-        });
-        document.querySelectorAll('a, .card-ae').forEach(el => {
-            el.addEventListener('mouseenter', () => { cursor.style.transform = 'scale(2.5)'; });
-            el.addEventListener('mouseleave', () => { cursor.style.transform = 'scale(1)'; });
-        });
+        (function() {
+            if (!window.matchMedia('(min-width: 768px)').matches || !window.matchMedia('(pointer: fine)').matches) return;
+            const cursor = document.getElementById('custom-cursor');
+            document.addEventListener('mousemove', (e) => {
+                cursor.style.left = e.clientX + 'px';
+                cursor.style.top = e.clientY + 'px';
+            });
+            document.querySelectorAll('a, .card-ae').forEach(el => {
+                el.addEventListener('mouseenter', () => { cursor.style.transform = 'scale(2.5)'; });
+                el.addEventListener('mouseleave', () => { cursor.style.transform = 'scale(1)'; });
+            });
+        })();
     </script>
 </body>
 </html>

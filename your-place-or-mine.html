@@ -12,9 +12,11 @@
             background-image: 
                 url("https://www.transparenttextures.com/patterns/concrete-wall.png"),
                 radial-gradient(ellipse 80% 50% at 50% -20%, rgba(251, 207, 232, 0.5), transparent);
-            cursor: none;
             overflow-x: hidden;
             font-family: 'Inter', sans-serif;
+        }
+        @media (min-width: 768px) and (pointer: fine) {
+            body { cursor: none; }
         }
         .marker-font { font-family: 'Permanent Marker', cursive; }
         .inter-black { font-family: 'Inter', sans-serif; font-weight: 900; }
@@ -22,11 +24,15 @@
         .elegant { font-family: 'Cormorant Garamond', serif; }
         .splatter { position: fixed; border-radius: 50%; filter: blur(100px); z-index: -1; pointer-events: none; }
         #custom-cursor {
+            display: none !important;
             width: 24px; height: 24px;
             background: linear-gradient(135deg, #e11d48, #b45309);
             border-radius: 50%; position: fixed; pointer-events: none; z-index: 9999;
             mix-blend-mode: difference; transition: transform 0.15s ease-out;
             box-shadow: 0 0 20px rgba(225, 29, 72, 0.6);
+        }
+        @media (min-width: 768px) and (pointer: fine) {
+            #custom-cursor { display: block !important; }
         }
         .section-tag-boutique {
             background: linear-gradient(135deg, #be185d, #9d174d);
@@ -124,15 +130,18 @@
     </footer>
 
     <script>
-        const cursor = document.getElementById('custom-cursor');
-        document.addEventListener('mousemove', (e) => {
-            cursor.style.left = e.clientX + 'px';
-            cursor.style.top = e.clientY + 'px';
-        });
-        document.querySelectorAll('a, .card-girly').forEach(el => {
-            el.addEventListener('mouseenter', () => { cursor.style.transform = 'scale(2.5)'; });
-            el.addEventListener('mouseleave', () => { cursor.style.transform = 'scale(1)'; });
-        });
+        (function() {
+            if (!window.matchMedia('(min-width: 768px)').matches || !window.matchMedia('(pointer: fine)').matches) return;
+            const cursor = document.getElementById('custom-cursor');
+            document.addEventListener('mousemove', (e) => {
+                cursor.style.left = e.clientX + 'px';
+                cursor.style.top = e.clientY + 'px';
+            });
+            document.querySelectorAll('a, .card-girly').forEach(el => {
+                el.addEventListener('mouseenter', () => { cursor.style.transform = 'scale(2.5)'; });
+                el.addEventListener('mouseleave', () => { cursor.style.transform = 'scale(1)'; });
+            });
+        })();
     </script>
 </body>
 </html>
