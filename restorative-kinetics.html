@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restorative Kinetics Fitness | Logo & Squarespace Case Study</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,400;0,600;0,700;1,400&family=Permanent+Marker&family=Urbanist:ital,wght@0,400;0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
+    <style>
+        /* Mirrors Restorative Kinetics live site tokens from Squarespace custom CSS */
+        :root {
+            --rk-bg: #f5f4f0;
+            --rk-ink: #121212;
+            --rk-mustard: #f8c96d;
+            --rk-mustard-soft: rgba(248, 201, 109, 0.42);
+            --rk-blue: #1c77a6;
+            --rk-red: #ba252b;
+            --rk-sage: #8c9b54;
+        }
+        body {
+            background-color: var(--rk-bg);
+            background-image: url("https://www.transparenttextures.com/patterns/concrete-wall.png");
+            overflow-x: hidden;
+            font-family: 'Urbanist', system-ui, sans-serif;
+            color: var(--rk-ink);
+            letter-spacing: -0.02em;
+        }
+        .rk-body { font-family: 'Bitter', Georgia, serif; letter-spacing: 0; line-height: 1.65; }
+        .rk-heading { font-family: 'Urbanist', system-ui, sans-serif; letter-spacing: -0.03em; font-weight: 800; }
+        .marker-font { font-family: 'Permanent Marker', cursive; font-weight: 400; }
+        .inter-black { font-family: 'Urbanist', system-ui, sans-serif; font-weight: 800; }
+        @media (min-width: 768px) and (pointer: fine) {
+            body.rk-page { cursor: none; }
+        }
+        .splatter { position: fixed; border-radius: 50%; filter: blur(88px); z-index: -1; opacity: 0.28; pointer-events: none; }
+        #custom-cursor { display: none !important; width: 22px; height: 22px; background: var(--rk-blue); border-radius: 50%; position: fixed; pointer-events: none; z-index: 9999; mix-blend-mode: multiply; opacity: 0.85; transition: transform 0.15s ease-out; }
+        @media (min-width: 768px) and (pointer: fine) {
+            #custom-cursor { display: block !important; }
+        }
+        .rk-card {
+            border: 4px solid var(--rk-ink);
+            box-shadow: 12px 12px 0 rgba(28, 119, 166, 0.25);
+            background: rgba(255,255,255,0.92);
+        }
+        .rk-shot {
+            border: 3px solid var(--rk-ink);
+            box-shadow: 8px 8px 0 rgba(140, 155, 84, 0.35);
+        }
+    </style>
+</head>
+<body class="rk-page p-6 md:p-16 pb-40">
+
+    <div id="custom-cursor"></div>
+    <div class="splatter bg-[#f8c96d] w-[520px] h-[520px] -top-24 -right-20"></div>
+    <div class="splatter bg-[#1c77a6] w-[420px] h-[420px] bottom-0 left-0"></div>
+
+    <a href="index.html" class="inline-block mb-12 bg-[var(--rk-ink)] text-white px-6 py-2 marker-font rotate-[-2deg] hover:bg-[var(--rk-red)] transition-colors shadow-[5px_5px_0px_var(--rk-mustard)]">← BACK TO GALLERY</a>
+
+    <header class="mb-16 md:mb-20">
+        <h1 class="rk-heading text-[7vw] md:text-[4.6vw] leading-[0.95] uppercase italic text-[var(--rk-ink)]">
+            Restorative Kinetics <span class="text-[var(--rk-blue)] not-italic tracking-tight block mt-1 md:mt-2">Fitness</span>
+        </h1>
+        <p class="rk-body mt-6 text-base md:text-lg text-[var(--rk-blue)] font-semibold max-w-2xl">
+            Gallatin Valley, Montana · Strength coaching with a rehabilitation-first approach — Squarespace underneath, custom code and integrations on top.
+        </p>
+    </header>
+
+    <section class="mb-24">
+        <div class="rk-card p-8 md:p-10 rotate-[0.5deg]">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+                <div>
+                    <h2 class="rk-heading text-[var(--rk-red)] text-3xl md:text-4xl mb-6 uppercase tracking-tight underline decoration-[var(--rk-mustard)] decoration-4 underline-offset-8">Logo & full site</h2>
+                    <p class="rk-body text-[var(--rk-ink)] text-lg mb-5">
+                        Roughly two months end-to-end on <strong>Squarespace 7.1</strong>. The platform is the foundation; the interesting part is everything I layered on with <strong>custom HTML, CSS, and JavaScript</strong>: <strong>glass-style panels</strong>, kinetic section layouts, motion where it earns attention, and interactive blocks— including <strong>animated, flip-style cards</strong> and a <strong>split section where the photo swaps</strong> as you click through different pieces of content—so the page feels alive instead of like a static brochure.
+                    </p>
+                    <p class="rk-body text-[var(--rk-ink)]/90 text-base mb-6">
+                        I also guided the client through the boring-but-critical wiring: <strong>Calendly</strong> hooked to real “book a consultation” CTAs, and <strong>Google Maps</strong> embedded properly via the Maps workflow so location and scheduling feel legitimate and frictionless. Header/footer <strong>SEO injection</strong> (meta + structured data) sits alongside that so Google gets a clear read of the business—not just a pretty front page.
+                    </p>
+                    <p class="rk-body text-[var(--rk-ink)]/90 text-base mb-8">
+                        The four calculators aren’t filler—they’re built to catch <strong>people searching for tools</strong> (“BMI calculator,” macros, etc.) and land them here instead of a random third-party widget. Each one can <strong>save results in the browser</strong>, which gives visitors a practical reason to come back and keeps the brand in rotation without turning the whole site into a sales pitch.
+                    </p>
+                    <ul class="text-[var(--rk-ink)] font-semibold space-y-2 mb-8 uppercase text-xs tracking-[0.18em] font-[Urbanist,sans-serif]">
+                        <li class="text-[var(--rk-sage)]">⚡ Custom code blocks · glass UI · motion · flip cards · interactive photo splits</li>
+                        <li class="text-[var(--rk-blue)]">⚡ Client handoff: Calendly + Google Maps embedded where it matters</li>
+                        <li class="text-[var(--rk-red)]">⚡ Calculator suite for search traffic + saved inputs for repeat visits</li>
+                    </ul>
+                    <a href="https://www.restorativekineticsfitness.com/" target="_blank" rel="noopener noreferrer" class="inline-block bg-[var(--rk-mustard)] text-[var(--rk-ink)] px-8 py-4 inter-black text-lg hover:bg-white transition-all border-4 border-[var(--rk-ink)] shadow-[6px_6px_0px_var(--rk-blue)] uppercase tracking-wide">Visit live site →</a>
+                </div>
+                <div class="rk-shot rotate-1 overflow-hidden bg-[#e8e6e1]">
+                    <img src="assets/images/restorative-kinetics/screens/home.png" alt="Homepage screenshot" class="w-full h-auto block">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="mb-20">
+        <div class="mb-10">
+            <span class="bg-[var(--rk-ink)] text-white px-5 py-2 marker-font text-xl md:text-2xl rotate-[-1deg] inline-block uppercase shadow-[5px_5px_0_var(--rk-mustard)]">Desktop snapshots</span>
+        </div>
+        <p class="rk-body text-[var(--rk-ink)] max-w-3xl mb-10 font-medium">
+            Four desktop grabs below replace the auto-generated grid shots—exported once the page had fully settled so layouts read true. <strong>Mobile</strong> can get its own strip later; no need to match desktop scroll positions side by side.
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+            <figure class="space-y-3">
+                <div class="rk-shot overflow-hidden bg-[#e8e6e1]"><img src="assets/images/restorative-kinetics/screens/desktop-about.png" alt="About page — desktop" class="w-full h-auto block"></div>
+                <figcaption class="rk-body text-sm font-semibold text-[var(--rk-blue)]"><strong class="text-[var(--rk-ink)]">About</strong> — stacked panels, portrait column, HELLO / Meet Allie strip.</figcaption>
+            </figure>
+            <figure class="space-y-3">
+                <div class="rk-shot overflow-hidden bg-[#e8e6e1]"><img src="assets/images/restorative-kinetics/screens/desktop-resources.png" alt="Resources — desktop" class="w-full h-auto block"></div>
+                <figcaption class="rk-body text-sm font-semibold text-[var(--rk-blue)]"><strong class="text-[var(--rk-ink)]">Resources</strong> — Trusted Links card (e.g. NSCA) on the mustard field.</figcaption>
+            </figure>
+            <figure class="space-y-3">
+                <div class="rk-shot overflow-hidden bg-[#e8e6e1]"><img src="assets/images/restorative-kinetics/screens/desktop-contact.png" alt="Contact — desktop" class="w-full h-auto block"></div>
+                <figcaption class="rk-body text-sm font-semibold text-[var(--rk-blue)]"><strong class="text-[var(--rk-ink)]">Contact</strong> — dual panels, CTAs, embedded Google Map.</figcaption>
+            </figure>
+            <figure class="space-y-3">
+                <div class="rk-shot overflow-hidden bg-[#e8e6e1]"><img src="assets/images/restorative-kinetics/screens/desktop-macros.png" alt="Macros calculator — desktop" class="w-full h-auto block"></div>
+                <figcaption class="rk-body text-sm font-semibold text-[var(--rk-blue)]"><strong class="text-[var(--rk-ink)]">Macros calculator</strong> — glass panel over photography; macro explainer grid.</figcaption>
+            </figure>
+        </div>
+    </section>
+
+    <section class="mt-24 mb-44 w-full">
+        <div class="mb-12">
+            <span class="bg-[var(--rk-ink)] text-white px-6 py-3 marker-font text-2xl rotate-[1deg] inline-block uppercase shadow-[5px_5px_0_var(--rk-blue)]">
+                Brand identity
+            </span>
+        </div>
+        <div class="flex flex-col xl:flex-row items-start justify-between gap-12">
+            <div class="w-full xl:w-2/5 flex justify-center">
+                <div class="rk-card border-[var(--rk-sage)] p-6 rotate-[-1deg] max-w-md w-full">
+                    <img src="assets/images/restorative-kinetics/logo-portfolio.png" alt="Restorative Kinetics logo mark" class="w-full h-auto">
+                    <p class="rk-body text-center mt-4 text-sm text-[var(--rk-blue)] uppercase tracking-wide font-bold">Master logo · production-ready</p>
+                </div>
+            </div>
+            <div class="w-full xl:flex-1">
+                <div class="rk-card p-8 rotate-[0.5deg] border-[var(--rk-blue)]">
+                    <p class="rk-body text-lg text-[var(--rk-ink)] italic">
+                        Logo sits in the same visual language as the coded layouts—so marketing pages and calculator pages read as one business, not a template with a mark dropped on top.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="mb-16">
+        <div class="mb-10">
+            <span class="bg-[var(--rk-ink)] text-white px-4 py-2 marker-font text-xl md:text-2xl rotate-[-1deg] inline-block uppercase shadow-[5px_5px_0_var(--rk-sage)]">
+                Interactive tools · retention & SEO
+            </span>
+        </div>
+        <p class="rk-body text-[var(--rk-ink)] font-semibold max-w-3xl mb-10 leading-relaxed">
+            Four client-side calculators—BMI, one-rep max, macros, and VO<sub>2</sub>—each with its <strong>own URL</strong> and <strong>local persistence</strong> so people can save progress between visits. They’re reachable from the main nav under Tools and indexed like any other page—so someone hunting for e.g. a BMI calculator can land here instead of a generic widget site.
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+            <div class="rk-card p-0 -rotate-1 overflow-hidden border-[var(--rk-red)]">
+                <div class="p-6 border-b-4 border-[var(--rk-ink)] bg-[var(--rk-mustard-soft)]">
+                    <h3 class="rk-heading text-[var(--rk-red)] text-2xl uppercase tracking-tight">BMI calculator</h3>
+                </div>
+                <div class="p-8 bg-white/90">
+                    <p class="rk-body text-sm text-[var(--rk-ink)] mb-6">Body-composition math with saved fields.</p>
+                    <a href="https://www.restorativekineticsfitness.com/bmical" target="_blank" rel="noopener noreferrer" class="inline-block bg-[var(--rk-ink)] text-white px-6 py-3 inter-black hover:bg-[var(--rk-blue)] border-4 border-[var(--rk-ink)] transition-all uppercase text-sm tracking-wide">View live →</a>
+                </div>
+            </div>
+            <div class="rk-card p-0 rotate-1 overflow-hidden border-[var(--rk-blue)]">
+                <div class="p-6 border-b-4 border-[var(--rk-ink)] bg-[var(--rk-mustard-soft)]">
+                    <h3 class="rk-heading text-[var(--rk-blue)] text-2xl uppercase tracking-tight">1RM calculator</h3>
+                </div>
+                <div class="p-8 bg-white/90">
+                    <p class="rk-body text-sm text-[var(--rk-ink)] mb-6">Strength planning tied to programming messaging.</p>
+                    <a href="https://www.restorativekineticsfitness.com/1rmcalculator" target="_blank" rel="noopener noreferrer" class="inline-block bg-[var(--rk-ink)] text-white px-6 py-3 inter-black hover:bg-[var(--rk-blue)] border-4 border-[var(--rk-ink)] transition-all uppercase text-sm tracking-wide">View live →</a>
+                </div>
+            </div>
+            <div class="rk-card p-0 rotate-1 overflow-hidden border-[var(--rk-sage)]">
+                <div class="p-6 border-b-4 border-[var(--rk-ink)] bg-[var(--rk-mustard-soft)]">
+                    <h3 class="rk-heading text-[var(--rk-sage)] text-2xl uppercase tracking-tight">Macros calculator</h3>
+                </div>
+                <div class="p-8 bg-white/90">
+                    <p class="rk-body text-sm text-[var(--rk-ink)] mb-6">Nutrition targets that stick across sessions.</p>
+                    <a href="https://www.restorativekineticsfitness.com/macros" target="_blank" rel="noopener noreferrer" class="inline-block bg-[var(--rk-ink)] text-white px-6 py-3 inter-black hover:bg-[var(--rk-blue)] border-4 border-[var(--rk-ink)] transition-all uppercase text-sm tracking-wide">View live →</a>
+                </div>
+            </div>
+            <div class="rk-card p-0 -rotate-1 overflow-hidden border-[var(--rk-red)]">
+                <div class="p-6 border-b-4 border-[var(--rk-ink)] bg-[var(--rk-mustard-soft)]">
+                    <h3 class="rk-heading text-[var(--rk-blue)] text-2xl uppercase tracking-tight">VO<sub>2</sub> max analysis</h3>
+                </div>
+                <div class="p-8 bg-white/90">
+                    <p class="rk-body text-sm text-[var(--rk-ink)] mb-6">Cardio benchmarking page—same design language.</p>
+                    <a href="https://www.restorativekineticsfitness.com/vo2-max-analysis" target="_blank" rel="noopener noreferrer" class="inline-block bg-[var(--rk-ink)] text-white px-6 py-3 inter-black hover:bg-[var(--rk-blue)] border-4 border-[var(--rk-ink)] transition-all uppercase text-sm tracking-wide">View live →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="mb-48">
+        <div class="mb-8">
+            <span class="bg-[var(--rk-ink)] text-white px-4 py-2 marker-font text-lg rotate-[1deg] inline-block uppercase shadow-[5px_5px_0_var(--rk-red)]">
+                Pages on the live site
+            </span>
+        </div>
+        <p class="rk-body text-[var(--rk-ink)] mb-8 max-w-3xl">
+            Eleven routes below—core pages plus each calculator as its own URL. The whole build is tuned for <strong>mobile</strong> as well as desktop (nav, layouts, tools).
+        </p>
+        <ol class="list-decimal list-inside space-y-3 font-[Urbanist,sans-serif] text-sm md:text-base font-semibold text-[var(--rk-ink)] max-w-4xl rk-body">
+            <li class="pl-1"><a href="https://www.restorativekineticsfitness.com/" class="text-[var(--rk-blue)] underline hover:text-[var(--rk-red)] font-bold" target="_blank" rel="noopener noreferrer">Home</a></li>
+            <li class="pl-1"><a href="https://www.restorativekineticsfitness.com/about" class="text-[var(--rk-blue)] underline hover:text-[var(--rk-red)] font-bold" target="_blank" rel="noopener noreferrer">About</a></li>
+            <li class="pl-1"><a href="https://www.restorativekineticsfitness.com/overview" class="text-[var(--rk-blue)] underline hover:text-[var(--rk-red)] font-bold" target="_blank" rel="noopener noreferrer">Methodology</a></li>
+            <li class="pl-1"><a href="https://www.restorativekineticsfitness.com/packages" class="text-[var(--rk-blue)] underline hover:text-[var(--rk-red)] font-bold" target="_blank" rel="noopener noreferrer">Services &amp; rates</a></li>
+            <li class="pl-1"><a href="https://www.restorativekineticsfitness.com/resources" class="text-[var(--rk-blue)] underline hover:text-[var(--rk-red)] font-bold" target="_blank" rel="noopener noreferrer">Resources</a></li>
+            <li class="pl-1"><a href="https://www.restorativekineticsfitness.com/bmical" class="text-[var(--rk-blue)] underline hover:text-[var(--rk-red)] font-bold" target="_blank" rel="noopener noreferrer">BMI calculator</a></li>
+            <li class="pl-1"><a href="https://www.restorativekineticsfitness.com/1rmcalculator" class="text-[var(--rk-blue)] underline hover:text-[var(--rk-red)] font-bold" target="_blank" rel="noopener noreferrer">1RM calculator</a></li>
+            <li class="pl-1"><a href="https://www.restorativekineticsfitness.com/macros" class="text-[var(--rk-blue)] underline hover:text-[var(--rk-red)] font-bold" target="_blank" rel="noopener noreferrer">Macros calculator</a></li>
+            <li class="pl-1"><a href="https://www.restorativekineticsfitness.com/vo2-max-analysis" class="text-[var(--rk-blue)] underline hover:text-[var(--rk-red)] font-bold" target="_blank" rel="noopener noreferrer">VO2 max calculator</a></li>
+            <li class="pl-1"><a href="https://www.restorativekineticsfitness.com/contact" class="text-[var(--rk-blue)] underline hover:text-[var(--rk-red)] font-bold" target="_blank" rel="noopener noreferrer">Contact</a> <span class="font-normal text-[var(--rk-ink)]">(scheduling · Maps)</span></li>
+            <li class="pl-1"><a href="https://www.restorativekineticsfitness.com/faqs-1" class="text-[var(--rk-blue)] underline hover:text-[var(--rk-red)] font-bold" target="_blank" rel="noopener noreferrer">FAQ</a></li>
+        </ol>
+    </section>
+
+    <footer class="fixed bottom-0 left-0 w-full bg-[var(--rk-blue)] border-t-4 border-[var(--rk-ink)] z-[100] p-4 flex flex-wrap justify-center gap-6 md:gap-12">
+        <a href="index.html" class="text-white inter-black text-lg md:text-xl hover:text-[var(--rk-mustard)] uppercase italic tracking-wide">Home</a>
+        <a href="about.html" class="text-white inter-black text-lg md:text-xl hover:text-[var(--rk-mustard)] uppercase italic tracking-wide">About Me</a>
+        <a href="https://www.redbubble.com/people/SoftwareSticker" target="_blank" rel="noopener noreferrer" class="text-white inter-black text-lg md:text-xl hover:text-[var(--rk-mustard)] uppercase italic tracking-wide">Software Stickers</a>
+        <a href="contact.html" class="text-white inter-black text-lg md:text-xl hover:text-[var(--rk-mustard)] uppercase italic tracking-wide">Contact Me</a>
+    </footer>
+
+    <script>
+        (function() {
+            if (!window.matchMedia('(min-width: 768px)').matches || !window.matchMedia('(pointer: fine)').matches) return;
+            const cursor = document.getElementById('custom-cursor');
+            document.addEventListener('mousemove', (e) => { cursor.style.left = e.clientX + 'px'; cursor.style.top = e.clientY + 'px'; });
+        })();
+    </script>
+</body>
+</html>

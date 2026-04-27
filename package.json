@@ -1,0 +1,25 @@
+{
+  "name": "life_of_logos",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "rk-screenshots": "node scripts/rk-screenshots.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MRJOHN5ON/life_of_logos.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/MRJOHN5ON/life_of_logos/issues"
+  },
+  "homepage": "https://github.com/MRJOHN5ON/life_of_logos#readme",
+  "devDependencies": {
+    "playwright": "^1.49.1"
+  }
+}
