@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wildland Imports | Website Revamp Case Study</title>
+    <meta name="description" content="Before & after: Wildland Imports website revamp — Weebly to a modern, story-driven coffee brand site.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Inter:wght@400;600;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/revamp-case-study.css">
+    <style>
+        :root {
+            --wl-forest: #1a3d2e;
+            --wl-moss: #2d5a47;
+            --wl-cream: #f4f0e6;
+            --wl-gold: #c9a227;
+        }
+        body {
+            background-color: #e5e5e5;
+            background-image: url("https://www.transparenttextures.com/patterns/concrete-wall.png");
+            overflow-x: hidden;
+            font-family: 'Inter', sans-serif;
+        }
+        @media (min-width: 768px) and (pointer: fine) {
+            body { cursor: none; }
+        }
+        .marker-font { font-family: 'Permanent Marker', cursive; }
+        .inter-black { font-family: 'Inter', sans-serif; font-weight: 900; }
+        .splatter { position: fixed; border-radius: 50%; filter: blur(80px); z-index: -1; opacity: 0.28; pointer-events: none; }
+        #custom-cursor { display: none !important; width: 24px; height: 24px; background: var(--wl-gold); border-radius: 50%; position: fixed; pointer-events: none; z-index: 9999; mix-blend-mode: difference; transition: transform 0.15s ease-out; }
+        @media (min-width: 768px) and (pointer: fine) {
+            #custom-cursor { display: block !important; }
+        }
+        .wl-card {
+            border: 4px solid black;
+            background: var(--wl-cream);
+            box-shadow: 12px 12px 0 var(--wl-forest);
+        }
+        .compare-shell {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 16 / 10;
+            overflow: hidden;
+            border: 4px solid black;
+            background: #111;
+            user-select: none;
+            touch-action: none;
+        }
+        .compare-shell img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top center;
+            pointer-events: none;
+        }
+        .compare-after {
+            clip-path: inset(0 0 0 50%);
+        }
+        .compare-handle {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            width: 4px;
+            background: #fff;
+            transform: translateX(-50%);
+            z-index: 20;
+            box-shadow: 0 0 12px rgba(0,0,0,0.5);
+        }
+        .compare-handle::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: var(--wl-gold);
+            border: 3px solid black;
+            box-shadow: 4px 4px 0 black;
+        }
+        .compare-range {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            cursor: ew-resize;
+            z-index: 30;
+            margin: 0;
+        }
+        .compare-label {
+            position: absolute;
+            top: 12px;
+            z-index: 15;
+            font-size: 0.65rem;
+            font-weight: 800;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            padding: 6px 12px;
+            border: 2px solid black;
+        }
+        .compare-label--before { left: 12px; background: #fff; color: #111; }
+        .compare-label--after { right: 12px; background: var(--wl-forest); color: #fff; }
+        .compare-label { transition: opacity 0.2s ease, visibility 0.2s ease; }
+        @media (prefers-reduced-motion: reduce) {
+            .compare-handle { transition: none; }
+        }
+    </style>
+</head>
+<body class="p-6 md:p-16 pb-40">
+    <div id="custom-cursor"></div>
+    <div class="splatter bg-[#2d5a47] w-[500px] h-[500px] -top-20 -left-20"></div>
+    <div class="splatter bg-[#c9a227] w-[400px] h-[400px] top-1/2 right-0"></div>
+
+    <a href="index.html#platform-escapes" class="inline-block mb-12 bg-black text-white px-6 py-2 marker-font rotate-[-2deg] hover:bg-[var(--wl-moss)] transition-colors shadow-[4px_4px_0px_var(--wl-gold)] cursor-pointer">← BACK TO GALLERY</a>
+
+    <header class="mb-12 md:mb-16">
+        <div class="flex flex-wrap items-center gap-3 mb-4">
+            <span class="bg-[var(--wl-forest)] text-white px-4 py-1 text-xs font-bold uppercase tracking-widest border-2 border-black">Work in progress</span>
+            <span class="bg-black text-white px-4 py-1 text-xs font-bold uppercase tracking-widest border-2 border-white">Weebly → custom</span>
+        </div>
+        <h1 class="inter-black text-[9vw] md:text-[5.5vw] leading-[0.9] uppercase italic text-black">
+            Wildland <span class="text-[var(--wl-moss)] marker-font lowercase block -mt-2 rotate-[-2deg]">Imports</span>
+        </h1>
+        <p class="mt-6 text-lg md:text-xl text-gray-800 max-w-3xl font-medium leading-relaxed">
+            Ethically sourced coffee from Chiapas — the client’s legacy Weebly site needed a full rethink: clearer story, modern typography, and a shop experience that feels as intentional as the product.
+        </p>
+    </header>
+
+    <section class="mb-20">
+        <div class="wl-card p-6 md:p-10 rotate-[0.5deg]">
+            <h2 class="inter-black text-2xl md:text-3xl uppercase mb-2 text-[var(--wl-forest)]">Before & after</h2>
+            <p class="text-gray-700 mb-6 max-w-2xl text-sm md:text-base">
+                Drag the handle to compare the <strong>live legacy site</strong> with my <strong>in-progress rebuild</strong>. Same brand — completely different first impression.
+            </p>
+
+            <div class="compare-shell mb-6" id="compare-shell" role="img" aria-label="Before and after comparison of Wildland Imports website">
+                <img src="assets/images/wildland/wildland-before.png" alt="Wildland Imports website before revamp — legacy Weebly layout" width="1280" height="800" decoding="async">
+                <img src="assets/images/wildland/wildland-after.png" alt="Wildland Imports website after revamp — work in progress" class="compare-after" id="compare-after" width="1280" height="800" decoding="async">
+                <div class="compare-handle" id="compare-handle" aria-hidden="true"></div>
+                <span class="compare-label compare-label--before">Before · Weebly</span>
+                <span class="compare-label compare-label--after">After · WIP</span>
+                <input type="range" min="0" max="100" value="50" class="compare-range" id="compare-range" aria-label="Drag to compare before and after website designs" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">
+            </div>
+
+            <div class="case-study-links">
+                <a href="https://www.wildlandimports.com/#/" target="_blank" rel="noopener noreferrer" class="case-study-link group bg-white border-4 border-black px-4 py-4 sm:px-5 hover:bg-gray-100 transition-colors cursor-pointer shadow-[6px_6px_0_#111]">
+                    <div>
+                        <p class="text-[10px] font-bold uppercase tracking-widest text-gray-500">Live legacy</p>
+                        <p class="inter-black case-study-url uppercase">wildlandimports.com</p>
+                    </div>
+                    <span class="case-study-arrow text-xl sm:text-2xl font-black group-hover:translate-x-1 transition-transform" aria-hidden="true">→</span>
+                </a>
+                <a href="https://mrjohn5on.github.io/wildland_imports/" target="_blank" rel="noopener noreferrer" class="case-study-link group bg-[var(--wl-forest)] text-white border-4 border-black px-4 py-4 sm:px-5 hover:bg-[var(--wl-moss)] transition-colors cursor-pointer shadow-[6px_6px_0_var(--wl-gold)]">
+                    <div>
+                        <p class="text-[10px] font-bold uppercase tracking-widest text-emerald-200/80">Work in progress</p>
+                        <p class="inter-black case-study-url uppercase">Preview rebuild</p>
+                    </div>
+                    <span class="case-study-arrow text-xl sm:text-2xl font-black group-hover:translate-x-1 transition-transform" aria-hidden="true">→</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="mb-20 border-4 border-black p-8 md:p-10 -rotate-1" style="background: linear-gradient(135deg, var(--wl-forest) 0%, #0f1410 100%); color: #fff; box-shadow: 14px 14px 0 var(--wl-gold);">
+        <h2 class="inter-black text-3xl md:text-4xl uppercase mb-4 text-[var(--wl-gold)]">Platform escape</h2>
+        <p class="text-lg text-white/90 max-w-3xl mb-6 leading-relaxed">
+            Wildland was on <strong>Weebly</strong> — annual fees for a template, limited control, and a shop experience that didn’t match the brand. The rebuild is about <strong>owning the site</strong>: no more renewing Weebly just to stay online, plus a faster, Stripe-ready storefront when they’re ready to launch.
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm font-semibold">
+            <div class="border-2 border-white/30 rounded-lg p-5 bg-black/25">
+                <p class="text-[var(--wl-gold)] uppercase tracking-widest text-xs mb-2">Before</p>
+                <p>Weebly subscription · generic e-commerce blocks · weak story hierarchy</p>
+            </div>
+            <div class="border-2 border-white/30 rounded-lg p-5 bg-black/25">
+                <p class="text-[var(--wl-gold)] uppercase tracking-widest text-xs mb-2">After</p>
+                <p>Custom build · video hero · owned hosting · modern checkout path</p>
+            </div>
+            <div class="border-2 border-[var(--wl-gold)] rounded-lg p-5 bg-[var(--wl-cream)] text-black">
+                <p class="uppercase tracking-widest text-xs mb-2 text-[var(--wl-forest)]">Client impact</p>
+                <p>Redirect platform spend into a site asset — one-time build vs. yearly Weebly forever.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="mb-20">
+        <div class="case-card p-6 md:p-8 rotate-[0.5deg]" style="--card-bg: var(--wl-cream); --shadow: var(--wl-forest);">
+            <h2 class="inter-black text-2xl md:text-3xl uppercase mb-2 text-[var(--wl-forest)]">What 3 years on a builder costs</h2>
+            <p class="text-gray-700 mb-4 text-sm md:text-base max-w-3xl">
+                Roughly what you keep paying just to stay on someone else’s platform — public list prices (2025–2026). Wildland was on <strong>Weebly</strong> (highlighted).
+            </p>
+            <div class="overflow-x-auto -mx-2 px-2 sm:mx-0 sm:px-0">
+                <table class="savings-table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Platform</th>
+                            <th scope="col">Typical plan (approx.)</th>
+                            <th scope="col">~3 years of subscriptions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="savings-highlight">
+                            <th scope="row">Weebly <span class="font-normal normal-case tracking-normal">· this client</span></th>
+                            <td>~$10–$26/mo</td>
+                            <td>~$360–$940+</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Wix</th>
+                            <td>~$17–$36/mo</td>
+                            <td>~$610–$1,300+</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Squarespace</th>
+                            <td>~$16–$27/mo</td>
+                            <td>~$575–$975+</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">WordPress.com</th>
+                            <td>~$9–$25/mo</td>
+                            <td>~$325–$900+</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="savings-disclaimer">
+                Figures are ballpark only — annual billing, ecommerce tiers, and add-ons can push totals higher. This is what the platform keeps billing while you rent their editor, year after year.
+            </p>
+            <div class="savings-owned-intro">
+                <div class="savings-owned-card">
+                    <h3>Pay once · own forever</h3>
+                    <p>You pay me <strong>once</strong> for the website build. You <strong>own the code</strong> after that — not another year of Weebly just to stay online. Ongoing cost is usually just your <strong>domain</strong> (~$20/year) and low-cost hosting.</p>
+                </div>
+                <div class="savings-owned-card">
+                    <h3>Your site · your data</h3>
+                    <p>If Weebly, Squarespace, or Wix goes down, changes terms, or you lose account access, you’re at their mercy. With a custom site, <strong>you own the files and your content</strong> — forever, outside their editor.</p>
+                </div>
+                <div class="savings-owned-card">
+                    <h3>Take it anywhere</h3>
+                    <p>Weebly-only designers are a niche hire. Web developers who code are easy to find. I hand you real HTML, CSS, and JS — <strong>any dev can maintain it</strong>, not a drag-and-drop prison.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="mb-20 grid grid-cols-1 lg:grid-cols-2 gap-10">
+        <div class="border-4 border-black bg-white p-8 shadow-[10px_10px_0_#111] -rotate-1">
+            <h3 class="marker-font text-2xl text-red-800 mb-4">What wasn’t working</h3>
+            <ul class="space-y-3 text-gray-800 text-sm md:text-base font-medium">
+                <li class="flex gap-2"><span class="text-red-600 font-black shrink-0">×</span> Dated Weebly template — cluttered sale blocks, weak hierarchy</li>
+                <li class="flex gap-2"><span class="text-red-600 font-black shrink-0">×</span> Brand story buried under generic e-commerce chrome</li>
+                <li class="flex gap-2"><span class="text-red-600 font-black shrink-0">×</span> No clear path from “who we are” to “shop the roasts”</li>
+                <li class="flex gap-2"><span class="text-red-600 font-black shrink-0">×</span> Mobile experience felt like an afterthought</li>
+                <li class="flex gap-2"><span class="text-red-600 font-black shrink-0">×</span> Annual Weebly fees without owning the underlying experience</li>
+            </ul>
+        </div>
+        <div class="border-4 border-black bg-[var(--wl-cream)] p-8 shadow-[10px_10px_0_var(--wl-forest)] rotate-1">
+            <h3 class="marker-font text-2xl text-[var(--wl-forest)] mb-4">What the rebuild delivers</h3>
+            <ul class="space-y-3 text-gray-800 text-sm md:text-base font-medium">
+                <li class="flex gap-2"><span class="text-[var(--wl-moss)] font-black shrink-0">✓</span> Hero-led narrative: wild places, Volcán Tacaná, ethical sourcing</li>
+                <li class="flex gap-2"><span class="text-[var(--wl-moss)] font-black shrink-0">✓</span> Roast comparison guide — helps visitors choose without guesswork</li>
+                <li class="flex gap-2"><span class="text-[var(--wl-moss)] font-black shrink-0">✓</span> Founder story section with real photography and trust cues</li>
+                <li class="flex gap-2"><span class="text-[var(--wl-moss)] font-black shrink-0">✓</span> Stripe-ready shop flow · responsive · built for launch</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="mb-24">
+        <span class="bg-black text-white px-4 py-2 marker-font text-xl inline-block uppercase tracking-widest shadow-[4px_4px_0_var(--wl-gold)] mb-8">Scope</span>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="border-4 border-black p-6 bg-white">
+                <p class="text-xs font-bold uppercase tracking-widest text-gray-500 mb-2">Design</p>
+                <p class="inter-black text-xl uppercase">UX & visual system</p>
+                <p class="mt-2 text-sm text-gray-700">Typography, color, layout, photography direction, component library</p>
+            </div>
+            <div class="border-4 border-black p-6 bg-white">
+                <p class="text-xs font-bold uppercase tracking-widest text-gray-500 mb-2">Build</p>
+                <p class="inter-black text-xl uppercase">Custom front end</p>
+                <p class="mt-2 text-sm text-gray-700">Semantic HTML, performance-minded CSS, accessible interactions</p>
+            </div>
+            <div class="border-4 border-black p-6 bg-[var(--wl-gold)]">
+                <p class="text-xs font-bold uppercase tracking-widest text-black/70 mb-2">Commerce</p>
+                <p class="inter-black text-xl uppercase">Stripe checkout</p>
+                <p class="mt-2 text-sm text-gray-900">Product cards, roast detail, buy-now flow wired for go-live</p>
+            </div>
+        </div>
+        <p class="mt-8 text-center text-sm font-bold text-gray-600 uppercase tracking-widest">
+            Logo for this client was pre-existing · this engagement is <span class="text-[var(--wl-forest)]">website-first</span>
+        </p>
+    </section>
+
+    <section class="text-center mb-32">
+        <a href="contact.html" class="inline-block bg-fuchsia-600 text-white px-10 py-4 inter-black text-xl uppercase border-4 border-black shadow-[8px_8px_0_#111] hover:bg-black transition-colors cursor-pointer">Need off Weebly or Wix? Let’s talk →</a>
+    </section>
+
+    <footer class="fixed bottom-0 left-0 w-full bg-[var(--wl-forest)] border-t-8 border-black z-[100] p-4 flex flex-wrap justify-center gap-6 md:gap-12">
+        <a href="index.html" class="text-white inter-black text-lg md:text-xl hover:text-[var(--wl-gold)] uppercase italic cursor-pointer">Home</a>
+        <a href="about.html" class="text-white inter-black text-lg md:text-xl hover:text-[var(--wl-gold)] uppercase italic cursor-pointer">About Me</a>
+        <a href="contact.html" class="text-white inter-black text-lg md:text-xl hover:text-[var(--wl-gold)] uppercase italic cursor-pointer">Contact Me</a>
+    </footer>
+
+    <script src="js/revamp-compare.js"></script>
+    <script>
+        (function() {
+            if (!window.matchMedia('(min-width: 768px)').matches || !window.matchMedia('(pointer: fine)').matches) return;
+            var cursor = document.getElementById('custom-cursor');
+            document.addEventListener('mousemove', function(e) {
+                cursor.style.left = e.clientX + 'px';
+                cursor.style.top = e.clientY + 'px';
+            });
+            document.querySelectorAll('a, .compare-range').forEach(function(el) {
+                el.addEventListener('mouseenter', function() { cursor.style.transform = 'scale(2)'; });
+                el.addEventListener('mouseleave', function() { cursor.style.transform = 'scale(1)'; });
+            });
+        })();
+    </script>
+</body>
+</html>

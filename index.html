@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Life of Logos | Ryley Johnson</title>
     <meta property="og:title" content="Life of Logos | Ryley Johnson">
-    <meta property="og:description" content="Logos • Business Cards • Flyers • Websites — Portfolio by Ryley Johnson">
+    <meta property="og:description" content="Logos & brand identity · Website design & revamps — Portfolio by Ryley Johnson">
     <meta property="og:image" content="assets/images/ogimage.jpg">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Life of Logos | Ryley Johnson">
-    <meta name="twitter:description" content="Logos • Business Cards • Flyers • Websites — Portfolio by Ryley Johnson">
+    <meta name="twitter:description" content="Logos & brand identity · Website design & revamps — Portfolio by Ryley Johnson">
     <meta name="twitter:image" content="assets/images/ogimage.jpg">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Inter:wght@400;900&display=swap" rel="stylesheet">
@@ -46,6 +46,78 @@
             .carousel-scroll-hint { display: block; }
         }
         .carousel-scroll-hint.carousel-scroll-hint--dismissed { opacity: 0; pointer-events: none; transition: opacity 0.4s ease; }
+        .project-badge {
+            position: absolute; top: 10px; left: 10px; z-index: 10;
+            font-size: 0.6rem; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase;
+            padding: 5px 10px; border: 2px solid black;
+        }
+        .project-badge--web { background: #1a3d2e; color: #fff; }
+        .project-badge--wip { background: #ff00ff; color: #fff; right: 10px; left: auto; }
+        .project-badge--logo { background: #fff; color: #111; }
+        .project-badge--live { background: #22c55e; color: #fff; right: 10px; left: auto; }
+        .project-badge--sqsp { background: #000; color: #fff; top: auto; bottom: 10px; left: 10px; }
+        .project-badge--platform { background: #ff00ff; color: #fff; top: auto; bottom: 10px; left: 10px; right: auto; }
+        .revamp-card { min-height: 100%; }
+        .mini-compare {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: clamp(0.75rem, 3vw, 1.5rem);
+            height: 100%;
+            padding: 0.75rem 1rem;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d3d32 100%);
+        }
+        .mini-compare-panel {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-width: 0;
+            max-width: 48%;
+        }
+        .mini-compare-frame {
+            height: min(100%, 22rem);
+            width: auto;
+            max-width: 100%;
+            aspect-ratio: 390 / 844;
+            border: 3px solid #000;
+            border-radius: 14px;
+            overflow: hidden;
+            background: #fff;
+            box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.85);
+        }
+        .mini-compare-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top center;
+            display: block;
+        }
+        .mini-compare-label {
+            margin-top: 0.5rem;
+            font-size: 0.55rem;
+            font-weight: 800;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            padding: 4px 8px;
+            border: 2px solid #000;
+        }
+        .mini-compare-label--before { background: #fff; color: #111; }
+        .mini-compare-label--after { background: #1a3d2e; color: #fff; }
+        .mini-compare-vs {
+            flex-shrink: 0;
+            font-size: 0.65rem;
+            font-weight: 900;
+            letter-spacing: 0.08em;
+            color: rgba(255, 255, 255, 0.5);
+            text-transform: uppercase;
+        }
+        .service-intro { max-width: 52rem; line-height: 1.65; }
+        @media (prefers-reduced-motion: reduce) {
+            .project-card { transition: none; }
+            .project-card:hover { transform: none !important; }
+        }
     </style>
 </head>
 <body class="p-6 md:p-16 pb-40">
@@ -60,38 +132,150 @@
         <div class="flex flex-col items-start mt-2 md:mt-4">
             <p class="marker-font text-3xl md:text-5xl text-gray-800 tracking-widest uppercase leading-none">Ryley Johnson</p>
             <div class="mt-4 bg-black text-white px-4 py-2 text-xs md:text-sm font-bold tracking-[0.2em] uppercase rotate-[-1deg] inline-block shadow-[4px_4px_0px_#ff00ff]">
-                Logos • Business Cards • Flyers • Websites
+                Logos · Websites · Revamps · Print
             </div>
             <p class="mt-4 font-mono text-[10px] md:text-xs font-bold text-gray-400 uppercase tracking-[0.4em]">// 2026 Portfolio</p>
         </div>
     </header>
 
-    <div class="mb-8"><div class="section-tag text-xl uppercase tracking-widest">Finished Designs</div></div>
+    <section id="finished-websites" class="mb-20 max-w-[1400px] mx-auto">
+        <div class="mb-6 flex flex-wrap items-end gap-4">
+            <div class="section-tag text-xl uppercase tracking-widest">Finished Websites</div>
+            <p class="text-xs font-bold uppercase tracking-widest text-gray-600">Live · Squarespace + custom code</p>
+        </div>
+        <p class="service-intro text-gray-800 font-medium mb-10 text-sm md:text-base">
+            These are <strong>shipped and live</strong> — built on Squarespace with heavy custom HTML, CSS, and JavaScript layered on top. Logo work is part of the story, but the website is the hero.
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-4">
+            <div class="project-card p-4 -rotate-1 shadow-[12px_12px_0px_0px_rgba(34,197,94,1)] group cursor-pointer">
+                <div class="aspect-[4/3] mb-4 border-2 border-black overflow-hidden relative">
+                    <span class="project-badge project-badge--live">Live site</span>
+                    <span class="project-badge project-badge--sqsp">Squarespace</span>
+                    <img src="assets/images/givens-web-full.png" alt="Givens Fire & Forestry live website" class="w-full h-full object-cover object-top">
+                    <a href="givens.html" class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-200">
+                        <span class="marker-font text-white text-xl border-2 border-white p-2 rotate-[-5deg]">VIEW CASE STUDY</span>
+                    </a>
+                </div>
+                <h2 class="marker-font text-2xl md:text-3xl text-emerald-800">Givens Fire & Forestry</h2>
+                <p class="text-sm font-bold text-gray-600 mt-1">Custom CSS/JS · cord & tree calculators · SEO architecture</p>
+                <p class="text-[10px] font-bold text-gray-400 uppercase tracking-wider mt-1">Also: shield logo · vehicle decals</p>
+            </div>
+
+            <div class="project-card p-4 rotate-1 shadow-[12px_12px_0px_0px_rgba(6,182,212,1)] ring-4 ring-cyan-400 ring-offset-2 ring-offset-transparent group cursor-pointer">
+                <div class="aspect-[4/3] mb-4 border-2 border-black overflow-hidden relative">
+                    <span class="project-badge project-badge--live">Live site</span>
+                    <span class="project-badge project-badge--sqsp">Squarespace</span>
+                    <img src="assets/images/restorative-kinetics/screens/home.png" alt="Restorative Kinetics Fitness live website" class="w-full h-full object-cover object-top" decoding="async">
+                    <a href="restorative-kinetics.html" class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-200">
+                        <span class="marker-font text-white text-xl border-2 border-white p-2 rotate-[-5deg]">VIEW CASE STUDY</span>
+                    </a>
+                </div>
+                <h2 class="marker-font text-2xl md:text-3xl text-teal-800">Restorative Kinetics</h2>
+                <p class="text-sm font-bold text-gray-600 mt-1">Glass UI · flip cards · 4 SEO calculators · Calendly · Maps</p>
+                <p class="text-[10px] font-bold text-gray-400 uppercase tracking-wider mt-1">Also: full brand mark</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="platform-escapes" class="mb-16 max-w-[1400px] mx-auto">
+        <div class="mb-6 flex flex-wrap items-end gap-4">
+            <div class="section-tag text-xl uppercase tracking-widest" style="background: #ff00ff;">Platform Escapes</div>
+            <p class="text-xs font-bold uppercase tracking-widest text-gray-600">Revamps in progress</p>
+        </div>
+        <p class="service-intro text-gray-800 font-medium mb-10 text-sm md:text-base">
+            Not just a visual upgrade — I help clients <strong>get off Weebly, Wix, Squarespace, and WordPress.com subscriptions</strong> with sites they actually own. Stop paying annually for templates; invest once in something built for the business.
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10">
+            <div class="project-card revamp-card p-4 -rotate-1 shadow-[10px_10px_0px_0px_rgba(26,61,46,1)] group cursor-pointer">
+                <div class="aspect-[4/3] mb-4 border-2 border-black overflow-hidden relative">
+                    <span class="project-badge project-badge--wip">In progress</span>
+                    <span class="project-badge project-badge--platform">Weebly</span>
+                    <div class="mini-compare h-full" aria-label="Wildland before and after mobile">
+                        <div class="mini-compare-panel">
+                            <div class="mini-compare-frame">
+                                <img src="assets/images/wildland/wildland-before-mobile.png" alt="Wildland Weebly site before" width="390" height="844" decoding="async">
+                            </div>
+                            <span class="mini-compare-label mini-compare-label--before">Before</span>
+                        </div>
+                        <span class="mini-compare-vs" aria-hidden="true">vs</span>
+                        <div class="mini-compare-panel">
+                            <div class="mini-compare-frame">
+                                <img src="assets/images/wildland/wildland-after-mobile.png" alt="Wildland redesign after" width="390" height="844" decoding="async">
+                            </div>
+                            <span class="mini-compare-label mini-compare-label--after" style="background:#1a3d2e;">After</span>
+                        </div>
+                    </div>
+                    <a href="wildland-imports.html" class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-200">
+                        <span class="marker-font text-white text-lg border-2 border-white p-2 rotate-[-5deg]">CASE STUDY</span>
+                    </a>
+                </div>
+                <h2 class="marker-font text-xl text-[#1a3d2e]">Wildland Imports</h2>
+                <p class="text-xs font-bold text-gray-500 mt-1">Coffee brand · Weebly → owned site · Stripe-ready</p>
+            </div>
+
+            <div class="project-card revamp-card p-4 rotate-1 shadow-[10px_10px_0px_0px_rgba(107,74,90,1)] group cursor-pointer">
+                <div class="aspect-[4/3] mb-4 border-2 border-black overflow-hidden relative">
+                    <span class="project-badge project-badge--wip">In progress</span>
+                    <span class="project-badge project-badge--platform">Wix</span>
+                    <div class="mini-compare h-full" aria-label="Northwest Wax before and after mobile">
+                        <div class="mini-compare-panel">
+                            <div class="mini-compare-frame">
+                                <img src="assets/images/northwest-wax/northwest-wax-before-mobile.png" alt="Northwest Wax Wix site before" width="390" height="844" decoding="async">
+                            </div>
+                            <span class="mini-compare-label mini-compare-label--before">Before</span>
+                        </div>
+                        <span class="mini-compare-vs" aria-hidden="true">vs</span>
+                        <div class="mini-compare-panel">
+                            <div class="mini-compare-frame">
+                                <img src="assets/images/northwest-wax/northwest-wax-after-mobile.png" alt="Northwest Wax redesign after" width="390" height="844" decoding="async">
+                            </div>
+                            <span class="mini-compare-label mini-compare-label--after" style="background:#6b4a5a;">After</span>
+                        </div>
+                    </div>
+                    <a href="northwest-wax.html" class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-200">
+                        <span class="marker-font text-white text-lg border-2 border-white p-2 rotate-[-5deg]">CASE STUDY</span>
+                    </a>
+                </div>
+                <h2 class="marker-font text-xl text-[#6b4a5a]">Northwest Wax</h2>
+                <p class="text-xs font-bold text-gray-500 mt-1">Wix one-pager → real pages · Yelp · Google Maps</p>
+            </div>
+
+            <div class="project-card revamp-card p-4 -rotate-2 shadow-[10px_10px_0px_0px_rgba(30,58,95,1)] group cursor-pointer md:col-span-2 xl:col-span-1">
+                <div class="aspect-[4/3] mb-4 border-2 border-black overflow-hidden relative">
+                    <span class="project-badge project-badge--wip">In progress</span>
+                    <span class="project-badge project-badge--platform">Weebly</span>
+                    <div class="mini-compare h-full" aria-label="Classes with Cory Weebly before and after mobile">
+                        <div class="mini-compare-panel">
+                            <div class="mini-compare-frame">
+                                <img src="assets/images/lingua-franca/lingua-franca-before-mobile.png" alt="Lingua Franca Institute Weebly site before" width="390" height="844" decoding="async">
+                            </div>
+                            <span class="mini-compare-label mini-compare-label--before">Before</span>
+                        </div>
+                        <span class="mini-compare-vs" aria-hidden="true">vs</span>
+                        <div class="mini-compare-panel">
+                            <div class="mini-compare-frame">
+                                <img src="assets/images/lingua-franca/lingua-franca-after-mobile.png" alt="Classes with Cory custom site after" width="390" height="844" decoding="async">
+                            </div>
+                            <span class="mini-compare-label mini-compare-label--after" style="background:#1e3a5f;">After</span>
+                        </div>
+                    </div>
+                    <a href="lingua-franca.html" class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-200">
+                        <span class="marker-font text-white text-lg border-2 border-white p-2 rotate-[-5deg]">CASE STUDY</span>
+                    </a>
+                </div>
+                <h2 class="marker-font text-xl text-[#1e3a5f]">Classes with Cory</h2>
+                <p class="text-xs font-bold text-gray-500 mt-1">Logo · EN/ES site · Weebly escape</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="mb-8"><div class="section-tag text-xl uppercase tracking-widest">Logo & Brand Identity</div></div>
+    <p class="text-sm text-gray-700 font-medium max-w-2xl mb-10 -mt-4">Marks, print, campaigns, and concept explorations — when the deliverable is the logo itself.</p>
     
     <main class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 max-w-[1400px] mx-auto mb-32">
-        <div class="project-card p-4 -rotate-1 shadow-[10px_10px_0px_0px_rgba(6,182,212,1)] ring-4 ring-cyan-400 ring-offset-2 ring-offset-transparent group">
-            <div class="aspect-square bg-zinc-100 mb-4 border-2 border-black overflow-hidden relative">
-                <img src="assets/images/restorative-kinetics/logo-portfolio.png" alt="Restorative Kinetics Fitness logo" class="w-full h-full object-cover object-center" decoding="async">
-                <a href="restorative-kinetics.html" class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity">
-                    <span class="marker-font text-white text-xl border-2 border-white p-2 rotate-[-5deg]">VIEW CASE STUDY</span>
-                </a>
-            </div>
-            <h2 class="marker-font text-2xl text-teal-800">Restorative Kinetics Fitness</h2>
-            <p class="text-xs font-bold text-gray-500 italic">Logo & Squarespace build · tools · Maps · Calendly</p>
-        </div>
-
-        <div class="project-card p-4 rotate-1 shadow-[10px_10px_0px_0px_rgba(0,0,0,1)] group">
-            <div class="aspect-square bg-zinc-200 mb-4 border-2 border-black overflow-hidden relative">
-                <img src="assets/images/givens-thumb.png" class="w-full h-full object-cover">
-                <a href="givens.html" class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity">
-                    <span class="marker-font text-white text-xl border-2 border-white p-2 rotate-[-5deg]">VIEW CASE STUDY</span>
-                </a>
-            </div>
-            <h2 class="marker-font text-2xl">Givens Fire & Forestry</h2>
-            <p class="text-xs font-bold text-gray-500 italic">Complete Brand Identity & Web Build</p>
-        </div>
-
-        <div class="project-card p-4 -rotate-1 shadow-[10px_10px_0px_0px_rgba(255,0,255,1)] group">
+        <div class="project-card p-4 -rotate-1 shadow-[10px_10px_0px_0px_rgba(255,0,255,1)] group cursor-pointer">
             <div class="aspect-square bg-pink-50 mb-4 border-2 border-black overflow-hidden relative">
                 <img src="assets/images/boutique-thumb.png" class="w-full h-full object-cover">
                 <a href="your-place-or-mine.html" class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity">
@@ -102,7 +286,7 @@
             <p class="text-xs font-bold text-gray-500 italic">Boutique Syringe Wand Logos</p>
         </div>
 
-        <div class="project-card p-4 rotate-2 shadow-[10px_10px_0px_0px_rgba(0,255,255,1)] group">
+        <div class="project-card p-4 rotate-2 shadow-[10px_10px_0px_0px_rgba(0,255,255,1)] group cursor-pointer">
             <div class="aspect-square bg-cyan-50 mb-4 border-2 border-black overflow-hidden relative">
                 <img src="assets/images/social-qa-thumb.png" class="w-full h-full object-cover">
                 <a href="social-qa.html" class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity">
@@ -113,7 +297,7 @@
             <p class="text-xs font-bold text-gray-500 italic">Typography & Infinity Branding</p>
         </div>
 
-        <div class="project-card p-4 -rotate-2 shadow-[10px_10px_0px_0px_rgba(0,0,0,1)] group">
+        <div class="project-card p-4 -rotate-2 shadow-[10px_10px_0px_0px_rgba(0,0,0,1)] group cursor-pointer">
             <div class="aspect-square bg-yellow-50 mb-4 border-2 border-black overflow-hidden relative">
                 <img src="assets/images/container-fix-thumb.png" class="w-full h-full object-cover">
                 <a href="container-fix.html" class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity">
@@ -124,7 +308,7 @@
             <p class="text-xs font-bold text-gray-500 italic">Novosibirsk Industrial Logistics</p>
         </div>
 
-        <div class="project-card p-4 rotate-1 shadow-[10px_10px_0px_0px_rgba(249,115,22,1)] group">
+        <div class="project-card p-4 rotate-1 shadow-[10px_10px_0px_0px_rgba(249,115,22,1)] group cursor-pointer">
             <div class="aspect-square bg-orange-50 mb-4 border-2 border-black overflow-hidden relative">
                 <img src="assets/images/outlawz-thumb.png" class="w-full h-full object-cover">
                 <a href="outlawz.html" class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity">
@@ -135,7 +319,7 @@
             <p class="text-xs font-bold text-gray-500 italic">Western Rebrands & Rideshare</p>
         </div>
 
-        <div class="project-card p-4 -rotate-1 shadow-[10px_10px_0px_0px_rgba(34,197,94,1)] group">
+        <div class="project-card p-4 -rotate-1 shadow-[10px_10px_0px_0px_rgba(34,197,94,1)] group cursor-pointer">
             <div class="aspect-square bg-zinc-800 mb-4 border-2 border-black overflow-hidden relative">
                 <img src="assets/images/qa-cards-thumb.png" class="w-full h-full object-cover">
                 <a href="r-johnson-qa.html" class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity">
@@ -146,7 +330,7 @@
             <p class="text-xs font-bold text-gray-500 italic">Personal brand · Biz cards, LinkedIn banner & portfolio</p>
         </div>
 
-        <div class="project-card p-4 rotate-2 shadow-[10px_10px_0px_0px_rgba(236,72,153,0.8)] group">
+        <div class="project-card p-4 rotate-2 shadow-[10px_10px_0px_0px_rgba(236,72,153,0.8)] group cursor-pointer">
             <div class="aspect-square bg-rose-950 mb-4 border-2 border-black overflow-hidden relative">
                 <img src="assets/images/angels-empire-thumb.png" class="w-full h-full object-cover">
                 <a href="angels-empire.html" class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity">
@@ -157,7 +341,7 @@
             <p class="text-xs font-bold text-gray-500 italic">Cam Studio · Ad campaign · Siberia, Russia</p>
         </div>
 
-        <div class="project-card p-4 -rotate-2 shadow-[10px_10px_0px_0px_rgba(13,148,136,0.9)] group">
+        <div class="project-card p-4 -rotate-2 shadow-[10px_10px_0px_0px_rgba(13,148,136,0.9)] group cursor-pointer">
             <div class="aspect-square bg-teal-50 mb-4 border-2 border-black overflow-hidden relative">
                 <img src="assets/images/rideshare-cory-thumb.png" class="w-full h-full object-cover">
                 <a href="rideshare-cory.html" class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity">
@@ -168,7 +352,7 @@
             <p class="text-xs font-bold text-gray-500 italic">Biz cards & logo · Colombia-style taxi</p>
         </div>
 
-        <div class="project-card p-4 rotate-1 shadow-[10px_10px_0px_0px_rgba(180,83,9,0.9)] group">
+        <div class="project-card p-4 rotate-1 shadow-[10px_10px_0px_0px_rgba(180,83,9,0.9)] group cursor-pointer">
             <div class="aspect-square bg-amber-50 mb-4 border-2 border-black overflow-hidden relative">
                 <img src="assets/images/chernakovo-thumb.png" class="w-full h-full object-cover">
                 <a href="chernakovo.html" class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity">

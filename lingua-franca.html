@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classes with Cory | Platform Escape Case Study</title>
+    <meta name="description" content="Weebly to custom rebuild for Cory’s language institute — logo, bilingual EN/ES site, AI scene imagery, owned code.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Inter:wght@400;600;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/revamp-case-study.css">
+    <style>
+        :root { --primary: #1e3a5f; --accent: #c9a227; --card-bg: #f4f6fa; --shadow: #1e3a5f; }
+    </style>
+</head>
+<body class="revamp-page p-6 md:p-16 pb-40" style="--accent:#c9a227;">
+    <div id="custom-cursor"></div>
+    <div class="splatter bg-[#c9a227] w-[500px] h-[500px] -top-20 -right-20"></div>
+    <div class="splatter bg-[#1e3a5f] w-[400px] h-[400px] bottom-0 left-0"></div>
+
+    <a href="index.html#platform-escapes" class="inline-block mb-12 bg-black text-white px-6 py-2 marker-font rotate-[-2deg] hover:bg-[var(--primary)] transition-colors shadow-[4px_4px_0px_var(--accent)] cursor-pointer">← BACK TO GALLERY</a>
+
+    <header class="mb-12 md:mb-16">
+        <div class="flex flex-wrap items-center gap-3 mb-4">
+            <span class="bg-[var(--primary)] text-white px-4 py-1 text-xs font-bold uppercase tracking-widest border-2 border-black">Work in progress</span>
+            <span class="bg-black text-white px-4 py-1 text-xs font-bold uppercase tracking-widest border-2 border-white">Weebly → custom</span>
+            <span class="bg-[var(--accent)] text-black px-4 py-1 text-xs font-bold uppercase tracking-widest border-2 border-black">Logo + site</span>
+        </div>
+        <h1 class="inter-black text-[8vw] md:text-[5vw] leading-[0.9] uppercase italic text-black">
+            Classes with <span class="text-[var(--primary)] marker-font lowercase block -mt-2 rotate-[-2deg]">Cory</span>
+        </h1>
+        <p class="mt-6 text-lg md:text-xl text-gray-800 max-w-3xl font-medium leading-relaxed">
+            Cory teaches English and Spanish through the <strong>Lingua Franca Institute</strong> — but his live presence was a dated <strong>Weebly</strong> site under the old institute name. I rebuilt the brand as <strong>Classes with Cory</strong>: custom logo, a full multi-page site, <strong>English ↔ Spanish</strong> toggling on every page, and AI-generated scene photos so he didn’t need another round of shoots.
+        </p>
+    </header>
+
+    <section class="mb-20">
+        <div class="case-card p-6 md:p-10 rotate-[-0.5deg]">
+            <h2 class="inter-black text-2xl md:text-3xl uppercase mb-2 text-[var(--primary)]">Before & after · About</h2>
+            <p class="text-gray-700 mb-6 max-w-2xl text-sm md:text-base">
+                Drag to compare the <strong>legacy Weebly institute site</strong> with Cory’s <strong>About page</strong> on the rebuild — where credentials, philosophy, and booking actually have room.
+            </p>
+            <div class="compare-shell mb-6" id="compare-shell" role="img" aria-label="Lingua Franca Weebly vs Classes with Cory About page">
+                <img src="assets/images/lingua-franca/lingua-franca-before.png" alt="Lingua Franca Institute Weebly site before" width="1280" height="800" decoding="async">
+                <img src="assets/images/lingua-franca/lingua-franca-after.png" alt="Classes with Cory About page on custom rebuild" class="compare-after" id="compare-after" width="1280" height="800" decoding="async">
+                <div class="compare-handle" id="compare-handle" aria-hidden="true"></div>
+                <span class="compare-label compare-label--before">Before · Weebly</span>
+                <span class="compare-label compare-label--after">After · WIP</span>
+                <input type="range" min="0" max="100" value="50" class="compare-range" id="compare-range" aria-label="Compare before and after" aria-valuenow="50">
+            </div>
+            <div class="case-study-links">
+                <a href="https://www.linguafrancainstitute.com/" target="_blank" rel="noopener noreferrer" class="case-study-link group bg-white border-4 border-black px-4 py-4 sm:px-5 hover:bg-gray-100 transition-colors cursor-pointer shadow-[6px_6px_0_#111]">
+                    <div>
+                        <p class="text-[10px] font-bold uppercase tracking-widest text-gray-500">Live legacy</p>
+                        <p class="inter-black case-study-url uppercase">linguafrancainstitute.com</p>
+                    </div>
+                    <span class="case-study-arrow text-xl sm:text-2xl font-black group-hover:translate-x-1 transition-transform" aria-hidden="true">→</span>
+                </a>
+                <a href="https://mrjohn5on.github.io/classes_with_cory/" target="_blank" rel="noopener noreferrer" class="case-study-link group bg-[var(--primary)] text-white border-4 border-black px-4 py-4 sm:px-5 hover:bg-[var(--accent)] hover:text-black transition-colors cursor-pointer shadow-[6px_6px_0_#111]">
+                    <div>
+                        <p class="text-[10px] font-bold uppercase tracking-widest text-white/80">Work in progress</p>
+                        <p class="inter-black case-study-url uppercase">classes_with_cory</p>
+                    </div>
+                    <span class="case-study-arrow text-xl sm:text-2xl font-black group-hover:translate-x-1 transition-transform" aria-hidden="true">→</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="mb-20 case-card p-8 md:p-10 rotate-[0.5deg]">
+        <h2 class="inter-black text-3xl md:text-4xl uppercase mb-6 text-[var(--primary)]">Brand & logo</h2>
+        <div class="showcase-logo">
+            <img src="assets/images/lingua-franca/cory-logo-display.png" width="320" height="320" alt="Classes with Cory circular logo — navy, gold, and cream" decoding="async">
+            <div class="flex-1 min-w-0 max-w-2xl">
+                <p class="text-gray-800 mb-4 leading-relaxed font-medium">
+                    Cory needed a name and mark that felt like <em>him</em>, not a generic institute template. I designed the <strong>Classes with Cory</strong> wordmark and circular seal — navy, academic gold, and warm cream — used in the header, footer, favicon path, and across every page of the rebuild.
+                </p>
+                <ul class="space-y-2 text-sm md:text-base font-medium text-gray-800">
+                    <li class="flex gap-2"><span class="text-[var(--primary)] font-black shrink-0">✓</span> Distinct from the old Lingua Franca Weebly branding</li>
+                    <li class="flex gap-2"><span class="text-[var(--primary)] font-black shrink-0">✓</span> Works at small sizes (nav mark) and large (hero trust)</li>
+                    <li class="flex gap-2"><span class="text-[var(--primary)] font-black shrink-0">✓</span> Same system on site + deliverable logo files for print and social</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="mb-20 case-card p-8 md:p-10 -rotate-[0.5deg]">
+        <h2 class="inter-black text-3xl md:text-4xl uppercase mb-4 text-[var(--primary)]">Two languages · one site</h2>
+        <p class="text-gray-700 mb-6 max-w-3xl leading-relaxed font-medium">
+            Cory teaches in both languages — his site should too. Visitors tap <strong>English (🇺🇸)</strong> or <strong>Spanish (🇨🇴)</strong> in the header and the whole page updates: nav, services, about, contact. No second site to maintain, no Weebly language upsell.
+        </p>
+        <div class="lang-pair mb-6">
+            <figure>
+                <img src="assets/images/lingua-franca/cory-lang-en.png" alt="Site header with English language active" width="640" height="120" decoding="async">
+                <figcaption>English active</figcaption>
+            </figure>
+            <figure>
+                <img src="assets/images/lingua-franca/cory-lang-es.png" alt="Site header with Spanish language active" width="640" height="120" decoding="async">
+                <figcaption>Spanish active</figcaption>
+            </figure>
+        </div>
+    </section>
+
+    <section class="mb-20 case-card p-8 md:p-10 rotate-1">
+        <h2 class="inter-black text-3xl md:text-4xl uppercase mb-4 text-[var(--primary)]">Real portrait · AI scenes</h2>
+        <p class="text-gray-700 mb-6 max-w-3xl leading-relaxed font-medium">
+            Cory had one great portrait session — enough for the homepage, not enough for every class page, banner, and contact section. Instead of booking another shoot, I generated <strong>on-brand scene images</strong> from his likeness: classrooms, travel, coaching — so the site looks full and professional from day one.
+        </p>
+        <div class="photo-grid mb-6">
+            <img class="photo-grid__hero" src="assets/images/lingua-franca/cory-portrait.jpg" alt="Cory professional portrait used in site hero" width="1200" height="675" decoding="async">
+            <img src="assets/images/lingua-franca/showcase/a1.png" alt="AI-generated classroom scene" width="800" height="600" loading="lazy" decoding="async">
+            <img src="assets/images/lingua-franca/showcase/a2.png" alt="AI-generated teaching scene" width="800" height="600" loading="lazy" decoding="async">
+            <img src="assets/images/lingua-franca/showcase/b1.png" alt="AI-generated contact banner scene" width="800" height="600" loading="lazy" decoding="async">
+            <img src="assets/images/lingua-franca/showcase/c1.png" alt="AI-generated study abroad style scene" width="800" height="600" loading="lazy" decoding="async">
+            <img src="assets/images/lingua-franca/showcase/c2.png" alt="AI-generated language learning scene" width="800" height="600" loading="lazy" decoding="async">
+            <img src="assets/images/lingua-franca/showcase/c3.png" alt="AI-generated international education scene" width="800" height="600" loading="lazy" decoding="async">
+        </div>
+        <ul class="space-y-2 text-sm md:text-base font-medium text-gray-800 max-w-3xl">
+            <li class="flex gap-2"><span class="text-[var(--accent)] font-black shrink-0">→</span> Homepage leads with his <strong>real photo</strong> — students see the actual teacher</li>
+            <li class="flex gap-2"><span class="text-[var(--accent)] font-black shrink-0">→</span> Supporting images match his brand without a second photoshoot bill</li>
+            <li class="flex gap-2"><span class="text-[var(--accent)] font-black shrink-0">→</span> When he has new photos, drop them in — same layout, no redesign</li>
+        </ul>
+    </section>
+
+    <section class="mb-20 border-4 border-black bg-white p-8 md:p-10 shadow-[12px_12px_0_var(--accent)] rotate-[-0.5deg]">
+        <h2 class="inter-black text-3xl md:text-4xl uppercase mb-6 text-[var(--primary)]">Weebly today vs. the rebuild</h2>
+        <p class="text-gray-800 mb-8 max-w-3xl leading-relaxed">
+            Same teacher, different foundation — the work-in-progress site already does things his institute page on Weebly never could.
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+                <h3 class="marker-font text-xl text-red-800 mb-4">Weebly · Lingua Franca Institute</h3>
+                <ul class="space-y-3 text-sm md:text-base font-medium text-gray-800">
+                    <li class="flex gap-2"><span class="text-red-600 font-black shrink-0">×</span> Template look — doesn’t match how serious his teaching actually is</li>
+                    <li class="flex gap-2"><span class="text-red-600 font-black shrink-0">×</span> Services and class paths buried in old IA</li>
+                    <li class="flex gap-2"><span class="text-red-600 font-black shrink-0">×</span> No real bilingual experience — English-only shell for a bilingual teacher</li>
+                    <li class="flex gap-2"><span class="text-red-600 font-black shrink-0">×</span> Stuck paying Weebly yearly without owning the experience</li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="marker-font text-xl text-[var(--primary)] mb-4">Rebuild · Classes with Cory</h3>
+                <ul class="space-y-3 text-sm md:text-base font-medium text-gray-800">
+                    <li class="flex gap-2"><span class="text-[var(--primary)] font-black shrink-0">✓</span> <strong>Custom logo + design system</strong> — navy, gold, cream</li>
+                    <li class="flex gap-2"><span class="text-[var(--primary)] font-black shrink-0">✓</span> <strong>Real pages</strong> — Services, About, Teachers, Methods, Blog, Contact</li>
+                    <li class="flex gap-2"><span class="text-[var(--primary)] font-black shrink-0">✓</span> <strong>English or Spanish</strong> across the whole site — one tap in the header</li>
+                    <li class="flex gap-2"><span class="text-[var(--primary)] font-black shrink-0">✓</span> <strong>Full imagery</strong> from one portrait session — no second shoot required</li>
+                    <li class="flex gap-2"><span class="text-[var(--primary)] font-black shrink-0">✓</span> Site he <strong>owns</strong> — ready to leave Weebly when he is</li>
+                </ul>
+            </div>
+        </div>
+        <figure class="mt-10 border-4 border-black overflow-hidden shadow-[8px_8px_0_#111]">
+            <img src="assets/images/lingua-franca/cory-home.png" alt="Classes with Cory homepage on custom rebuild" width="1280" height="800" loading="lazy" decoding="async" class="w-full h-auto block">
+            <figcaption class="text-xs font-bold uppercase tracking-widest bg-black text-white px-4 py-2">Homepage · work in progress</figcaption>
+        </figure>
+    </section>
+
+    <section class="mb-20 platform-card p-8 md:p-10 rotate-1">
+        <h2 class="inter-black text-3xl md:text-4xl uppercase mb-4 text-[var(--accent)]">Platform escape</h2>
+        <p class="text-lg text-white/90 max-w-3xl mb-6 leading-relaxed">
+            Language schools bleed money on <strong>Weebly, Wix, Squarespace, and WordPress.com</strong> — paying annually for slow templates while enrollment still happens over email. Cory’s rebuild is <strong>owned code on cheap hosting</strong>, with the brand and bilingual UX baked in from day one.
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm font-semibold">
+            <div class="border-2 border-white/30 rounded-lg p-5 bg-black/20">
+                <p class="text-[var(--accent)] uppercase tracking-widest text-xs mb-2">Before</p>
+                <p>Weebly template · old institute name · no EN/ES · recurring platform bill</p>
+            </div>
+            <div class="border-2 border-white/30 rounded-lg p-5 bg-black/20">
+                <p class="text-[var(--accent)] uppercase tracking-widest text-xs mb-2">After</p>
+                <p>Classes with Cory brand · multi-page site · bilingual · code he owns</p>
+            </div>
+            <div class="border-2 border-[var(--accent)] rounded-lg p-5 bg-white text-black">
+                <p class="uppercase tracking-widest text-xs mb-2 text-[var(--primary)]">Client impact</p>
+                <p>Stop renting Weebly for a site that doesn’t speak both of his languages — launch something that does.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="mb-20">
+        <div class="case-card p-6 md:p-8 -rotate-[0.5deg]">
+            <h2 class="inter-black text-2xl md:text-3xl uppercase mb-2 text-[var(--primary)]">What 3 years on a builder costs</h2>
+            <p class="text-gray-700 mb-4 text-sm md:text-base max-w-3xl">
+                Roughly what you keep paying just to stay on someone else’s platform — public list prices (2025–2026). Cory was on <strong>Weebly</strong> (highlighted).
+            </p>
+            <div class="overflow-x-auto -mx-2 px-2 sm:mx-0 sm:px-0">
+                <table class="savings-table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Platform</th>
+                            <th scope="col">Typical plan (approx.)</th>
+                            <th scope="col">~3 years of subscriptions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="savings-highlight">
+                            <th scope="row">Weebly <span class="font-normal normal-case tracking-normal">· this client</span></th>
+                            <td>~$10–$26/mo</td>
+                            <td>~$360–$940+</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Wix</th>
+                            <td>~$17–$36/mo</td>
+                            <td>~$610–$1,300+</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Squarespace</th>
+                            <td>~$16–$27/mo</td>
+                            <td>~$575–$975+</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">WordPress.com</th>
+                            <td>~$9–$25/mo</td>
+                            <td>~$325–$900+</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="savings-disclaimer">
+                Figures are ballpark only — annual billing and add-ons can push totals higher. This is subscription rent, not a website you own.
+            </p>
+            <div class="savings-owned-intro">
+                <div class="savings-owned-card">
+                    <h3>Pay once · own forever</h3>
+                    <p>You pay me <strong>once</strong> for the website build. You <strong>own the code</strong> after that. Ongoing cost is usually just your <strong>domain</strong> (~$20/year) and low-cost hosting — not Weebly every year.</p>
+                </div>
+                <div class="savings-owned-card">
+                    <h3>Your site · your data</h3>
+                    <p>If Weebly or Squarespace goes down, changes terms, or you lose access, your content is hostage. A custom site means <strong>you own the files and your data</strong> — forever.</p>
+                </div>
+                <div class="savings-owned-card">
+                    <h3>Take it anywhere</h3>
+                    <p>Platform-specific designers are a niche market. Coded websites are maintained everywhere. What I build is standard web tech — <strong>portable, not locked in</strong>.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="text-center mb-32">
+        <a href="contact.html" class="inline-block bg-fuchsia-600 text-white px-10 py-4 inter-black text-xl uppercase border-4 border-black shadow-[8px_8px_0_#111] hover:bg-black transition-colors cursor-pointer">Need off Weebly? Let’s talk →</a>
+    </section>
+
+    <footer class="fixed bottom-0 left-0 w-full bg-[var(--primary)] border-t-8 border-black z-[100] p-4 flex flex-wrap justify-center gap-6 md:gap-12">
+        <a href="index.html" class="text-white inter-black text-lg md:text-xl hover:text-[var(--accent)] uppercase italic cursor-pointer">Home</a>
+        <a href="about.html" class="text-white inter-black text-lg md:text-xl hover:text-[var(--accent)] uppercase italic cursor-pointer">About Me</a>
+        <a href="contact.html" class="text-white inter-black text-lg md:text-xl hover:text-[var(--accent)] uppercase italic cursor-pointer">Contact Me</a>
+    </footer>
+
+    <script src="js/revamp-compare.js"></script>
+    <script>
+        (function () {
+            if (!window.matchMedia('(min-width: 768px)').matches || !window.matchMedia('(pointer: fine)').matches) return;
+            var cursor = document.getElementById('custom-cursor');
+            document.addEventListener('mousemove', function (e) {
+                cursor.style.left = e.clientX + 'px';
+                cursor.style.top = e.clientY + 'px';
+            });
+            document.querySelectorAll('a, .compare-range').forEach(function (el) {
+                el.addEventListener('mouseenter', function () { cursor.style.transform = 'scale(2)'; });
+                el.addEventListener('mouseleave', function () { cursor.style.transform = 'scale(1)'; });
+            });
+        })();
+    </script>
+</body>
+</html>

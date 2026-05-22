@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Northwest Wax | Platform Escape Case Study</title>
+    <meta name="description" content="Wix one-page site to custom multi-page rebuild — Northwest Wax Beaverton. Yelp reviews, Google Maps, owned hosting.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Inter:wght@400;600;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/revamp-case-study.css">
+    <style>
+        :root { --primary: #6b4a5a; --accent: #e8b4b8; --card-bg: #faf6f4; --shadow: #6b4a5a; }
+    </style>
+</head>
+<body class="revamp-page p-6 md:p-16 pb-40" style="--accent:#e8b4b8;">
+    <div id="custom-cursor"></div>
+    <div class="splatter bg-[#e8b4b8] w-[500px] h-[500px] -top-20 -left-20"></div>
+    <div class="splatter bg-[#6b4a5a] w-[400px] h-[400px] top-1/2 right-0"></div>
+
+    <a href="index.html#platform-escapes" class="inline-block mb-12 bg-black text-white px-6 py-2 marker-font rotate-[-2deg] hover:bg-[var(--primary)] transition-colors shadow-[4px_4px_0px_var(--accent)] cursor-pointer">← BACK TO GALLERY</a>
+
+    <header class="mb-12 md:mb-16">
+        <div class="flex flex-wrap items-center gap-3 mb-4">
+            <span class="bg-[var(--primary)] text-white px-4 py-1 text-xs font-bold uppercase tracking-widest border-2 border-black">Work in progress</span>
+            <span class="bg-black text-white px-4 py-1 text-xs font-bold uppercase tracking-widest border-2 border-white">Wix → custom</span>
+        </div>
+        <h1 class="inter-black text-[9vw] md:text-[5.5vw] leading-[0.9] uppercase italic text-black">
+            Northwest <span class="text-[var(--primary)] marker-font lowercase block -mt-2 rotate-[-2deg]">Wax</span>
+        </h1>
+        <p class="mt-6 text-lg md:text-xl text-gray-800 max-w-3xl font-medium leading-relaxed">
+            Tori Gledhill’s Beaverton studio was stuck on a <strong>single Wix page</strong> — the nav only jumped to anchors on that one URL, not real destinations. The rebuild in progress adds dedicated pages, live <strong>Yelp reviews</strong>, and a <strong>Google Maps</strong> embed so clients can find Cedar + Sage without hunting.
+        </p>
+    </header>
+
+    <section class="mb-20">
+        <div class="case-card p-6 md:p-10 rotate-[0.5deg]">
+            <h2 class="inter-black text-2xl md:text-3xl uppercase mb-2 text-[var(--primary)]">Before & after · About</h2>
+            <p class="text-gray-700 mb-6 max-w-2xl text-sm md:text-base">
+                Drag to compare Tori’s <strong>Wix “About” block</strong> (one section on a one-pager) with the <strong>dedicated About page</strong> on the rebuild — where her story, experience, and credibility actually get room to breathe.
+            </p>
+            <div class="compare-shell mb-6" id="compare-shell" role="img" aria-label="Northwest Wax About section before and after">
+                <img src="assets/images/northwest-wax/northwest-wax-before.png" alt="Northwest Wax Wix About section before" width="1280" height="800" decoding="async">
+                <img src="assets/images/northwest-wax/northwest-wax-after.png" alt="Northwest Wax custom About page after" class="compare-after" id="compare-after" width="1280" height="800" decoding="async">
+                <div class="compare-handle" id="compare-handle" aria-hidden="true"></div>
+                <span class="compare-label compare-label--before">Before · Wix</span>
+                <span class="compare-label compare-label--after">After · WIP</span>
+                <input type="range" min="0" max="100" value="50" class="compare-range" id="compare-range" aria-label="Compare before and after" aria-valuenow="50">
+            </div>
+            <div class="case-study-links">
+                <a href="https://www.northwestwaxbeaverton.com/#about" target="_blank" rel="noopener noreferrer" class="case-study-link group bg-white border-4 border-black px-4 py-4 sm:px-5 hover:bg-gray-100 transition-colors cursor-pointer shadow-[6px_6px_0_#111]">
+                    <div>
+                        <p class="text-[10px] font-bold uppercase tracking-widest text-gray-500">Live legacy · About anchor</p>
+                        <p class="inter-black case-study-url uppercase">northwestwaxbeaverton.com</p>
+                    </div>
+                    <span class="case-study-arrow text-xl sm:text-2xl font-black group-hover:translate-x-1 transition-transform" aria-hidden="true">→</span>
+                </a>
+                <a href="https://mrjohn5on.github.io/nw_wax_tori/about.html" target="_blank" rel="noopener noreferrer" class="case-study-link group bg-[var(--primary)] text-white border-4 border-black px-4 py-4 sm:px-5 hover:bg-black transition-colors cursor-pointer shadow-[6px_6px_0_var(--accent)]">
+                    <div>
+                        <p class="text-[10px] font-bold uppercase tracking-widest text-white/70">Work in progress · About page</p>
+                        <p class="inter-black case-study-url uppercase">Preview rebuild</p>
+                    </div>
+                    <span class="case-study-arrow text-xl sm:text-2xl font-black group-hover:translate-x-1 transition-transform" aria-hidden="true">→</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="mb-20 border-4 border-black bg-white p-8 md:p-10 shadow-[12px_12px_0_var(--accent)] rotate-[-0.5deg]">
+        <h2 class="inter-black text-3xl md:text-4xl uppercase mb-6 text-[var(--primary)]">Wix today vs. the rebuild</h2>
+        <p class="text-gray-800 mb-8 max-w-3xl leading-relaxed">
+            A straight comparison — same business, different structure. The work-in-progress site isn’t finished yet, but it already solves problems her live Wix setup can’t.
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+                <h3 class="marker-font text-xl text-red-800 mb-4">Her Wix site today</h3>
+                <ul class="space-y-3 text-sm md:text-base font-medium text-gray-800">
+                    <li class="flex gap-2"><span class="text-red-600 font-black shrink-0">×</span> <strong>One page only</strong> — Home, Services, About, Contact are scroll targets, not pages</li>
+                    <li class="flex gap-2"><span class="text-red-600 font-black shrink-0">×</span> Nav pretends to be multi-page but everything lives on a single URL</li>
+                    <li class="flex gap-2"><span class="text-red-600 font-black shrink-0">×</span> About is a text block lost between pricing walls — no dedicated story layout</li>
+                    <li class="flex gap-2"><span class="text-red-600 font-black shrink-0">×</span> No live Yelp feed — social proof is “please review us” copy, not real quotes</li>
+                    <li class="flex gap-2"><span class="text-red-600 font-black shrink-0">×</span> No embedded map — address is text; clients still Google it themselves</li>
+                    <li class="flex gap-2"><span class="text-red-600 font-black shrink-0">×</span> Paying Wix annually for a template that never felt like Tori</li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="marker-font text-xl text-[var(--primary)] mb-4">The rebuild · in progress</h3>
+                <ul class="space-y-3 text-sm md:text-base font-medium text-gray-800">
+                    <li class="flex gap-2"><span class="text-[var(--primary)] font-black shrink-0">✓</span> <strong>Real pages</strong> — Home, About, Services, Testimonials, Specials, Contact</li>
+                    <li class="flex gap-2"><span class="text-[var(--primary)] font-black shrink-0">✓</span> Shareable URLs (e.g. send someone straight to Services or About)</li>
+                    <li class="flex gap-2"><span class="text-[var(--primary)] font-black shrink-0">✓</span> <strong>Yelp reviews pulled in</strong> — 4.8★ social proof with real client voices on-page</li>
+                    <li class="flex gap-2"><span class="text-[var(--primary)] font-black shrink-0">✓</span> <strong>Google Maps API</strong> — studio location inside Cedar + Sage, not a vague address line</li>
+                    <li class="flex gap-2"><span class="text-[var(--primary)] font-black shrink-0">✓</span> Studio photo gallery from Yelp — shows the cute, clean room she’s known for</li>
+                    <li class="flex gap-2"><span class="text-[var(--primary)] font-black shrink-0">✓</span> Booking CTA wired to her Square appointments · owned code when she’s ready to leave Wix</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="mb-20 platform-card p-8 md:p-10 -rotate-1">
+        <h2 class="inter-black text-3xl md:text-4xl uppercase mb-4 text-[var(--accent)]">Platform escape</h2>
+        <p class="text-lg text-white/90 max-w-3xl mb-6 leading-relaxed">
+            Wix charges every year for the privilege of a one-page site you don’t own. The rebuild moves Tori to <strong>static hosting she controls</strong> — same Yelp and Maps integrations, none of the “premium widget” upsells.
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm font-semibold">
+            <div class="border-2 border-white/30 rounded-lg p-5 bg-black/20">
+                <p class="text-[var(--accent)] uppercase tracking-widest text-xs mb-2">Before</p>
+                <p>Single-page Wix · fake nav · no review feed · no map embed · recurring fees</p>
+            </div>
+            <div class="border-2 border-white/30 rounded-lg p-5 bg-black/20">
+                <p class="text-[var(--accent)] uppercase tracking-widest text-xs mb-2">After</p>
+                <p>Multi-page custom site · Yelp + Maps · booking-forward · you own the code</p>
+            </div>
+            <div class="border-2 border-[var(--accent)] rounded-lg p-5 bg-white text-black">
+                <p class="uppercase tracking-widest text-xs mb-2 text-[var(--primary)]">Client impact</p>
+                <p>Stop renting Wix for a one-pager — launch something that matches how good her waxing actually is.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="mb-20">
+        <div class="case-card p-6 md:p-8 rotate-[0.5deg]">
+            <h2 class="inter-black text-2xl md:text-3xl uppercase mb-2 text-[var(--primary)]">What 3 years on a builder costs</h2>
+            <p class="text-gray-700 mb-4 text-sm md:text-base max-w-3xl">
+                Roughly what you keep paying just to stay on someone else’s platform — public list prices (2025–2026), before booking apps and premium widgets. Tori’s on <strong>Wix</strong> (highlighted).
+            </p>
+            <div class="overflow-x-auto -mx-2 px-2 sm:mx-0 sm:px-0">
+                <table class="savings-table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Platform</th>
+                            <th scope="col">Typical plan (approx.)</th>
+                            <th scope="col">~3 years of subscriptions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Weebly</th>
+                            <td>~$10–$26/mo</td>
+                            <td>~$360–$940+</td>
+                        </tr>
+                        <tr class="savings-highlight">
+                            <th scope="row">Wix <span class="font-normal normal-case tracking-normal">· this client</span></th>
+                            <td>~$17–$36/mo</td>
+                            <td>~$610–$1,300+</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Squarespace</th>
+                            <td>~$16–$27/mo</td>
+                            <td>~$575–$975+</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">WordPress.com</th>
+                            <td>~$9–$25/mo</td>
+                            <td>~$325–$900+</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="savings-disclaimer">
+                Figures are ballpark only — annual billing, ecommerce tiers, and Wix apps can push totals higher. None of this includes a one-time custom build; it’s what the platform keeps billing while you rent their editor.
+            </p>
+            <div class="savings-owned-intro">
+                <div class="savings-owned-card">
+                    <h3>Pay once · own forever</h3>
+                    <p>You pay me <strong>once</strong> for the website build. You <strong>own the code</strong> after that — not another year of Wix just to stay online. Ongoing cost is usually just your <strong>domain</strong> (~$20/year) and low-cost hosting.</p>
+                </div>
+                <div class="savings-owned-card">
+                    <h3>Your site · your data</h3>
+                    <p>If Wix, Squarespace, or Weebly goes down, changes terms, or you lose account access, you’re at their mercy. With a custom site, <strong>you own the files and your content</strong> — forever, outside their editor.</p>
+                </div>
+                <div class="savings-owned-card">
+                    <h3>Take it anywhere</h3>
+                    <p>Wix-only designers are a niche hire. Web developers who code are easy to find. I hand you real HTML, CSS, and JS — <strong>any dev can maintain it</strong>, not a drag-and-drop prison.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="text-center mb-32">
+        <a href="contact.html" class="inline-block bg-fuchsia-600 text-white px-10 py-4 inter-black text-xl uppercase border-4 border-black shadow-[8px_8px_0_#111] hover:bg-black transition-colors cursor-pointer">Stuck on a Wix one-pager? Let’s talk →</a>
+    </section>
+
+    <footer class="fixed bottom-0 left-0 w-full bg-[var(--primary)] border-t-8 border-black z-[100] p-4 flex flex-wrap justify-center gap-6 md:gap-12">
+        <a href="index.html" class="text-white inter-black text-lg md:text-xl hover:text-[var(--accent)] uppercase italic cursor-pointer">Home</a>
+        <a href="about.html" class="text-white inter-black text-lg md:text-xl hover:text-[var(--accent)] uppercase italic cursor-pointer">About Me</a>
+        <a href="contact.html" class="text-white inter-black text-lg md:text-xl hover:text-[var(--accent)] uppercase italic cursor-pointer">Contact Me</a>
+    </footer>
+
+    <script src="js/revamp-compare.js"></script>
+    <script>
+        (function () {
+            if (!window.matchMedia('(min-width: 768px)').matches || !window.matchMedia('(pointer: fine)').matches) return;
+            var cursor = document.getElementById('custom-cursor');
+            document.addEventListener('mousemove', function (e) {
+                cursor.style.left = e.clientX + 'px';
+                cursor.style.top = e.clientY + 'px';
+            });
+            document.querySelectorAll('a, .compare-range').forEach(function (el) {
+                el.addEventListener('mouseenter', function () { cursor.style.transform = 'scale(2)'; });
+                el.addEventListener('mouseleave', function () { cursor.style.transform = 'scale(1)'; });
+            });
+        })();
+    </script>
+</body>
+</html>
