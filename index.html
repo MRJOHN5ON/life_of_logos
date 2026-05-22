@@ -114,6 +114,17 @@
             text-transform: uppercase;
         }
         .service-intro { max-width: 52rem; line-height: 1.65; }
+        .project-card-cta {
+            opacity: 1;
+        }
+        @media (min-width: 768px) and (pointer: fine) {
+            .project-card-cta {
+                opacity: 0;
+            }
+            .group:hover .project-card-cta {
+                opacity: 1;
+            }
+        }
         @media (prefers-reduced-motion: reduce) {
             .project-card { transition: none; }
         }
@@ -174,7 +185,7 @@
                     <span class="project-badge project-badge--live">Live site</span>
                     <span class="project-badge project-badge--sqsp">Squarespace</span>
                     <img src="assets/images/givens-web-full.png" alt="Givens Fire & Forestry live website" class="w-full h-full object-cover object-top">
-                    <a href="givens.html" class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-200">
+                    <a href="givens.html" class="project-card-cta absolute inset-0 bg-black/60 flex items-center justify-center transition-opacity duration-200">
                         <span class="marker-font text-white text-xl border-2 border-white p-2 rotate-[-5deg]">VIEW CASE STUDY</span>
                     </a>
                 </div>
@@ -188,7 +199,7 @@
                     <span class="project-badge project-badge--live">Live site</span>
                     <span class="project-badge project-badge--sqsp">Squarespace</span>
                     <img src="assets/images/restorative-kinetics/screens/home.png" alt="Restorative Kinetics Fitness live website" class="w-full h-full object-cover object-top" decoding="async">
-                    <a href="restorative-kinetics.html" class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-200">
+                    <a href="restorative-kinetics.html" class="project-card-cta absolute inset-0 bg-black/60 flex items-center justify-center transition-opacity duration-200">
                         <span class="marker-font text-white text-xl border-2 border-white p-2 rotate-[-5deg]">VIEW CASE STUDY</span>
                     </a>
                 </div>
@@ -228,8 +239,8 @@
                             <span class="mini-compare-label mini-compare-label--after" style="background:#1a3d2e;">After</span>
                         </div>
                     </div>
-                    <a href="wildland-imports.html" class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-200">
-                        <span class="marker-font text-white text-lg border-2 border-white p-2 rotate-[-5deg]">CASE STUDY</span>
+                    <a href="wildland-imports.html" class="project-card-cta absolute inset-0 bg-black/60 flex items-center justify-center transition-opacity duration-200">
+                        <span class="marker-font text-white text-lg border-2 border-white p-2 rotate-[-5deg]">VIEW CASE STUDY</span>
                     </a>
                 </div>
                 <h2 class="marker-font text-xl text-[#1a3d2e]">Wildland Imports</h2>
@@ -255,8 +266,8 @@
                             <span class="mini-compare-label mini-compare-label--after" style="background:#6b4a5a;">After</span>
                         </div>
                     </div>
-                    <a href="northwest-wax.html" class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-200">
-                        <span class="marker-font text-white text-lg border-2 border-white p-2 rotate-[-5deg]">CASE STUDY</span>
+                    <a href="northwest-wax.html" class="project-card-cta absolute inset-0 bg-black/60 flex items-center justify-center transition-opacity duration-200">
+                        <span class="marker-font text-white text-lg border-2 border-white p-2 rotate-[-5deg]">VIEW CASE STUDY</span>
                     </a>
                 </div>
                 <h2 class="marker-font text-xl text-[#6b4a5a]">Northwest Wax</h2>
@@ -282,8 +293,8 @@
                             <span class="mini-compare-label mini-compare-label--after" style="background:#1e3a5f;">After</span>
                         </div>
                     </div>
-                    <a href="lingua-franca.html" class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-200">
-                        <span class="marker-font text-white text-lg border-2 border-white p-2 rotate-[-5deg]">CASE STUDY</span>
+                    <a href="lingua-franca.html" class="project-card-cta absolute inset-0 bg-black/60 flex items-center justify-center transition-opacity duration-200">
+                        <span class="marker-font text-white text-lg border-2 border-white p-2 rotate-[-5deg]">VIEW CASE STUDY</span>
                     </a>
                 </div>
                 <h2 class="marker-font text-xl text-[#1e3a5f]">Classes with Cory</h2>
@@ -299,7 +310,7 @@
         <div class="project-card p-4 -rotate-1 shadow-[10px_10px_0px_0px_rgba(255,0,255,1)] group cursor-pointer">
             <div class="aspect-square bg-pink-50 mb-4 border-2 border-black overflow-hidden relative">
                 <img src="assets/images/boutique-thumb.png" class="w-full h-full object-cover">
-                <a href="your-place-or-mine.html" class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity">
+                <a href="your-place-or-mine.html" class="project-card-cta absolute inset-0 bg-black/60 flex items-center justify-center transition-opacity duration-200">
                     <span class="marker-font text-white text-xl border-2 border-white p-2 rotate-[-5deg]">VIEW CASE STUDY</span>
                 </a>
             </div>
@@ -310,7 +321,7 @@
         <div class="project-card p-4 rotate-2 shadow-[10px_10px_0px_0px_rgba(0,255,255,1)] group cursor-pointer">
             <div class="aspect-square bg-cyan-50 mb-4 border-2 border-black overflow-hidden relative">
                 <img src="assets/images/social-qa-thumb.png" class="w-full h-full object-cover">
-                <a href="social-qa.html" class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity">
+                <a href="social-qa.html" class="project-card-cta absolute inset-0 bg-black/60 flex items-center justify-center transition-opacity duration-200">
                     <span class="marker-font text-white text-xl border-2 border-white p-2 rotate-[-5deg]">VIEW CASE STUDY</span>
                 </a>
             </div>
@@ -321,7 +332,7 @@
         <div class="project-card p-4 -rotate-2 shadow-[10px_10px_0px_0px_rgba(0,0,0,1)] group cursor-pointer">
             <div class="aspect-square bg-yellow-50 mb-4 border-2 border-black overflow-hidden relative">
                 <img src="assets/images/container-fix-thumb.png" class="w-full h-full object-cover">
-                <a href="container-fix.html" class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity">
+                <a href="container-fix.html" class="project-card-cta absolute inset-0 bg-black/60 flex items-center justify-center transition-opacity duration-200">
                     <span class="marker-font text-white text-xl border-2 border-white p-2 rotate-[-5deg]">VIEW CASE STUDY</span>
                 </a>
             </div>
@@ -332,7 +343,7 @@
         <div class="project-card p-4 rotate-1 shadow-[10px_10px_0px_0px_rgba(249,115,22,1)] group cursor-pointer">
             <div class="aspect-square bg-orange-50 mb-4 border-2 border-black overflow-hidden relative">
                 <img src="assets/images/outlawz-thumb.png" class="w-full h-full object-cover">
-                <a href="outlawz.html" class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity">
+                <a href="outlawz.html" class="project-card-cta absolute inset-0 bg-black/60 flex items-center justify-center transition-opacity duration-200">
                     <span class="marker-font text-white text-xl border-2 border-white p-2 rotate-[-5deg]">VIEW CASE STUDY</span>
                 </a>
             </div>
@@ -343,7 +354,7 @@
         <div class="project-card p-4 -rotate-1 shadow-[10px_10px_0px_0px_rgba(34,197,94,1)] group cursor-pointer">
             <div class="aspect-square bg-zinc-800 mb-4 border-2 border-black overflow-hidden relative">
                 <img src="assets/images/qa-cards-thumb.png" class="w-full h-full object-cover">
-                <a href="r-johnson-qa.html" class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity">
+                <a href="r-johnson-qa.html" class="project-card-cta absolute inset-0 bg-black/60 flex items-center justify-center transition-opacity duration-200">
                     <span class="marker-font text-white text-xl border-2 border-white p-2 rotate-[-5deg]">VIEW CASE STUDY</span>
                 </a>
             </div>
@@ -354,7 +365,7 @@
         <div class="project-card p-4 rotate-2 shadow-[10px_10px_0px_0px_rgba(236,72,153,0.8)] group cursor-pointer">
             <div class="aspect-square bg-rose-950 mb-4 border-2 border-black overflow-hidden relative">
                 <img src="assets/images/angels-empire-thumb.png" class="w-full h-full object-cover">
-                <a href="angels-empire.html" class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity">
+                <a href="angels-empire.html" class="project-card-cta absolute inset-0 bg-black/60 flex items-center justify-center transition-opacity duration-200">
                     <span class="marker-font text-white text-xl border-2 border-white p-2 rotate-[-5deg]">VIEW CASE STUDY</span>
                 </a>
             </div>
@@ -365,7 +376,7 @@
         <div class="project-card p-4 -rotate-2 shadow-[10px_10px_0px_0px_rgba(13,148,136,0.9)] group cursor-pointer">
             <div class="aspect-square bg-teal-50 mb-4 border-2 border-black overflow-hidden relative">
                 <img src="assets/images/rideshare-cory-thumb.png" class="w-full h-full object-cover">
-                <a href="rideshare-cory.html" class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity">
+                <a href="rideshare-cory.html" class="project-card-cta absolute inset-0 bg-black/60 flex items-center justify-center transition-opacity duration-200">
                     <span class="marker-font text-white text-xl border-2 border-white p-2 rotate-[-5deg]">VIEW CASE STUDY</span>
                 </a>
             </div>
@@ -376,7 +387,7 @@
         <div class="project-card p-4 rotate-1 shadow-[10px_10px_0px_0px_rgba(180,83,9,0.9)] group cursor-pointer">
             <div class="aspect-square bg-amber-50 mb-4 border-2 border-black overflow-hidden relative">
                 <img src="assets/images/chernakovo-thumb.png" class="w-full h-full object-cover">
-                <a href="chernakovo.html" class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity">
+                <a href="chernakovo.html" class="project-card-cta absolute inset-0 bg-black/60 flex items-center justify-center transition-opacity duration-200">
                     <span class="marker-font text-white text-xl border-2 border-white p-2 rotate-[-5deg]">VIEW CASE STUDY</span>
                 </a>
             </div>
