@@ -46,7 +46,124 @@
             border: 3px solid var(--rk-ink);
             box-shadow: 8px 8px 0 rgba(140, 155, 84, 0.35);
         }
+        .rk-sitemap-wrap {
+            border: 4px solid var(--rk-ink);
+            background: rgba(255, 255, 255, 0.94);
+            box-shadow: 14px 14px 0 rgba(186, 37, 43, 0.22);
+            padding: 1.5rem;
+        }
+        @media (min-width: 768px) {
+            .rk-sitemap-wrap { padding: 2rem 2.25rem; }
+        }
+        .rk-sitemap-group + .rk-sitemap-group {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 3px dashed rgba(18, 18, 18, 0.15);
+        }
+        .rk-sitemap-group__title {
+            font-family: 'Urbanist', system-ui, sans-serif;
+            font-weight: 800;
+            font-size: 0.7rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--rk-red);
+            margin-bottom: 1rem;
+        }
+        .rk-sitemap-group__title--tools { color: var(--rk-blue); }
+        .rk-sitemap-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 0.75rem;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        @media (min-width: 480px) {
+            .rk-sitemap-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (min-width: 900px) {
+            .rk-sitemap-grid--tools { grid-template-columns: repeat(2, 1fr); }
+            .rk-sitemap-grid--core { grid-template-columns: repeat(3, 1fr); }
+        }
+        .rk-sitemap-card {
+            display: flex;
+            align-items: center;
+            gap: 0.65rem;
+            min-width: 0;
+            padding: 0.85rem 1rem;
+            border: 3px solid var(--rk-ink);
+            background: #fff;
+            box-shadow: 5px 5px 0 var(--rk-mustard);
+            text-decoration: none;
+            color: var(--rk-ink);
+            font-family: 'Urbanist', system-ui, sans-serif;
+            font-weight: 700;
+            font-size: 0.9rem;
+            line-height: 1.2;
+            letter-spacing: -0.02em;
+            transition: transform 0.18s ease, box-shadow 0.18s ease, background-color 0.18s ease;
+        }
+        .rk-sitemap-card:hover,
+        .rk-sitemap-card:focus-visible {
+            transform: translate(-3px, -3px);
+            box-shadow: 8px 8px 0 var(--rk-blue);
+            background: var(--rk-mustard-soft);
+            outline: none;
+        }
+        .rk-sitemap-card--tool {
+            border-color: var(--rk-blue);
+            box-shadow: 5px 5px 0 rgba(28, 119, 166, 0.35);
+        }
+        .rk-sitemap-card--tool:hover,
+        .rk-sitemap-card--tool:focus-visible {
+            box-shadow: 8px 8px 0 var(--rk-sage);
+        }
+        .rk-sitemap-card--wide {
+            grid-column: 1 / -1;
+        }
+        @media (min-width: 900px) {
+            .rk-sitemap-card--wide { grid-column: span 2; }
+        }
+        .rk-sitemap-label {
+            flex: 1;
+            min-width: 0;
+        }
+        .rk-sitemap-note {
+            display: block;
+            font-size: 0.65rem;
+            font-weight: 600;
+            color: var(--rk-sage);
+            margin-top: 0.15rem;
+        }
+        .rk-sitemap-arrow {
+            flex-shrink: 0;
+            font-size: 1.1rem;
+            color: var(--rk-red);
+            transition: transform 0.18s ease;
+        }
+        .rk-sitemap-card:hover .rk-sitemap-arrow,
+        .rk-sitemap-card:focus-visible .rk-sitemap-arrow {
+            transform: translateX(3px);
+        }
+        .rk-sitemap-cta {
+            margin-top: 1.75rem;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            padding-top: 1.5rem;
+            border-top: 3px solid var(--rk-ink);
+        }
+        .rk-sitemap-cta p {
+            margin: 0;
+            font-family: 'Bitter', Georgia, serif;
+            font-size: 0.9rem;
+            color: var(--rk-ink);
+            max-width: 28rem;
+        }
     </style>
+<link rel="stylesheet" href="css/lol-enhance.css">
 </head>
 <body class="rk-page p-6 md:p-16 pb-40">
 
@@ -200,22 +317,39 @@
                 Pages on the live site
             </span>
         </div>
-        <p class="rk-body text-[var(--rk-ink)] mb-8 max-w-3xl">
-            Eleven routes below—core pages plus each calculator as its own URL. The whole build is tuned for <strong>mobile</strong> as well as desktop (nav, layouts, tools).
+        <p class="rk-body text-[var(--rk-ink)] mb-8 max-w-3xl font-medium">
+            Eleven live routes—not a one-pager. Core storytelling pages sit alongside <strong>four calculator URLs</strong> and contact wired for <strong>Calendly + Google Maps</strong>. Everything is built for <strong>mobile and desktop</strong> (nav, layouts, tools).
         </p>
-        <ol class="list-decimal list-inside space-y-3 font-[Urbanist,sans-serif] text-sm md:text-base font-semibold text-[var(--rk-ink)] max-w-4xl rk-body">
-            <li class="pl-1"><a href="https://www.restorativekineticsfitness.com/" class="text-[var(--rk-blue)] underline hover:text-[var(--rk-red)] font-bold" target="_blank" rel="noopener noreferrer">Home</a></li>
-            <li class="pl-1"><a href="https://www.restorativekineticsfitness.com/about" class="text-[var(--rk-blue)] underline hover:text-[var(--rk-red)] font-bold" target="_blank" rel="noopener noreferrer">About</a></li>
-            <li class="pl-1"><a href="https://www.restorativekineticsfitness.com/overview" class="text-[var(--rk-blue)] underline hover:text-[var(--rk-red)] font-bold" target="_blank" rel="noopener noreferrer">Methodology</a></li>
-            <li class="pl-1"><a href="https://www.restorativekineticsfitness.com/packages" class="text-[var(--rk-blue)] underline hover:text-[var(--rk-red)] font-bold" target="_blank" rel="noopener noreferrer">Services &amp; rates</a></li>
-            <li class="pl-1"><a href="https://www.restorativekineticsfitness.com/resources" class="text-[var(--rk-blue)] underline hover:text-[var(--rk-red)] font-bold" target="_blank" rel="noopener noreferrer">Resources</a></li>
-            <li class="pl-1"><a href="https://www.restorativekineticsfitness.com/bmical" class="text-[var(--rk-blue)] underline hover:text-[var(--rk-red)] font-bold" target="_blank" rel="noopener noreferrer">BMI calculator</a></li>
-            <li class="pl-1"><a href="https://www.restorativekineticsfitness.com/1rmcalculator" class="text-[var(--rk-blue)] underline hover:text-[var(--rk-red)] font-bold" target="_blank" rel="noopener noreferrer">1RM calculator</a></li>
-            <li class="pl-1"><a href="https://www.restorativekineticsfitness.com/macros" class="text-[var(--rk-blue)] underline hover:text-[var(--rk-red)] font-bold" target="_blank" rel="noopener noreferrer">Macros calculator</a></li>
-            <li class="pl-1"><a href="https://www.restorativekineticsfitness.com/vo2-max-analysis" class="text-[var(--rk-blue)] underline hover:text-[var(--rk-red)] font-bold" target="_blank" rel="noopener noreferrer">VO2 max calculator</a></li>
-            <li class="pl-1"><a href="https://www.restorativekineticsfitness.com/contact" class="text-[var(--rk-blue)] underline hover:text-[var(--rk-red)] font-bold" target="_blank" rel="noopener noreferrer">Contact</a> <span class="font-normal text-[var(--rk-ink)]">(scheduling · Maps)</span></li>
-            <li class="pl-1"><a href="https://www.restorativekineticsfitness.com/faqs-1" class="text-[var(--rk-blue)] underline hover:text-[var(--rk-red)] font-bold" target="_blank" rel="noopener noreferrer">FAQ</a></li>
-        </ol>
+
+        <div class="rk-sitemap-wrap rotate-[-0.5deg]">
+            <div class="rk-sitemap-group">
+                <p class="rk-sitemap-group__title">Core pages · 7</p>
+                <ul class="rk-sitemap-grid rk-sitemap-grid--core">
+                    <li><a href="https://www.restorativekineticsfitness.com/" class="rk-sitemap-card" target="_blank" rel="noopener noreferrer"><span class="rk-sitemap-label">Home</span><span class="rk-sitemap-arrow" aria-hidden="true">→</span></a></li>
+                    <li><a href="https://www.restorativekineticsfitness.com/about" class="rk-sitemap-card" target="_blank" rel="noopener noreferrer"><span class="rk-sitemap-label">About</span><span class="rk-sitemap-arrow" aria-hidden="true">→</span></a></li>
+                    <li><a href="https://www.restorativekineticsfitness.com/overview" class="rk-sitemap-card" target="_blank" rel="noopener noreferrer"><span class="rk-sitemap-label">Methodology</span><span class="rk-sitemap-arrow" aria-hidden="true">→</span></a></li>
+                    <li><a href="https://www.restorativekineticsfitness.com/packages" class="rk-sitemap-card" target="_blank" rel="noopener noreferrer"><span class="rk-sitemap-label">Services &amp; rates</span><span class="rk-sitemap-arrow" aria-hidden="true">→</span></a></li>
+                    <li><a href="https://www.restorativekineticsfitness.com/resources" class="rk-sitemap-card" target="_blank" rel="noopener noreferrer"><span class="rk-sitemap-label">Resources</span><span class="rk-sitemap-arrow" aria-hidden="true">→</span></a></li>
+                    <li><a href="https://www.restorativekineticsfitness.com/contact" class="rk-sitemap-card rk-sitemap-card--wide" target="_blank" rel="noopener noreferrer"><span class="rk-sitemap-label">Contact<span class="rk-sitemap-note">Calendly scheduling · Google Maps</span></span><span class="rk-sitemap-arrow" aria-hidden="true">→</span></a></li>
+                    <li><a href="https://www.restorativekineticsfitness.com/faqs-1" class="rk-sitemap-card" target="_blank" rel="noopener noreferrer"><span class="rk-sitemap-label">FAQ</span><span class="rk-sitemap-arrow" aria-hidden="true">→</span></a></li>
+                </ul>
+            </div>
+
+            <div class="rk-sitemap-group">
+                <p class="rk-sitemap-group__title rk-sitemap-group__title--tools">Calculator suite · own URLs · 4</p>
+                <ul class="rk-sitemap-grid rk-sitemap-grid--tools">
+                    <li><a href="https://www.restorativekineticsfitness.com/bmical" class="rk-sitemap-card rk-sitemap-card--tool" target="_blank" rel="noopener noreferrer"><span class="rk-sitemap-label">BMI calculator</span><span class="rk-sitemap-arrow" aria-hidden="true">→</span></a></li>
+                    <li><a href="https://www.restorativekineticsfitness.com/1rmcalculator" class="rk-sitemap-card rk-sitemap-card--tool" target="_blank" rel="noopener noreferrer"><span class="rk-sitemap-label">1RM calculator</span><span class="rk-sitemap-arrow" aria-hidden="true">→</span></a></li>
+                    <li><a href="https://www.restorativekineticsfitness.com/macros" class="rk-sitemap-card rk-sitemap-card--tool" target="_blank" rel="noopener noreferrer"><span class="rk-sitemap-label">Macros calculator</span><span class="rk-sitemap-arrow" aria-hidden="true">→</span></a></li>
+                    <li><a href="https://www.restorativekineticsfitness.com/vo2-max-analysis" class="rk-sitemap-card rk-sitemap-card--tool" target="_blank" rel="noopener noreferrer"><span class="rk-sitemap-label">VO<sub>2</sub> max calculator</span><span class="rk-sitemap-arrow" aria-hidden="true">→</span></a></li>
+                </ul>
+            </div>
+
+            <div class="rk-sitemap-cta">
+                <p>Tap any tile to open that page on the live Squarespace build.</p>
+                <a href="https://www.restorativekineticsfitness.com/" target="_blank" rel="noopener noreferrer" class="inline-block bg-[var(--rk-red)] text-white px-7 py-3 inter-black uppercase tracking-wide text-sm border-4 border-[var(--rk-ink)] shadow-[5px_5px_0_var(--rk-mustard)] hover:bg-[var(--rk-ink)] transition-colors shrink-0">Open live site →</a>
+            </div>
+        </div>
     </section>
 
     <footer class="fixed bottom-0 left-0 w-full bg-[var(--rk-blue)] border-t-4 border-[var(--rk-ink)] z-[100] p-4 flex flex-wrap justify-center gap-6 md:gap-12">
@@ -232,5 +366,6 @@
             document.addEventListener('mousemove', (e) => { cursor.style.left = e.clientX + 'px'; cursor.style.top = e.clientY + 'px'; });
         })();
     </script>
+    <script src="js/lol-enhance.js" defer></script>
 </body>
 </html>

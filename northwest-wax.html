@@ -11,6 +11,7 @@
     <style>
         :root { --primary: #6b4a5a; --accent: #e8b4b8; --card-bg: #faf6f4; --shadow: #6b4a5a; }
     </style>
+<link rel="stylesheet" href="css/lol-enhance.css">
 </head>
 <body class="revamp-page p-6 md:p-16 pb-40" style="--accent:#e8b4b8;">
     <div id="custom-cursor"></div>
@@ -36,28 +37,35 @@
         <div class="case-card p-6 md:p-10 rotate-[0.5deg]">
             <h2 class="inter-black text-2xl md:text-3xl uppercase mb-2 text-[var(--primary)]">Before & after · About</h2>
             <p class="text-gray-700 mb-6 max-w-2xl text-sm md:text-base">
-                Drag to compare Tori’s <strong>Wix “About” block</strong> (one section on a one-pager) with the <strong>dedicated About page</strong> on the rebuild — where her story, experience, and credibility actually get room to breathe.
+                Same mobile viewport — Tori’s <strong>Wix About block</strong> on the left, the <strong>dedicated About page</strong> on the rebuild on the right. Open either site below to explore live.
             </p>
-            <div class="compare-shell mb-6" id="compare-shell" role="img" aria-label="Northwest Wax About section before and after">
-                <img src="assets/images/northwest-wax/northwest-wax-before.png" alt="Northwest Wax Wix About section before" width="1280" height="800" decoding="async">
-                <img src="assets/images/northwest-wax/northwest-wax-after.png" alt="Northwest Wax custom About page after" class="compare-after" id="compare-after" width="1280" height="800" decoding="async">
-                <div class="compare-handle" id="compare-handle" aria-hidden="true"></div>
-                <span class="compare-label compare-label--before">Before · Wix</span>
-                <span class="compare-label compare-label--after">After · WIP</span>
-                <input type="range" min="0" max="100" value="50" class="compare-range" id="compare-range" aria-label="Compare before and after" aria-valuenow="50">
+            <div class="phone-compare mb-6" role="group" aria-label="Northwest Wax mobile before and after">
+                <div class="phone-compare-panel">
+                    <div class="phone-compare-frame">
+                        <img src="assets/images/northwest-wax/northwest-wax-before-mobile.png" alt="Northwest Wax Wix site on mobile" width="390" height="844" decoding="async">
+                    </div>
+                    <span class="phone-compare-tag phone-compare-tag--before">Before · Wix</span>
+                </div>
+                <span class="phone-compare-vs" aria-hidden="true">vs</span>
+                <div class="phone-compare-panel">
+                    <div class="phone-compare-frame">
+                        <img src="assets/images/northwest-wax/northwest-wax-after-mobile.png" alt="Northwest Wax rebuild on mobile" width="390" height="844" decoding="async">
+                    </div>
+                    <span class="phone-compare-tag phone-compare-tag--after">After · work in progress</span>
+                </div>
             </div>
             <div class="case-study-links">
-                <a href="https://www.northwestwaxbeaverton.com/#about" target="_blank" rel="noopener noreferrer" class="case-study-link group bg-white border-4 border-black px-4 py-4 sm:px-5 hover:bg-gray-100 transition-colors cursor-pointer shadow-[6px_6px_0_#111]">
+                <a href="https://www.northwestwaxbeaverton.com/#about" target="_blank" rel="noopener noreferrer" class="case-study-link case-study-link--legacy group bg-white border-4 border-black px-4 py-4 sm:px-5 hover:bg-gray-100 transition-colors cursor-pointer shadow-[6px_6px_0_#111]">
                     <div>
-                        <p class="text-[10px] font-bold uppercase tracking-widest text-gray-500">Live legacy · About anchor</p>
-                        <p class="inter-black case-study-url uppercase">northwestwaxbeaverton.com</p>
+                        <p class="case-study-link__cta">Click here to see the old site</p>
+                        <p class="text-[10px] font-bold uppercase tracking-widest text-gray-500 mt-1">northwestwaxbeaverton.com · About</p>
                     </div>
                     <span class="case-study-arrow text-xl sm:text-2xl font-black group-hover:translate-x-1 transition-transform" aria-hidden="true">→</span>
                 </a>
-                <a href="https://mrjohn5on.github.io/nw_wax_tori/about.html" target="_blank" rel="noopener noreferrer" class="case-study-link group bg-[var(--primary)] text-white border-4 border-black px-4 py-4 sm:px-5 hover:bg-black transition-colors cursor-pointer shadow-[6px_6px_0_var(--accent)]">
+                <a href="https://mrjohn5on.github.io/nw_wax_tori/about.html" target="_blank" rel="noopener noreferrer" class="case-study-link case-study-link--upgrade group bg-[var(--primary)] text-white border-4 border-black px-4 py-4 sm:px-5 hover:bg-black transition-colors cursor-pointer shadow-[6px_6px_0_#111]">
                     <div>
-                        <p class="text-[10px] font-bold uppercase tracking-widest text-white/70">Work in progress · About page</p>
-                        <p class="inter-black case-study-url uppercase">Preview rebuild</p>
+                        <p class="case-study-link__cta">Click here to see the upgrade</p>
+                        <p class="text-[10px] font-bold uppercase tracking-widest text-white/70 mt-1">nw_wax_tori · About preview</p>
                     </div>
                     <span class="case-study-arrow text-xl sm:text-2xl font-black group-hover:translate-x-1 transition-transform" aria-hidden="true">→</span>
                 </a>
@@ -186,7 +194,6 @@
         <a href="contact.html" class="text-white inter-black text-lg md:text-xl hover:text-[var(--accent)] uppercase italic cursor-pointer">Contact Me</a>
     </footer>
 
-    <script src="js/revamp-compare.js"></script>
     <script>
         (function () {
             if (!window.matchMedia('(min-width: 768px)').matches || !window.matchMedia('(pointer: fine)').matches) return;
@@ -195,11 +202,12 @@
                 cursor.style.left = e.clientX + 'px';
                 cursor.style.top = e.clientY + 'px';
             });
-            document.querySelectorAll('a, .compare-range').forEach(function (el) {
+            document.querySelectorAll('a').forEach(function (el) {
                 el.addEventListener('mouseenter', function () { cursor.style.transform = 'scale(2)'; });
                 el.addEventListener('mouseleave', function () { cursor.style.transform = 'scale(1)'; });
             });
         })();
     </script>
+    <script src="js/lol-enhance.js" defer></script>
 </body>
 </html>

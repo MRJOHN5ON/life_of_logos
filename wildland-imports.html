@@ -36,82 +36,10 @@
             background: var(--wl-cream);
             box-shadow: 12px 12px 0 var(--wl-forest);
         }
-        .compare-shell {
-            position: relative;
-            width: 100%;
-            aspect-ratio: 16 / 10;
-            overflow: hidden;
-            border: 4px solid black;
-            background: #111;
-            user-select: none;
-            touch-action: none;
-        }
-        .compare-shell img {
-            position: absolute;
-            inset: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: top center;
-            pointer-events: none;
-        }
-        .compare-after {
-            clip-path: inset(0 0 0 50%);
-        }
-        .compare-handle {
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 50%;
-            width: 4px;
-            background: #fff;
-            transform: translateX(-50%);
-            z-index: 20;
-            box-shadow: 0 0 12px rgba(0,0,0,0.5);
-        }
-        .compare-handle::after {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 44px;
-            height: 44px;
-            border-radius: 50%;
-            background: var(--wl-gold);
-            border: 3px solid black;
-            box-shadow: 4px 4px 0 black;
-        }
-        .compare-range {
-            position: absolute;
-            inset: 0;
-            width: 100%;
-            height: 100%;
-            opacity: 0;
-            cursor: ew-resize;
-            z-index: 30;
-            margin: 0;
-        }
-        .compare-label {
-            position: absolute;
-            top: 12px;
-            z-index: 15;
-            font-size: 0.65rem;
-            font-weight: 800;
-            letter-spacing: 0.12em;
-            text-transform: uppercase;
-            padding: 6px 12px;
-            border: 2px solid black;
-        }
-        .compare-label--before { left: 12px; background: #fff; color: #111; }
-        .compare-label--after { right: 12px; background: var(--wl-forest); color: #fff; }
-        .compare-label { transition: opacity 0.2s ease, visibility 0.2s ease; }
-        @media (prefers-reduced-motion: reduce) {
-            .compare-handle { transition: none; }
-        }
     </style>
+<link rel="stylesheet" href="css/lol-enhance.css">
 </head>
-<body class="p-6 md:p-16 pb-40">
+<body class="revamp-page p-6 md:p-16 pb-40" style="--accent: var(--wl-gold); --primary: var(--wl-forest); --shadow: var(--wl-forest);">
     <div id="custom-cursor"></div>
     <div class="splatter bg-[#2d5a47] w-[500px] h-[500px] -top-20 -left-20"></div>
     <div class="splatter bg-[#c9a227] w-[400px] h-[400px] top-1/2 right-0"></div>
@@ -135,30 +63,37 @@
         <div class="wl-card p-6 md:p-10 rotate-[0.5deg]">
             <h2 class="inter-black text-2xl md:text-3xl uppercase mb-2 text-[var(--wl-forest)]">Before & after</h2>
             <p class="text-gray-700 mb-6 max-w-2xl text-sm md:text-base">
-                Drag the handle to compare the <strong>live legacy site</strong> with my <strong>in-progress rebuild</strong>. Same brand — completely different first impression.
+                Same mobile viewport — the <strong>live Weebly site</strong> on the left, the <strong>in-progress rebuild</strong> on the right. Same brand, completely different first impression.
             </p>
 
-            <div class="compare-shell mb-6" id="compare-shell" role="img" aria-label="Before and after comparison of Wildland Imports website">
-                <img src="assets/images/wildland/wildland-before.png" alt="Wildland Imports website before revamp — legacy Weebly layout" width="1280" height="800" decoding="async">
-                <img src="assets/images/wildland/wildland-after.png" alt="Wildland Imports website after revamp — work in progress" class="compare-after" id="compare-after" width="1280" height="800" decoding="async">
-                <div class="compare-handle" id="compare-handle" aria-hidden="true"></div>
-                <span class="compare-label compare-label--before">Before · Weebly</span>
-                <span class="compare-label compare-label--after">After · WIP</span>
-                <input type="range" min="0" max="100" value="50" class="compare-range" id="compare-range" aria-label="Drag to compare before and after website designs" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">
+            <div class="phone-compare mb-6" role="group" aria-label="Wildland Imports mobile before and after">
+                <div class="phone-compare-panel">
+                    <div class="phone-compare-frame">
+                        <img src="assets/images/wildland/wildland-before-mobile.png" alt="Wildland Imports Weebly site on mobile" width="390" height="844" decoding="async">
+                    </div>
+                    <span class="phone-compare-tag phone-compare-tag--before">Before · Weebly</span>
+                </div>
+                <span class="phone-compare-vs" aria-hidden="true">vs</span>
+                <div class="phone-compare-panel">
+                    <div class="phone-compare-frame">
+                        <img src="assets/images/wildland/wildland-after-mobile.png" alt="Wildland Imports rebuild on mobile" width="390" height="844" decoding="async">
+                    </div>
+                    <span class="phone-compare-tag phone-compare-tag--after">After · work in progress</span>
+                </div>
             </div>
 
             <div class="case-study-links">
-                <a href="https://www.wildlandimports.com/#/" target="_blank" rel="noopener noreferrer" class="case-study-link group bg-white border-4 border-black px-4 py-4 sm:px-5 hover:bg-gray-100 transition-colors cursor-pointer shadow-[6px_6px_0_#111]">
+                <a href="https://www.wildlandimports.com/#/" target="_blank" rel="noopener noreferrer" class="case-study-link case-study-link--legacy group bg-white border-4 border-black px-4 py-4 sm:px-5 hover:bg-gray-100 transition-colors cursor-pointer shadow-[6px_6px_0_#111]">
                     <div>
-                        <p class="text-[10px] font-bold uppercase tracking-widest text-gray-500">Live legacy</p>
-                        <p class="inter-black case-study-url uppercase">wildlandimports.com</p>
+                        <p class="case-study-link__cta">Click here to see the old site</p>
+                        <p class="text-[10px] font-bold uppercase tracking-widest text-gray-500 mt-1">wildlandimports.com</p>
                     </div>
                     <span class="case-study-arrow text-xl sm:text-2xl font-black group-hover:translate-x-1 transition-transform" aria-hidden="true">→</span>
                 </a>
-                <a href="https://mrjohn5on.github.io/wildland_imports/" target="_blank" rel="noopener noreferrer" class="case-study-link group bg-[var(--wl-forest)] text-white border-4 border-black px-4 py-4 sm:px-5 hover:bg-[var(--wl-moss)] transition-colors cursor-pointer shadow-[6px_6px_0_var(--wl-gold)]">
+                <a href="https://mrjohn5on.github.io/wildland_imports/" target="_blank" rel="noopener noreferrer" class="case-study-link case-study-link--upgrade group bg-[var(--wl-forest)] text-white border-4 border-black px-4 py-4 sm:px-5 hover:bg-[var(--wl-moss)] transition-colors cursor-pointer shadow-[6px_6px_0_#111]">
                     <div>
-                        <p class="text-[10px] font-bold uppercase tracking-widest text-emerald-200/80">Work in progress</p>
-                        <p class="inter-black case-study-url uppercase">Preview rebuild</p>
+                        <p class="case-study-link__cta">Click here to see the upgrade</p>
+                        <p class="text-[10px] font-bold uppercase tracking-widest text-emerald-200/80 mt-1">wildland_imports · preview</p>
                     </div>
                     <span class="case-study-arrow text-xl sm:text-2xl font-black group-hover:translate-x-1 transition-transform" aria-hidden="true">→</span>
                 </a>
@@ -302,7 +237,6 @@
         <a href="contact.html" class="text-white inter-black text-lg md:text-xl hover:text-[var(--wl-gold)] uppercase italic cursor-pointer">Contact Me</a>
     </footer>
 
-    <script src="js/revamp-compare.js"></script>
     <script>
         (function() {
             if (!window.matchMedia('(min-width: 768px)').matches || !window.matchMedia('(pointer: fine)').matches) return;
@@ -311,11 +245,12 @@
                 cursor.style.left = e.clientX + 'px';
                 cursor.style.top = e.clientY + 'px';
             });
-            document.querySelectorAll('a, .compare-range').forEach(function(el) {
+            document.querySelectorAll('a').forEach(function(el) {
                 el.addEventListener('mouseenter', function() { cursor.style.transform = 'scale(2)'; });
                 el.addEventListener('mouseleave', function() { cursor.style.transform = 'scale(1)'; });
             });
         })();
     </script>
+    <script src="js/lol-enhance.js" defer></script>
 </body>
 </html>

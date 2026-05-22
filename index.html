@@ -27,8 +27,8 @@
         .marker-font { font-family: 'Permanent Marker', cursive; }
         .inter-black { font-family: 'Inter', sans-serif; font-weight: 900; }
         .splatter { position: fixed; border-radius: 50%; filter: blur(80px); z-index: -1; opacity: 0.3; pointer-events: none; }
-        .project-card { transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); background: white; border: 4px solid black; }
-        .project-card:hover { transform: scale(1.05) rotate(0deg) !important; z-index: 20; box-shadow: 0 0 40px rgba(255, 0, 255, 0.7); }
+        .project-card { transition: box-shadow 0.3s ease, border-color 0.3s ease; background: white; border: 4px solid black; }
+        .project-card:hover { z-index: 20; box-shadow: 0 0 40px rgba(255, 0, 255, 0.55); }
         #custom-cursor { display: none !important; width: 24px; height: 24px; background: #ff00ff; border-radius: 50%; position: fixed; pointer-events: none; z-index: 9999; mix-blend-mode: difference; transition: transform 0.15s ease-out; box-shadow: 0 0 15px #ff00ff; }
         @media (min-width: 768px) and (pointer: fine) {
             #custom-cursor { display: block !important; }
@@ -116,9 +116,9 @@
         .service-intro { max-width: 52rem; line-height: 1.65; }
         @media (prefers-reduced-motion: reduce) {
             .project-card { transition: none; }
-            .project-card:hover { transform: none !important; }
         }
     </style>
+    <link rel="stylesheet" href="css/lol-enhance.css">
 </head>
 <body class="p-6 md:p-16 pb-40">
     <div id="custom-cursor"></div>
@@ -127,9 +127,9 @@
 
     <header class="mb-24 relative z-10 flex flex-col items-start gap-4">
         <h1 class="inter-black text-[12vw] md:text-[8vw] leading-[0.8] tracking-tighter uppercase italic text-black">
-            LIFE OF <span class="text-fuchsia-600 marker-font lowercase block -mt-2 md:-mt-6 rotate-[-3deg] drop-shadow-[4px_4px_0px_rgba(0,0,0,1)]">Logos</span>
+            LIFE OF <span class="lol-hero-shimmer marker-font lowercase block -mt-2 md:-mt-6 rotate-[-3deg] drop-shadow-[4px_4px_0px_rgba(0,0,0,1)]">Logos</span>
         </h1>
-        <div class="flex flex-col items-start mt-2 md:mt-4">
+        <div class="flex flex-col items-start mt-2 md:mt-4 lol-reveal">
             <p class="marker-font text-3xl md:text-5xl text-gray-800 tracking-widest uppercase leading-none">Ryley Johnson</p>
             <div class="mt-4 bg-black text-white px-4 py-2 text-xs md:text-sm font-bold tracking-[0.2em] uppercase rotate-[-1deg] inline-block shadow-[4px_4px_0px_#ff00ff]">
                 Logos · Websites · Revamps · Print
@@ -138,7 +138,28 @@
         </div>
     </header>
 
-    <section id="finished-websites" class="mb-20 max-w-[1400px] mx-auto">
+    <div class="lol-marquee-wrap lol-reveal" aria-hidden="true">
+        <div class="lol-marquee">
+            <div class="lol-marquee__group">
+                <span>Logo design</span><span class="lol-marquee__dot">★</span>
+                <span>Website revamps</span><span class="lol-marquee__dot">★</span>
+                <span>Weebly · Wix escape</span><span class="lol-marquee__dot">★</span>
+                <span>Business cards</span><span class="lol-marquee__dot">★</span>
+                <span>Gen AI visuals</span><span class="lol-marquee__dot">★</span>
+                <span>Squarespace + code</span><span class="lol-marquee__dot">★</span>
+            </div>
+            <div class="lol-marquee__group" aria-hidden="true">
+                <span>Logo design</span><span class="lol-marquee__dot">★</span>
+                <span>Website revamps</span><span class="lol-marquee__dot">★</span>
+                <span>Weebly · Wix escape</span><span class="lol-marquee__dot">★</span>
+                <span>Business cards</span><span class="lol-marquee__dot">★</span>
+                <span>Gen AI visuals</span><span class="lol-marquee__dot">★</span>
+                <span>Squarespace + code</span><span class="lol-marquee__dot">★</span>
+            </div>
+        </div>
+    </div>
+
+    <section id="finished-websites" class="mb-20 max-w-[1400px] mx-auto lol-reveal">
         <div class="mb-6 flex flex-wrap items-end gap-4">
             <div class="section-tag text-xl uppercase tracking-widest">Finished Websites</div>
             <p class="text-xs font-bold uppercase tracking-widest text-gray-600">Live · Squarespace + custom code</p>
@@ -178,7 +199,7 @@
         </div>
     </section>
 
-    <section id="platform-escapes" class="mb-16 max-w-[1400px] mx-auto">
+    <section id="platform-escapes" class="mb-16 max-w-[1400px] mx-auto lol-reveal">
         <div class="mb-6 flex flex-wrap items-end gap-4">
             <div class="section-tag text-xl uppercase tracking-widest" style="background: #ff00ff;">Platform Escapes</div>
             <p class="text-xs font-bold uppercase tracking-widest text-gray-600">Revamps in progress</p>
@@ -190,7 +211,7 @@
         <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10">
             <div class="project-card revamp-card p-4 -rotate-1 shadow-[10px_10px_0px_0px_rgba(26,61,46,1)] group cursor-pointer">
                 <div class="aspect-[4/3] mb-4 border-2 border-black overflow-hidden relative">
-                    <span class="project-badge project-badge--wip">In progress</span>
+                    <span class="project-badge project-badge--wip">Work in progress</span>
                     <span class="project-badge project-badge--platform">Weebly</span>
                     <div class="mini-compare h-full" aria-label="Wildland before and after mobile">
                         <div class="mini-compare-panel">
@@ -217,7 +238,7 @@
 
             <div class="project-card revamp-card p-4 rotate-1 shadow-[10px_10px_0px_0px_rgba(107,74,90,1)] group cursor-pointer">
                 <div class="aspect-[4/3] mb-4 border-2 border-black overflow-hidden relative">
-                    <span class="project-badge project-badge--wip">In progress</span>
+                    <span class="project-badge project-badge--wip">Work in progress</span>
                     <span class="project-badge project-badge--platform">Wix</span>
                     <div class="mini-compare h-full" aria-label="Northwest Wax before and after mobile">
                         <div class="mini-compare-panel">
@@ -244,7 +265,7 @@
 
             <div class="project-card revamp-card p-4 -rotate-2 shadow-[10px_10px_0px_0px_rgba(30,58,95,1)] group cursor-pointer md:col-span-2 xl:col-span-1">
                 <div class="aspect-[4/3] mb-4 border-2 border-black overflow-hidden relative">
-                    <span class="project-badge project-badge--wip">In progress</span>
+                    <span class="project-badge project-badge--wip">Work in progress</span>
                     <span class="project-badge project-badge--platform">Weebly</span>
                     <div class="mini-compare h-full" aria-label="Classes with Cory Weebly before and after mobile">
                         <div class="mini-compare-panel">
@@ -543,5 +564,6 @@
             }
         })();
     </script>
+    <script src="js/lol-enhance.js" defer></script>
 </body>
 </html>

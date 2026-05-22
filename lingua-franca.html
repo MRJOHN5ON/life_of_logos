@@ -11,6 +11,7 @@
     <style>
         :root { --primary: #1e3a5f; --accent: #c9a227; --card-bg: #f4f6fa; --shadow: #1e3a5f; }
     </style>
+<link rel="stylesheet" href="css/lol-enhance.css">
 </head>
 <body class="revamp-page p-6 md:p-16 pb-40" style="--accent:#c9a227;">
     <div id="custom-cursor"></div>
@@ -37,28 +38,35 @@
         <div class="case-card p-6 md:p-10 rotate-[-0.5deg]">
             <h2 class="inter-black text-2xl md:text-3xl uppercase mb-2 text-[var(--primary)]">Before & after · About</h2>
             <p class="text-gray-700 mb-6 max-w-2xl text-sm md:text-base">
-                Drag to compare the <strong>legacy Weebly institute site</strong> with Cory’s <strong>About page</strong> on the rebuild — where credentials, philosophy, and booking actually have room.
+                Same mobile viewport — <strong>legacy Weebly</strong> on the left, the <strong>rebuild</strong> on the right. Open either site below to explore live.
             </p>
-            <div class="compare-shell mb-6" id="compare-shell" role="img" aria-label="Lingua Franca Weebly vs Classes with Cory About page">
-                <img src="assets/images/lingua-franca/lingua-franca-before.png" alt="Lingua Franca Institute Weebly site before" width="1280" height="800" decoding="async">
-                <img src="assets/images/lingua-franca/lingua-franca-after.png" alt="Classes with Cory About page on custom rebuild" class="compare-after" id="compare-after" width="1280" height="800" decoding="async">
-                <div class="compare-handle" id="compare-handle" aria-hidden="true"></div>
-                <span class="compare-label compare-label--before">Before · Weebly</span>
-                <span class="compare-label compare-label--after">After · WIP</span>
-                <input type="range" min="0" max="100" value="50" class="compare-range" id="compare-range" aria-label="Compare before and after" aria-valuenow="50">
+            <div class="phone-compare mb-6" role="group" aria-label="Lingua Franca mobile before and after">
+                <div class="phone-compare-panel">
+                    <div class="phone-compare-frame">
+                        <img src="assets/images/lingua-franca/lingua-franca-before-mobile.png" alt="Lingua Franca Institute Weebly site on mobile" width="390" height="844" decoding="async">
+                    </div>
+                    <span class="phone-compare-tag phone-compare-tag--before">Before · Weebly</span>
+                </div>
+                <span class="phone-compare-vs" aria-hidden="true">vs</span>
+                <div class="phone-compare-panel">
+                    <div class="phone-compare-frame">
+                        <img src="assets/images/lingua-franca/lingua-franca-after-mobile.png" alt="Classes with Cory rebuild on mobile" width="390" height="844" decoding="async">
+                    </div>
+                    <span class="phone-compare-tag phone-compare-tag--after">After · work in progress</span>
+                </div>
             </div>
             <div class="case-study-links">
-                <a href="https://www.linguafrancainstitute.com/" target="_blank" rel="noopener noreferrer" class="case-study-link group bg-white border-4 border-black px-4 py-4 sm:px-5 hover:bg-gray-100 transition-colors cursor-pointer shadow-[6px_6px_0_#111]">
+                <a href="https://www.linguafrancainstitute.com/" target="_blank" rel="noopener noreferrer" class="case-study-link case-study-link--legacy group bg-white border-4 border-black px-4 py-4 sm:px-5 hover:bg-gray-100 transition-colors cursor-pointer shadow-[6px_6px_0_#111]">
                     <div>
-                        <p class="text-[10px] font-bold uppercase tracking-widest text-gray-500">Live legacy</p>
-                        <p class="inter-black case-study-url uppercase">linguafrancainstitute.com</p>
+                        <p class="case-study-link__cta">Click here to see the old site</p>
+                        <p class="text-[10px] font-bold uppercase tracking-widest text-gray-500 mt-1">linguafrancainstitute.com</p>
                     </div>
                     <span class="case-study-arrow text-xl sm:text-2xl font-black group-hover:translate-x-1 transition-transform" aria-hidden="true">→</span>
                 </a>
-                <a href="https://mrjohn5on.github.io/classes_with_cory/" target="_blank" rel="noopener noreferrer" class="case-study-link group bg-[var(--primary)] text-white border-4 border-black px-4 py-4 sm:px-5 hover:bg-[var(--accent)] hover:text-black transition-colors cursor-pointer shadow-[6px_6px_0_#111]">
+                <a href="https://mrjohn5on.github.io/classes_with_cory/" target="_blank" rel="noopener noreferrer" class="case-study-link case-study-link--upgrade group bg-[var(--primary)] text-white border-4 border-black px-4 py-4 sm:px-5 hover:bg-[var(--accent)] hover:text-black transition-colors cursor-pointer shadow-[6px_6px_0_#111]">
                     <div>
-                        <p class="text-[10px] font-bold uppercase tracking-widest text-white/80">Work in progress</p>
-                        <p class="inter-black case-study-url uppercase">classes_with_cory</p>
+                        <p class="case-study-link__cta">Click here to see the upgrade</p>
+                        <p class="text-[10px] font-bold uppercase tracking-widest text-white/80 mt-1">classes_with_cory · preview</p>
                     </div>
                     <span class="case-study-arrow text-xl sm:text-2xl font-black group-hover:translate-x-1 transition-transform" aria-hidden="true">→</span>
                 </a>
@@ -70,7 +78,7 @@
         <h2 class="inter-black text-3xl md:text-4xl uppercase mb-6 text-[var(--primary)]">Brand & logo</h2>
         <div class="showcase-logo">
             <img src="assets/images/lingua-franca/cory-logo-display.png" width="320" height="320" alt="Classes with Cory circular logo — navy, gold, and cream" decoding="async">
-            <div class="flex-1 min-w-0 max-w-2xl">
+            <div class="showcase-logo__copy">
                 <p class="text-gray-800 mb-4 leading-relaxed font-medium">
                     Cory needed a name and mark that felt like <em>him</em>, not a generic institute template. I designed the <strong>Classes with Cory</strong> wordmark and circular seal — navy, academic gold, and warm cream — used in the header, footer, favicon path, and across every page of the rebuild.
                 </p>
@@ -243,7 +251,6 @@
         <a href="contact.html" class="text-white inter-black text-lg md:text-xl hover:text-[var(--accent)] uppercase italic cursor-pointer">Contact Me</a>
     </footer>
 
-    <script src="js/revamp-compare.js"></script>
     <script>
         (function () {
             if (!window.matchMedia('(min-width: 768px)').matches || !window.matchMedia('(pointer: fine)').matches) return;
@@ -252,11 +259,12 @@
                 cursor.style.left = e.clientX + 'px';
                 cursor.style.top = e.clientY + 'px';
             });
-            document.querySelectorAll('a, .compare-range').forEach(function (el) {
+            document.querySelectorAll('a').forEach(function (el) {
                 el.addEventListener('mouseenter', function () { cursor.style.transform = 'scale(2)'; });
                 el.addEventListener('mouseleave', function () { cursor.style.transform = 'scale(1)'; });
             });
         })();
     </script>
+    <script src="js/lol-enhance.js" defer></script>
 </body>
 </html>
