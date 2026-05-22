@@ -4,165 +4,237 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About | Life of Logos · Ryley Johnson</title>
+    <meta name="description" content="Ryley Johnson — logo designer, website revamps, Squarespace builds, and Gen AI creative work. Retired firefighter turned dev-adjacent maker.">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
-    <style>
-        body {
-            background-color: #e5e5e5;
-            background-image: url("https://www.transparenttextures.com/patterns/concrete-wall.png");
-            overflow-x: hidden;
-            font-family: 'Inter', sans-serif;
-        }
-        @media (min-width: 768px) and (pointer: fine) {
-            body { cursor: none; }
-        }
-        .marker-font { font-family: 'Permanent Marker', cursive; }
-        .inter-black { font-family: 'Inter', sans-serif; font-weight: 900; }
-        .splatter { position: fixed; border-radius: 50%; filter: blur(100px); z-index: -1; opacity: 0.3; pointer-events: none; }
-        #custom-cursor { display: none !important; width: 24px; height: 24px; background: #ff00ff; border-radius: 50%; position: fixed; pointer-events: none; z-index: 9999; mix-blend-mode: exclusion; transition: transform 0.15s ease-out; box-shadow: 0 0 15px #ff00ff; }
-        @media (min-width: 768px) and (pointer: fine) {
-            #custom-cursor { display: block !important; }
-        }
-        .bio-card { border: 4px solid black; background: white; box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.8); }
-        .gallery-card { border: 4px solid black; background: white; box-shadow: 6px 6px 0 #ff00ff; cursor: pointer; }
-        .gallery-card:hover { box-shadow: 8px 8px 0 #ff00ff; }
-        #ai-lightbox { display: none; position: fixed; inset: 0; z-index: 9998; background: rgba(0,0,0,0.9); align-items: center; justify-content: center; padding: 2rem; }
-        #ai-lightbox.show { display: flex; }
-        #ai-lightbox img { max-width: 100%; max-height: 90vh; object-fit: contain; border: 4px solid white; box-shadow: 0 0 40px #ff00ff; }
-        #ai-lightbox .close { position: absolute; top: 1rem; right: 1rem; background: white; color: black; border: 4px solid black; width: 48px; height: 48px; font-size: 1.5rem; cursor: pointer; display: flex; align-items: center; justify-content: center; font-weight: bold; }
-        .section-tag-about { background: black; color: white; padding: 10px 20px; display: inline-block; transform: rotate(-2deg); border: 2px solid white; box-shadow: 6px 6px 0 #ff00ff; font-family: 'Permanent Marker', cursive; }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/about.css">
 </head>
-<body class="p-6 md:p-16 pb-40">
-    <div id="custom-cursor"></div>
-    <div class="splatter bg-fuchsia-500 w-[500px] h-[500px] -top-24 -right-20"></div>
-    <div class="splatter bg-yellow-400 w-[400px] h-[400px] bottom-0 left-0"></div>
+<body class="about-page p-6 md:p-16 pb-44">
+    <a href="#main" class="sr-only">Skip to content</a>
 
-    <a href="index.html" class="inline-block mb-12 bg-black text-white px-6 py-3 marker-font rotate-[-2deg] hover:bg-fuchsia-600 transition-colors border-2 border-fuchsia-500 shadow-[6px_6px_0px_#ff00ff]">← BACK</a>
+    <div id="custom-cursor" aria-hidden="true"></div>
+    <div class="about-splatter bg-fuchsia-500 w-[500px] h-[500px] -top-24 -right-20"></div>
+    <div class="about-splatter bg-yellow-400 w-[400px] h-[400px] bottom-1/4 left-0"></div>
 
-    <header class="mb-16">
-        <h1 class="inter-black text-[10vw] md:text-[6vw] leading-none uppercase italic text-black">
-            About <span class="marker-font lowercase block -mt-2 md:-mt-4 rotate-[-2deg] text-fuchsia-600">Me</span>
-        </h1>
-    </header>
+    <a href="index.html" class="about-back marker-font uppercase tracking-wide">← Back</a>
 
-    <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 max-w-5xl mb-20">
-        <div class="lg:col-span-1 flex justify-center lg:justify-start">
-            <div class="bio-card p-2 w-56 h-56 md:w-64 md:h-64 overflow-hidden rotate-[-2deg]">
-                <img src="assets/images/about/me.png" alt="Ryley Johnson" class="w-full h-full object-cover">
+    <main id="main">
+        <header class="mb-14 md:mb-20 max-w-4xl">
+            <p class="text-xs font-bold uppercase tracking-[0.35em] text-zinc-600 mb-4">Life of Logos · 2026</p>
+            <h1 class="inter-black text-[11vw] md:text-[5.5rem] leading-[0.88] uppercase italic text-zinc-950">
+                Ryley <span class="marker-font lowercase block -mt-1 md:-mt-3 rotate-[-2deg] text-fuchsia-600">Johnson</span>
+            </h1>
+            <p class="mt-6 text-lg md:text-xl text-zinc-800 font-medium max-w-2xl leading-relaxed">
+                I turn brand ideas into <strong>logos people remember</strong>, <strong>sites that escape Weebly and Wix</strong>, and <strong>print you can hand out</strong> — with Gen AI in the mix when it saves clients time and money.
+            </p>
+            <div class="mt-6 inline-block bg-zinc-950 text-white px-4 py-2 text-xs font-bold tracking-[0.2em] uppercase rotate-[-1deg] shadow-[4px_4px_0_#ec4899]">
+                Logos · Websites · Revamps · Print
             </div>
-        </div>
-        <div class="lg:col-span-2">
-            <div class="bio-card p-8 md:p-10 rotate-[0.5deg]">
-                <p class="text-gray-800 text-lg leading-relaxed mb-6">
-                    I’m <strong>Ryley Johnson</strong>. By day I work full time at <strong>Prophet Town LLC</strong>, a small dev studio supporting Department of War contracts and private tech. <em>Life of Logos</em> is my hobby—where I get to do the creative stuff I love.
-                </p>
-                <p class="text-gray-800 text-lg leading-relaxed mb-6">
-                    I’m a retired firefighter who moved into tech (QA bootcamp at TripleTen, internships, and now dev-adjacent work). I’ve always been drawn to troubleshooting and making things look good. That combo led me to <strong>logo design</strong>, <strong>business cards</strong>, and <strong>Squarespace websites</strong>—and to building this portfolio so clients can see the range of work I do.
-                </p>
-                <p class="text-gray-800 text-lg leading-relaxed">
-                    When I’m not designing or testing, I’m exploring <strong>Gen AI</strong>—Midjourney, Grok, Stable Diffusion, Comfy UI—for fun and for client concepts. I vibe-code sites, sketch ideas, and turn brand ideas into something people can actually use and hold in their hands.
-                </p>
+        </header>
+
+        <section class="mb-16 md:mb-20 max-w-6xl" aria-labelledby="what-i-do">
+            <h2 id="what-i-do" class="about-tag mb-8">What I do</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="about-skill rotate-[-0.5deg]">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                    <div>
+                        <strong>Logo & identity</strong>
+                        <span>Marks, wordmarks, and systems for small businesses and side projects.</span>
+                    </div>
+                </div>
+                <div class="about-skill rotate-[0.5deg]">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+                    <div>
+                        <strong>Website revamps</strong>
+                        <span>Off Weebly, Wix, and Squarespace — owned HTML/CSS clients control.</span>
+                    </div>
+                </div>
+                <div class="about-skill rotate-[-0.5deg]">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+                    <div>
+                        <strong>Squarespace + code</strong>
+                        <span>Live sites for clients who need a builder today and custom pieces where it counts.</span>
+                    </div>
+                </div>
+                <div class="about-skill rotate-[0.5deg]">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/><circle cx="12" cy="12" r="4"/></svg>
+                    <div>
+                        <strong>Gen AI visuals</strong>
+                        <span>Concept art, scene imagery, and experiments — Midjourney, Grok, Comfy UI, and more.</span>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
+        </section>
 
-    <div class="mb-10">
-        <div class="section-tag-about text-lg uppercase tracking-widest">Tech portfolio</div>
-        <p class="text-gray-600 mt-4">QA, automation, and more: <a href="https://mrjohn5on.github.io/" target="_blank" rel="noopener noreferrer" class="text-fuchsia-600 font-bold hover:underline">mrjohn5on.github.io</a></p>
-    </div>
-
-    <div class="mb-10">
-        <div class="section-tag-about text-lg uppercase tracking-widest">Gen AI experiments</div>
-        <p class="text-gray-600 mt-2 mb-6">This is just a small sample of what is possible with AI. Click any image below to expand.</p>
-        <a href="https://youtube.com/shorts/mIhFF6tkqOE?si=yDfVEsiR7x-bkooe" target="_blank" rel="noopener noreferrer" class="block relative bio-card p-2 max-w-[280px] mx-auto rotate-[-1deg] overflow-hidden group hover:shadow-[8px_8px_0_#ff00ff] transition-shadow">
-            <img src="https://img.youtube.com/vi/mIhFF6tkqOE/hqdefault.jpg" alt="Watch my YouTube Short" class="w-full aspect-video object-cover group-hover:opacity-90 transition-opacity">
-            <div class="absolute inset-0 flex items-center justify-center pointer-events-none bg-black/10">
-                <span class="w-16 h-16 rounded-full bg-red-600 flex items-center justify-center shadow-lg opacity-90 group-hover:scale-110 transition-transform">
-                    <svg class="w-8 h-8 text-white ml-1" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-                </span>
+        <section class="mb-16 md:mb-20 max-w-6xl">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
+                <div class="lg:col-span-4 flex justify-center lg:justify-start">
+                    <figure class="about-portrait w-56 h-56 md:w-72 md:h-72 rotate-[-2deg] m-0">
+                        <img src="assets/images/about/me.png" alt="Portrait of Ryley Johnson" width="288" height="288" class="w-full h-full object-cover" decoding="async">
+                    </figure>
+                </div>
+                <div class="lg:col-span-8 space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="about-card about-card--dark p-6 rotate-[0.5deg]">
+                            <p class="text-[10px] font-bold uppercase tracking-widest text-fuchsia-400 mb-2">Day job</p>
+                            <p class="text-sm md:text-base leading-relaxed text-zinc-100">
+                                <strong class="text-white">Prophet Town LLC</strong> — small dev studio on Department of War contracts and private tech. QA, automation, and shipping real software.
+                            </p>
+                        </div>
+                        <div class="about-card about-card--accent p-6 rotate-[-0.5deg]">
+                            <p class="text-[10px] font-bold uppercase tracking-widest mb-2">Life of Logos</p>
+                            <p class="text-sm md:text-base leading-relaxed">
+                                The creative outlet: logos, cards, revamps, and vibe-coded sites — the work on this portfolio.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="about-card p-8 md:p-10 rotate-[-0.5deg]">
+                        <p class="text-zinc-800 text-base md:text-lg leading-relaxed mb-5">
+                            I’m a <strong>retired firefighter</strong> who found a second career in tech — TripleTen bootcamp, internships, and now dev-adjacent work. I’ve always been the person who fixes what’s broken and cares how it <em>looks</em>.
+                        </p>
+                        <p class="text-zinc-800 text-base md:text-lg leading-relaxed mb-5">
+                            That path led to <strong>logo design</strong>, <strong>business cards</strong>, and <strong>websites</strong> for people who outgrew their builder subscription but don’t want to sound like a template.
+                        </p>
+                        <p class="text-zinc-800 text-base md:text-lg leading-relaxed">
+                            Off the clock I sketch, test Gen AI pipelines, and build this gallery so you can see logos, platform escapes, and print in one place — not buried in a LinkedIn post.
+                        </p>
+                    </div>
+                </div>
             </div>
-        </a>
-        <p class="text-center text-sm text-gray-500 mt-2">YouTube Short · Click to watch</p>
-    </div>
-    <div id="ai-lightbox" aria-hidden="true">
-        <button type="button" class="close" id="ai-lightbox-close" aria-label="Close">×</button>
-        <img id="ai-lightbox-img" src="" alt="AI generated image (expanded)">
-    </div>
-    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 max-w-6xl" id="ai-gallery">
-        <div class="gallery-card p-1 overflow-hidden rotate-1" data-ai-src="assets/images/about/ai-1.png"><img src="assets/images/about/ai-1.png" alt="AI generated image" class="w-full aspect-square object-cover" onerror="this.parentElement.style.display='none'"></div>
-        <div class="gallery-card p-1 overflow-hidden -rotate-1" data-ai-src="assets/images/about/ai-2.png"><img src="assets/images/about/ai-2.png" alt="AI generated image" class="w-full aspect-square object-cover" onerror="this.parentElement.style.display='none'"></div>
-        <div class="gallery-card p-1 overflow-hidden rotate-2" data-ai-src="assets/images/about/ai-3.png"><img src="assets/images/about/ai-3.png" alt="AI generated image" class="w-full aspect-square object-cover" onerror="this.parentElement.style.display='none'"></div>
-        <div class="gallery-card p-1 overflow-hidden -rotate-2" data-ai-src="assets/images/about/ai-4.png"><img src="assets/images/about/ai-4.png" alt="AI generated image" class="w-full aspect-square object-cover" onerror="this.parentElement.style.display='none'"></div>
-        <div class="gallery-card p-1 overflow-hidden rotate-1" data-ai-src="assets/images/about/ai-5.png"><img src="assets/images/about/ai-5.png" alt="AI generated image" class="w-full aspect-square object-cover" onerror="this.parentElement.style.display='none'"></div>
-        <div class="gallery-card p-1 overflow-hidden -rotate-1" data-ai-src="assets/images/about/ai-6.png"><img src="assets/images/about/ai-6.png" alt="AI generated image" class="w-full aspect-square object-cover" onerror="this.parentElement.style.display='none'"></div>
-        <div class="gallery-card p-1 overflow-hidden rotate-2" data-ai-src="assets/images/about/ai-7.png"><img src="assets/images/about/ai-7.png" alt="AI generated image" class="w-full aspect-square object-cover" onerror="this.parentElement.style.display='none'"></div>
-        <div class="gallery-card p-1 overflow-hidden -rotate-2" data-ai-src="assets/images/about/ai-8.png"><img src="assets/images/about/ai-8.png" alt="AI generated image" class="w-full aspect-square object-cover" onerror="this.parentElement.style.display='none'"></div>
-        <div class="gallery-card p-1 overflow-hidden rotate-1" data-ai-src="assets/images/about/ai-9.png"><img src="assets/images/about/ai-9.png" alt="AI generated image" class="w-full aspect-square object-cover" onerror="this.parentElement.style.display='none'"></div>
-        <div class="gallery-card p-1 overflow-hidden -rotate-1" data-ai-src="assets/images/about/ai-10.png"><img src="assets/images/about/ai-10.png" alt="AI generated image" class="w-full aspect-square object-cover" onerror="this.parentElement.style.display='none'"></div>
-        <div class="gallery-card p-1 overflow-hidden rotate-2" data-ai-src="assets/images/about/ai-11.png"><img src="assets/images/about/ai-11.png" alt="AI generated image" class="w-full aspect-square object-cover" onerror="this.parentElement.style.display='none'"></div>
-        <div class="gallery-card p-1 overflow-hidden -rotate-2" data-ai-src="assets/images/about/ai-12.png"><img src="assets/images/about/ai-12.png" alt="AI generated image" class="w-full aspect-square object-cover" onerror="this.parentElement.style.display='none'"></div>
-        <div class="gallery-card p-1 overflow-hidden rotate-1" data-ai-src="assets/images/about/ai-13.png"><img src="assets/images/about/ai-13.png" alt="AI generated image" class="w-full aspect-square object-cover" onerror="this.parentElement.style.display='none'"></div>
-        <div class="gallery-card p-1 overflow-hidden -rotate-1" data-ai-src="assets/images/about/ai-14.png"><img src="assets/images/about/ai-14.png" alt="AI generated image" class="w-full aspect-square object-cover" onerror="this.parentElement.style.display='none'"></div>
-        <div class="gallery-card p-1 overflow-hidden rotate-2" data-ai-src="assets/images/about/ai-15.png"><img src="assets/images/about/ai-15.png" alt="AI generated image" class="w-full aspect-square object-cover" onerror="this.parentElement.style.display='none'"></div>
-    </div>
+        </section>
 
-    <div class="mt-12 mb-20">
-        <p class="text-gray-600 mb-4">Follow me for more AI and creative stuff:</p>
-        <div class="flex flex-wrap gap-6">
-            <a href="https://www.tiktok.com/@widestool?_r=1&_t=ZT-96a1z5Z0BAb" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 bio-card px-6 py-4 rotate-[-1deg] hover:shadow-[8px_8px_0_#ff00ff] transition-shadow">
-                <svg class="w-8 h-8 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88 6.24v-9.49a6.25 6.25 0 0 0-4.19 10.84 6.25 6.25 0 0 0 8.38 0 6.25 6.25 0 0 0 .12-9.28v-2.4a8.12 8.12 0 0 0 4.7 1.45v-3.4a4.86 4.86 0 0 1-1-.1z"/></svg>
-                <span class="marker-font uppercase">TikTok</span>
+        <section class="mb-16 md:mb-20 max-w-3xl" aria-labelledby="tech-portfolio">
+            <h2 id="tech-portfolio" class="about-tag mb-6">Also in tech</h2>
+            <a href="https://mrjohn5on.github.io/" target="_blank" rel="noopener noreferrer" class="about-cta rotate-[0.5deg]">
+                <div class="min-w-0">
+                    <p class="text-[10px] font-bold uppercase tracking-widest text-zinc-500">Separate portfolio</p>
+                    <p class="inter-black text-lg md:text-xl uppercase">QA · automation · dev work</p>
+                    <p class="text-sm text-zinc-600 mt-1">mrjohn5on.github.io</p>
+                </div>
+                <span class="about-cta__arrow" aria-hidden="true">→</span>
             </a>
-            <a href="https://www.youtube.com/@alienhippie12" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 bio-card px-6 py-4 rotate-[1deg] hover:shadow-[8px_8px_0_#ff00ff] transition-shadow">
-                <svg class="w-8 h-8 flex-shrink-0" viewBox="0 0 24 24" fill="#FF0000"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-                <span class="marker-font uppercase">YouTube</span>
+        </section>
+
+        <section class="mb-12 max-w-6xl" aria-labelledby="gen-ai">
+            <h2 id="gen-ai" class="about-tag mb-4">Gen AI playground</h2>
+            <p class="text-zinc-600 max-w-2xl mb-8 leading-relaxed">
+                A small slice of what’s possible — concept boards, characters, and client-ready scenes. <strong class="text-zinc-800">Click any tile to expand.</strong> Featured short below.
+            </p>
+            <div class="flex flex-col md:flex-row md:items-start gap-10 mb-10">
+                <a href="https://youtube.com/shorts/mIhFF6tkqOE?si=yDfVEsiR7x-bkooe" target="_blank" rel="noopener noreferrer" class="about-youtube rotate-[-1deg] shrink-0 mx-auto md:mx-0" aria-label="Watch Gen AI YouTube Short on YouTube">
+                    <img src="https://img.youtube.com/vi/mIhFF6tkqOE/hqdefault.jpg" alt="" width="480" height="270" loading="lazy" decoding="async">
+                    <div class="about-youtube-play" aria-hidden="true">
+                        <span class="w-14 h-14 rounded-full bg-red-600 flex items-center justify-center shadow-lg">
+                            <svg class="w-7 h-7 text-white ml-0.5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+                        </span>
+                    </div>
+                </a>
+                <div class="text-sm text-zinc-600 max-w-md">
+                    <p class="font-semibold text-zinc-800 mb-2">Tools I reach for</p>
+                    <p class="leading-relaxed">Midjourney · Grok · Stable Diffusion · Comfy UI — for fun, for concepts, and for client work when a second photoshoot isn’t in the budget.</p>
+                </div>
+            </div>
+
+            <div id="ai-lightbox" role="dialog" aria-modal="true" aria-label="Expanded AI image" aria-hidden="true">
+                <button type="button" class="close" id="ai-lightbox-close" aria-label="Close image">×</button>
+                <img id="ai-lightbox-img" src="" alt="">
+            </div>
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 md:gap-4" id="ai-gallery">
+                <button type="button" class="gallery-card p-1 overflow-hidden rotate-1 text-left" data-ai-src="assets/images/about/ai-1.png" aria-label="View AI image 1"><img src="assets/images/about/ai-1.png" alt="" class="w-full aspect-square object-cover pointer-events-none" loading="lazy" decoding="async" onerror="this.closest('button').remove()"></button>
+                <button type="button" class="gallery-card p-1 overflow-hidden -rotate-1 text-left" data-ai-src="assets/images/about/ai-2.png" aria-label="View AI image 2"><img src="assets/images/about/ai-2.png" alt="" class="w-full aspect-square object-cover pointer-events-none" loading="lazy" decoding="async" onerror="this.closest('button').remove()"></button>
+                <button type="button" class="gallery-card p-1 overflow-hidden rotate-2 text-left" data-ai-src="assets/images/about/ai-3.png" aria-label="View AI image 3"><img src="assets/images/about/ai-3.png" alt="" class="w-full aspect-square object-cover pointer-events-none" loading="lazy" decoding="async" onerror="this.closest('button').remove()"></button>
+                <button type="button" class="gallery-card p-1 overflow-hidden -rotate-2 text-left" data-ai-src="assets/images/about/ai-4.png" aria-label="View AI image 4"><img src="assets/images/about/ai-4.png" alt="" class="w-full aspect-square object-cover pointer-events-none" loading="lazy" decoding="async" onerror="this.closest('button').remove()"></button>
+                <button type="button" class="gallery-card p-1 overflow-hidden rotate-1 text-left" data-ai-src="assets/images/about/ai-5.png" aria-label="View AI image 5"><img src="assets/images/about/ai-5.png" alt="" class="w-full aspect-square object-cover pointer-events-none" loading="lazy" decoding="async" onerror="this.closest('button').remove()"></button>
+                <button type="button" class="gallery-card p-1 overflow-hidden -rotate-1 text-left" data-ai-src="assets/images/about/ai-6.png" aria-label="View AI image 6"><img src="assets/images/about/ai-6.png" alt="" class="w-full aspect-square object-cover pointer-events-none" loading="lazy" decoding="async" onerror="this.closest('button').remove()"></button>
+                <button type="button" class="gallery-card p-1 overflow-hidden rotate-2 text-left" data-ai-src="assets/images/about/ai-7.png" aria-label="View AI image 7"><img src="assets/images/about/ai-7.png" alt="" class="w-full aspect-square object-cover pointer-events-none" loading="lazy" decoding="async" onerror="this.closest('button').remove()"></button>
+                <button type="button" class="gallery-card p-1 overflow-hidden -rotate-2 text-left" data-ai-src="assets/images/about/ai-8.png" aria-label="View AI image 8"><img src="assets/images/about/ai-8.png" alt="" class="w-full aspect-square object-cover pointer-events-none" loading="lazy" decoding="async" onerror="this.closest('button').remove()"></button>
+                <button type="button" class="gallery-card p-1 overflow-hidden rotate-1 text-left" data-ai-src="assets/images/about/ai-9.png" aria-label="View AI image 9"><img src="assets/images/about/ai-9.png" alt="" class="w-full aspect-square object-cover pointer-events-none" loading="lazy" decoding="async" onerror="this.closest('button').remove()"></button>
+                <button type="button" class="gallery-card p-1 overflow-hidden -rotate-1 text-left" data-ai-src="assets/images/about/ai-10.png" aria-label="View AI image 10"><img src="assets/images/about/ai-10.png" alt="" class="w-full aspect-square object-cover pointer-events-none" loading="lazy" decoding="async" onerror="this.closest('button').remove()"></button>
+                <button type="button" class="gallery-card p-1 overflow-hidden rotate-2 text-left" data-ai-src="assets/images/about/ai-11.png" aria-label="View AI image 11"><img src="assets/images/about/ai-11.png" alt="" class="w-full aspect-square object-cover pointer-events-none" loading="lazy" decoding="async" onerror="this.closest('button').remove()"></button>
+                <button type="button" class="gallery-card p-1 overflow-hidden -rotate-2 text-left" data-ai-src="assets/images/about/ai-12.png" aria-label="View AI image 12"><img src="assets/images/about/ai-12.png" alt="" class="w-full aspect-square object-cover pointer-events-none" loading="lazy" decoding="async" onerror="this.closest('button').remove()"></button>
+                <button type="button" class="gallery-card p-1 overflow-hidden rotate-1 text-left" data-ai-src="assets/images/about/ai-13.png" aria-label="View AI image 13"><img src="assets/images/about/ai-13.png" alt="" class="w-full aspect-square object-cover pointer-events-none" loading="lazy" decoding="async" onerror="this.closest('button').remove()"></button>
+                <button type="button" class="gallery-card p-1 overflow-hidden -rotate-1 text-left" data-ai-src="assets/images/about/ai-14.png" aria-label="View AI image 14"><img src="assets/images/about/ai-14.png" alt="" class="w-full aspect-square object-cover pointer-events-none" loading="lazy" decoding="async" onerror="this.closest('button').remove()"></button>
+                <button type="button" class="gallery-card p-1 overflow-hidden rotate-2 text-left" data-ai-src="assets/images/about/ai-15.png" aria-label="View AI image 15"><img src="assets/images/about/ai-15.png" alt="" class="w-full aspect-square object-cover pointer-events-none" loading="lazy" decoding="async" onerror="this.closest('button').remove()"></button>
+            </div>
+        </section>
+
+        <section class="mb-24 max-w-3xl" aria-labelledby="connect">
+            <h2 id="connect" class="about-tag mb-6">Follow &amp; connect</h2>
+            <div class="flex flex-wrap gap-4 mb-8">
+                <a href="https://www.tiktok.com/@widestool?_r=1&_t=ZT-96a1z5Z0BAb" target="_blank" rel="noopener noreferrer" class="about-social rotate-[-1deg]">
+                    <svg class="w-7 h-7 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88 6.24v-9.49a6.25 6.25 0 0 0-4.19 10.84 6.25 6.25 0 0 0 8.38 0 6.25 6.25 0 0 0 .12-9.28v-2.4a8.12 8.12 0 0 0 4.7 1.45v-3.4a4.86 4.86 0 0 1-1-.1z"/></svg>
+                    <span class="marker-font uppercase">TikTok</span>
+                </a>
+                <a href="https://www.youtube.com/@alienhippie12" target="_blank" rel="noopener noreferrer" class="about-social rotate-[1deg]">
+                    <svg class="w-7 h-7 flex-shrink-0" viewBox="0 0 24 24" fill="#FF0000" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                    <span class="marker-font uppercase">YouTube</span>
+                </a>
+            </div>
+            <a href="contact.html" class="about-cta about-cta--hire rotate-[-0.5deg]">
+                <div>
+                    <p class="about-cta__label text-[10px] font-bold uppercase tracking-widest">Hire me</p>
+                    <p class="about-cta__title inter-black text-xl uppercase">Start a project →</p>
+                </div>
+                <span class="about-cta__arrow" aria-hidden="true">→</span>
             </a>
-        </div>
-    </div>
+        </section>
+    </main>
 
     <footer class="fixed bottom-0 left-0 w-full bg-yellow-400 border-t-8 border-black z-[100] p-4 flex flex-wrap justify-center gap-6 md:gap-12">
-        <a href="index.html" class="inter-black text-lg md:text-xl hover:text-fuchsia-600 uppercase italic">Home</a>
-        <a href="about.html" class="inter-black text-lg md:text-xl hover:text-fuchsia-600 uppercase italic">About Me</a>
-        <a href="https://www.redbubble.com/people/SoftwareSticker" target="_blank" rel="noopener noreferrer" class="inter-black text-lg md:text-xl hover:text-fuchsia-600 uppercase italic">Software Stickers</a>
-        <a href="contact.html" class="inter-black text-lg md:text-xl hover:text-fuchsia-600 uppercase italic">Contact Me</a>
+        <a href="index.html" class="inter-black text-lg md:text-xl hover:text-fuchsia-600 uppercase italic cursor-pointer focus-visible:outline focus-visible:outline-2 focus-visible:outline-fuchsia-600 focus-visible:outline-offset-2">Home</a>
+        <a href="about.html" class="inter-black text-lg md:text-xl hover:text-fuchsia-600 uppercase italic cursor-pointer focus-visible:outline focus-visible:outline-2 focus-visible:outline-fuchsia-600 focus-visible:outline-offset-2" aria-current="page">About Me</a>
+        <a href="https://www.redbubble.com/people/SoftwareSticker" target="_blank" rel="noopener noreferrer" class="inter-black text-lg md:text-xl hover:text-fuchsia-600 uppercase italic cursor-pointer focus-visible:outline focus-visible:outline-2 focus-visible:outline-fuchsia-600 focus-visible:outline-offset-2">Software Stickers</a>
+        <a href="contact.html" class="inter-black text-lg md:text-xl hover:text-fuchsia-600 uppercase italic cursor-pointer focus-visible:outline focus-visible:outline-2 focus-visible:outline-fuchsia-600 focus-visible:outline-offset-2">Contact Me</a>
     </footer>
 
     <script>
-        (function() {
+        (function () {
             if (!window.matchMedia('(min-width: 768px)').matches || !window.matchMedia('(pointer: fine)').matches) return;
             var cursor = document.getElementById('custom-cursor');
-            document.addEventListener('mousemove', function(e) { cursor.style.left = e.clientX + 'px'; cursor.style.top = e.clientY + 'px'; });
-            document.querySelectorAll('a').forEach(function(el) {
-                el.addEventListener('mouseenter', function() { cursor.style.transform = 'scale(3)'; cursor.style.backgroundColor = '#00ffff'; });
-                el.addEventListener('mouseleave', function() { cursor.style.transform = 'scale(1)'; cursor.style.backgroundColor = '#ff00ff'; });
+            document.addEventListener('mousemove', function (e) {
+                cursor.style.left = e.clientX + 'px';
+                cursor.style.top = e.clientY + 'px';
+            });
+            document.querySelectorAll('a, button.gallery-card, .about-cta, #ai-lightbox .close').forEach(function (el) {
+                el.addEventListener('mouseenter', function () { cursor.style.transform = 'scale(2.5)'; });
+                el.addEventListener('mouseleave', function () { cursor.style.transform = 'scale(1)'; });
             });
         })();
-        (function() {
+        (function () {
             var lightbox = document.getElementById('ai-lightbox');
             var lightboxImg = document.getElementById('ai-lightbox-img');
             var closeBtn = document.getElementById('ai-lightbox-close');
-            function openLightbox(src) {
+            var lastFocus = null;
+
+            function openLightbox(src, label) {
                 if (!src) return;
+                lastFocus = document.activeElement;
                 lightboxImg.src = src;
+                lightboxImg.alt = label || 'AI generated artwork (expanded)';
                 lightbox.classList.add('show');
                 lightbox.setAttribute('aria-hidden', 'false');
                 document.body.style.overflow = 'hidden';
+                closeBtn.focus();
             }
             function closeLightbox() {
                 lightbox.classList.remove('show');
                 lightbox.setAttribute('aria-hidden', 'true');
+                lightboxImg.src = '';
                 document.body.style.overflow = '';
+                if (lastFocus && lastFocus.focus) lastFocus.focus();
             }
-            document.getElementById('ai-gallery').querySelectorAll('.gallery-card').forEach(function(card) {
-                card.addEventListener('click', function() {
-                    var src = card.getAttribute('data-ai-src');
-                    if (src && card.querySelector('img').complete && card.querySelector('img').naturalWidth) openLightbox(src);
+            document.getElementById('ai-gallery').querySelectorAll('.gallery-card').forEach(function (btn, i) {
+                btn.addEventListener('click', function () {
+                    var src = btn.getAttribute('data-ai-src');
+                    var img = btn.querySelector('img');
+                    if (src && img && img.naturalWidth) openLightbox(src, 'AI generated artwork ' + (i + 1));
                 });
             });
             closeBtn.addEventListener('click', closeLightbox);
-            lightbox.addEventListener('click', function(e) { if (e.target === lightbox) closeLightbox(); });
-            document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeLightbox(); });
+            lightbox.addEventListener('click', function (e) { if (e.target === lightbox) closeLightbox(); });
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape' && lightbox.classList.contains('show')) closeLightbox();
+            });
         })();
     </script>
 </body>
