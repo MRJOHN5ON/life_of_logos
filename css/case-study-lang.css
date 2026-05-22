@@ -1,0 +1,59 @@
+/* Russian case study — single toggle under header */
+
+.case-lang-switch-wrap {
+    margin-top: 1rem;
+    margin-bottom: 0;
+}
+
+.case-lang-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 0;
+    padding: 0.65rem 1rem;
+    background: #000;
+    border: 3px solid var(--case-lang-accent, #ca8a04);
+    box-shadow: 5px 5px 0 var(--case-lang-accent, #ca8a04);
+    color: #fff;
+    font-family: 'Inter', system-ui, sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    line-height: 1.2;
+    cursor: pointer;
+    transition: background-color 0.15s ease, color 0.15s ease, transform 0.15s ease;
+}
+
+.case-lang-toggle:hover {
+    background: var(--case-lang-accent, #ca8a04);
+    color: #000;
+}
+
+.case-lang-toggle:focus-visible {
+    outline: 2px solid #000;
+    outline-offset: 3px;
+}
+
+.case-lang-toggle__flag {
+    font-size: 1.1rem;
+    line-height: 1;
+}
+
+.case-lang-toggle__label {
+    white-space: nowrap;
+}
+
+.case-i18n-page.is-lang-switching {
+    animation: case-i18n-fade 0.28s ease;
+}
+
+@keyframes case-i18n-fade {
+    0% { opacity: 0.7; }
+    100% { opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .case-i18n-page.is-lang-switching {
+        animation: none;
+    }
+}

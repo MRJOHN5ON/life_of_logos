@@ -1,0 +1,375 @@
+/* Your Place or Mine? — boutique case study */
+
+.ypom-page {
+    --ypom-rose: #be185d;
+    --ypom-rose-deep: #9d174d;
+    --ypom-plum: #831843;
+    --ypom-blush: #fbcfe8;
+    --ypom-cream: #fff7fb;
+    --ypom-gold: #b45309;
+    --ypom-gold-soft: #fef3c7;
+    --ypom-ink: #1f0a14;
+}
+
+.ypom-page {
+    background-color: #fdf2f8;
+    background-image:
+        url("https://www.transparenttextures.com/patterns/concrete-wall.png"),
+        radial-gradient(ellipse 90% 55% at 50% -15%, rgba(251, 207, 232, 0.55), transparent);
+}
+
+.ypom-back {
+    display: inline-block;
+    margin-bottom: 1.5rem;
+    background: #111;
+    color: #fff;
+    padding: 0.5rem 1.5rem;
+    font-family: 'Permanent Marker', cursive;
+    transform: rotate(-2deg);
+    border: 2px solid var(--ypom-blush);
+    box-shadow: 5px 5px 0 var(--ypom-rose);
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    cursor: pointer;
+}
+.ypom-back:hover {
+    background: var(--ypom-rose);
+    transform: rotate(-1deg) translate(-2px, -2px);
+}
+
+.ypom-badge {
+    font-size: 0.65rem;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    padding: 0.35rem 0.75rem;
+    border: 2px solid var(--ypom-ink);
+}
+.ypom-badge--rose {
+    background: var(--ypom-rose);
+    color: #fff;
+}
+.ypom-badge--gold {
+    background: var(--ypom-gold-soft);
+    color: var(--ypom-ink);
+}
+.ypom-badge--plum {
+    background: var(--ypom-plum);
+    color: #fff;
+}
+
+.ypom-hero-title {
+    font-family: 'Inter', system-ui, sans-serif;
+    font-weight: 900;
+    font-size: clamp(2.5rem, 10vw, 5.5rem);
+    line-height: 0.92;
+    text-transform: uppercase;
+    font-style: italic;
+    color: var(--ypom-ink);
+}
+.ypom-hero-script {
+    font-family: 'Great Vibes', cursive;
+    color: #e11d48;
+    text-transform: none;
+    font-style: normal;
+    font-weight: 400;
+    display: block;
+    margin-top: -0.15em;
+    transform: rotate(-2deg);
+}
+.ypom-script-sample {
+    font-family: 'Great Vibes', cursive;
+    font-size: 1.65rem;
+    color: #e11d48;
+    line-height: 1.2;
+}
+
+.ypom-lead {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: clamp(1.15rem, 2.8vw, 1.55rem);
+    line-height: 1.45;
+    color: #9d174d;
+    font-style: italic;
+    max-width: 36rem;
+}
+
+.ypom-card {
+    border: 4px solid var(--ypom-ink);
+    background: rgba(255, 255, 255, 0.94);
+    box-shadow: 12px 12px 0 rgba(190, 24, 93, 0.22);
+}
+.ypom-tag {
+    font-family: 'Permanent Marker', cursive;
+    display: inline-block;
+    padding: 0.55rem 1.1rem;
+    font-size: clamp(1rem, 2.5vw, 1.35rem);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #fff;
+    background: linear-gradient(135deg, var(--ypom-rose), var(--ypom-rose-deep));
+    border: 3px solid var(--ypom-blush);
+    box-shadow: 6px 6px 0 rgba(180, 83, 9, 0.35);
+    transform: rotate(-1deg);
+}
+
+.ypom-facts {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+}
+@media (min-width: 640px) {
+    .ypom-facts {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+.ypom-fact {
+    border: 3px solid var(--ypom-ink);
+    padding: 0.85rem 1rem;
+    background: #fff;
+    box-shadow: 5px 5px 0 var(--ypom-blush);
+}
+.ypom-fact__label {
+    font-size: 0.6rem;
+    font-weight: 800;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--ypom-rose);
+    margin-bottom: 0.25rem;
+}
+.ypom-fact__value {
+    font-size: 0.85rem;
+    font-weight: 600;
+    line-height: 1.35;
+    color: var(--ypom-ink);
+}
+
+.ypom-split {
+    display: grid;
+    gap: 1.5rem;
+}
+@media (min-width: 900px) {
+    .ypom-split {
+        grid-template-columns: 1fr 1fr;
+        align-items: start;
+    }
+}
+
+.ypom-body {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #3f3f46;
+}
+.ypom-body strong {
+    color: var(--ypom-rose-deep);
+    font-weight: 600;
+}
+
+.ypom-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.ypom-list li {
+    position: relative;
+    padding-left: 1.35rem;
+    margin-bottom: 0.65rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    line-height: 1.45;
+    color: #3f3f46;
+}
+.ypom-list li::before {
+    content: "✦";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--ypom-gold);
+    font-size: 0.85rem;
+}
+
+.ypom-showcase {
+    display: grid;
+    gap: 1.5rem;
+}
+@media (min-width: 900px) {
+    .ypom-showcase--logo {
+        grid-template-columns: 1.15fr 0.85fr;
+        align-items: center;
+    }
+}
+.ypom-showcase__frame {
+    border: 4px solid var(--ypom-ink);
+    background: #fff;
+    padding: clamp(1.25rem, 4vw, 2.5rem);
+    box-shadow: 14px 14px 0 rgba(190, 24, 93, 0.18);
+}
+.ypom-showcase__frame img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.ypom-callout {
+    border: 3px solid var(--ypom-ink);
+    padding: 1rem 1.1rem;
+    background: var(--ypom-cream);
+    margin-bottom: 0.75rem;
+    box-shadow: 4px 4px 0 var(--ypom-blush);
+}
+.ypom-callout h3 {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 0.95rem;
+    color: var(--ypom-rose);
+    margin: 0 0 0.35rem;
+    text-transform: uppercase;
+}
+.ypom-callout p {
+    margin: 0;
+    font-size: 0.88rem;
+    line-height: 1.5;
+    color: #52525b;
+}
+
+.ypom-palette {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.65rem;
+    margin-top: 1rem;
+}
+.ypom-swatch {
+    flex: 1 1 4.5rem;
+    min-width: 4.5rem;
+    text-align: center;
+}
+.ypom-swatch__chip {
+    display: block;
+    width: 100%;
+    height: 2.75rem;
+    border: 3px solid var(--ypom-ink);
+    border-radius: 6px;
+    box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.12);
+}
+.ypom-swatch__chip--blush { background: #fce7f3; }
+.ypom-swatch__chip--rose { background: #be185d; }
+.ypom-swatch__chip--gold { background: #b45309; }
+.ypom-swatch__chip--plum { background: #831843; }
+.ypom-swatch__name {
+    display: block;
+    margin-top: 0.35rem;
+    font-size: 0.58rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #71717a;
+}
+
+.ypom-cards-hero {
+    border: 4px solid var(--ypom-ink);
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 16px 16px 0 rgba(180, 83, 9, 0.25);
+}
+.ypom-cards-hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.ypom-cards-hero figcaption {
+    font-size: 0.65rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 0.65rem 1rem;
+    background: var(--ypom-ink);
+    color: #fff;
+}
+
+.ypom-alt-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+}
+@media (min-width: 768px) {
+    .ypom-alt-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+.ypom-alt-card {
+    border: 4px solid var(--ypom-ink);
+    background: #fff;
+    overflow: hidden;
+    box-shadow: 8px 8px 0 rgba(190, 24, 93, 0.15);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.ypom-alt-card:hover {
+    transform: translate(-3px, -3px);
+    box-shadow: 11px 11px 0 rgba(190, 24, 93, 0.22);
+}
+.ypom-alt-card img {
+    width: 100%;
+    height: auto;
+    min-height: 220px;
+    object-fit: contain;
+    background: #fff7fb;
+    padding: 1rem;
+    display: block;
+}
+.ypom-alt-card__body {
+    padding: 1rem 1.1rem 1.15rem;
+    border-top: 3px solid var(--ypom-ink);
+    background: var(--ypom-cream);
+}
+.ypom-alt-card__body h3 {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 0.9rem;
+    color: var(--ypom-rose);
+    margin: 0 0 0.35rem;
+    text-transform: uppercase;
+}
+.ypom-alt-card__body p {
+    margin: 0;
+    font-size: 0.82rem;
+    line-height: 1.45;
+    color: #52525b;
+}
+
+.ypom-cta {
+    display: inline-block;
+    background: #ec4899;
+    color: #fff;
+    padding: 1rem 2.25rem;
+    font-family: 'Inter', system-ui, sans-serif;
+    font-weight: 900;
+    font-size: clamp(1rem, 3vw, 1.25rem);
+    text-transform: uppercase;
+    border: 4px solid var(--ypom-ink);
+    box-shadow: 8px 8px 0 var(--ypom-ink);
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    cursor: pointer;
+}
+.ypom-cta:hover {
+    background: var(--ypom-ink);
+    transform: translate(-2px, -2px);
+}
+
+@media (max-width: 767px) {
+    .ypom-page .ypom-rotate,
+    .ypom-page [class*="rotate-"] {
+        transform: none !important;
+    }
+    .ypom-page {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    .ypom-card {
+        padding: 1.25rem !important;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .ypom-alt-card,
+    .ypom-back,
+    .ypom-cta {
+        transition: none;
+    }
+}

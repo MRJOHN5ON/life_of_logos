@@ -3,15 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Container Fix | Novosibirsk Industrial Logistics</title>
+    <title data-i18n-title="meta.title">Container Fix | Novosibirsk Industrial Logistics</title>
+    <meta name="description" content="Logo design for a Novosibirsk industrial startup — container loading innovation, Skolkovo resident." data-i18n="meta.description">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/case-study-lang.css">
     <style>
         body {
             background-color: #e5e5e5;
             background-image: url("https://www.transparenttextures.com/patterns/concrete-wall.png");
             overflow-x: hidden;
             font-family: 'Inter', sans-serif;
+            --case-lang-accent: #ca8a04;
         }
         @media (min-width: 768px) and (pointer: fine) {
             body { cursor: none; }
@@ -51,98 +54,100 @@
     </style>
 <link rel="stylesheet" href="css/lol-enhance.css">
 </head>
-<body class="p-6 md:p-16 pb-40">
+<body class="case-i18n-page p-6 md:p-16 pb-40" data-case-i18n="container-fix" data-page-lang="en">
     <div id="custom-cursor"></div>
     <div class="splatter bg-amber-200 w-[500px] h-[500px] -top-24 -right-20"></div>
     <div class="splatter bg-yellow-100 w-[400px] h-[400px] bottom-0 left-0"></div>
 
-    <a href="index.html" class="inline-block mb-12 bg-black text-white px-6 py-3 marker-font rotate-[-2deg] hover:bg-amber-600 transition-colors border-2 border-amber-600 shadow-[6px_6px_0px_#ca8a04]">← BACK TO GALLERY</a>
+    <a href="index.html" class="inline-block mb-12 bg-black text-white px-6 py-3 marker-font rotate-[-2deg] hover:bg-amber-600 transition-colors border-2 border-amber-600 shadow-[6px_6px_0px_#ca8a04] cursor-pointer" data-i18n="nav.back">← BACK TO GALLERY</a>
 
-    <header class="mb-16">
+    <header class="mb-16 lol-reveal">
         <h1 class="inter-black text-[9vw] md:text-[6vw] leading-none uppercase italic text-black">
             Container <span class="marker-font lowercase block -mt-2 md:-mt-4 rotate-[-2deg] text-amber-600">Fix</span>
         </h1>
-        <p class="text-sm font-bold text-gray-500 mt-4 uppercase tracking-widest">Novosibirsk Industrial Logistics · 2024</p>
+        <p class="text-sm font-bold text-gray-500 mt-4 uppercase tracking-widest" data-i18n="header.sub">Novosibirsk Industrial Logistics · 2024</p>
+        <div class="case-lang-switch-wrap">
+            <button type="button" class="case-lang-toggle" data-case-lang-toggle aria-label="Переключить на русский">
+                <span class="case-lang-toggle__flag" aria-hidden="true">🇷🇺</span>
+                <span class="case-lang-toggle__label">Переключить на русский</span>
+            </button>
+        </div>
     </header>
 
-    <!-- The logo story -->
-    <section class="mb-24 max-w-4xl">
+    <section class="mb-24 max-w-4xl lol-reveal">
         <div class="mb-10">
-            <span class="section-tag-cf text-lg uppercase tracking-widest">2024</span>
+            <span class="section-tag-cf text-lg uppercase tracking-widest" data-i18n="tag.2024">2024</span>
         </div>
         <div class="card-cf p-8 md:p-12 rotate-[0.5deg]">
-            <p class="text-gray-800 text-lg md:text-xl leading-relaxed">
+            <p class="text-gray-800 text-lg md:text-xl leading-relaxed" data-i18n-html="story.body_html">
                 The Container Fix logo was created for a Russian Novosibirsk-based company developing a device that accelerates container loading into gondola cars by reducing manual labor. Its <strong>layered, cube-like design</strong> represents both the container and the gondola, while the bold <strong>“CF”</strong> anchors the brand’s identity. The contrasting colors and exposed cross-section underscore the system’s unique <strong>two-component material</strong>, which fills the gap between container and car for an elastic, efficient fit.
             </p>
         </div>
     </section>
 
-    <!-- Final logo -->
-    <section class="mb-24">
+    <section class="mb-24 lol-reveal">
         <div class="mb-10">
-            <span class="section-tag-cf text-lg uppercase tracking-widest">Final logo</span>
+            <span class="section-tag-cf text-lg uppercase tracking-widest" data-i18n="tag.final">Final logo</span>
         </div>
         <div class="flex justify-center">
             <div class="card-cf p-8 md:p-12 max-w-xl -rotate-1">
                 <img src="assets/images/container-fix/logo.png" alt="Container Fix final logo" class="w-full h-auto bg-zinc-100 min-h-[200px] object-contain">
-                <p class="marker-font text-center mt-4 text-sm text-amber-700 uppercase tracking-wider">Container Fix · Master mark</p>
+                <p class="marker-font text-center mt-4 text-sm text-amber-700 uppercase tracking-wider" data-i18n="caption.final">Container Fix · Master mark</p>
             </div>
         </div>
     </section>
 
-    <!-- Logo on Skolkovo / in the wild -->
-    <section class="mb-48">
+    <section class="mb-48 lol-reveal">
         <div class="mb-10">
-            <span class="section-tag-cf text-lg uppercase tracking-widest">In the wild</span>
+            <span class="section-tag-cf text-lg uppercase tracking-widest" data-i18n="tag.wild">In the wild</span>
         </div>
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start max-w-6xl">
             <div class="card-cf p-2 overflow-hidden rotate-1">
                 <img src="assets/images/container-fix/skolkovo-screenshot.png" alt="Container Fix on Skolkovo Innovation Center profile" class="w-full h-auto bg-white object-contain">
             </div>
             <div class="card-cf p-8 md:p-10 -rotate-1">
-                <h2 class="inter-black text-xl md:text-2xl text-black mb-4 uppercase">Skolkovo Innovation Center</h2>
-                <p class="text-gray-700 text-base leading-relaxed mb-4">
-                    This screenshot shows the official <strong>Skolkovo Innovation Center</strong> profile for Container Fix, a high-tech industrial startup founded in 2024.
+                <h2 class="inter-black text-xl md:text-2xl text-black mb-4 uppercase" data-i18n="wild.title">Skolkovo Innovation Center</h2>
+                <p class="text-gray-700 text-base leading-relaxed mb-4" data-i18n="wild.p1">
+                    This screenshot shows the official Skolkovo Innovation Center profile for Container Fix, a high-tech industrial startup founded in 2024.
                 </p>
-                <p class="text-gray-700 text-base leading-relaxed mb-4">
-                    <strong>Platform:</strong> This is an official government-backed registry for “Residents” (vetted tech companies) within Russia’s primary innovation hub.
+                <p class="text-gray-700 text-base leading-relaxed mb-4" data-i18n-html="wild.p2_html">
+                    <strong>Platform:</strong> Official government-backed registry for vetted tech companies in Russia’s primary innovation hub.
                 </p>
-                <p class="text-gray-700 text-base leading-relaxed mb-4">
-                    <strong>Context:</strong> The page validates the company’s status as a member of both the Novosibirsk Innovation Fund and Skolkovo, granting them elite status in the tech manufacturing sector.
+                <p class="text-gray-700 text-base leading-relaxed mb-4" data-i18n-html="wild.p3_html">
+                    <strong>Context:</strong> Validates membership in the Novosibirsk Innovation Fund and Skolkovo — elite status in tech manufacturing.
                 </p>
-                <p class="text-gray-700 text-base leading-relaxed">
-                    <strong>Design highlight:</strong> The logo (featured in the bottom left and on the 3D product render) was designed to reflect the company’s focus on modularity and industrial precision, aligning with their mission to innovate in containerized solutions and hardware fixing systems.
+                <p class="text-gray-700 text-base leading-relaxed" data-i18n-html="wild.p4_html">
+                    <strong>Design highlight:</strong> The logo (bottom left and on the 3D render) reflects modularity and industrial precision, aligned with containerized hardware systems.
                 </p>
             </div>
         </div>
     </section>
 
-    <!-- Alternative logo not selected -->
-    <section class="mb-48">
+    <section class="mb-48 lol-reveal">
         <div class="mb-10">
-            <span class="section-tag-cf text-lg uppercase tracking-widest">Alternative they didn’t go with</span>
+            <span class="section-tag-cf text-lg uppercase tracking-widest" data-i18n="tag.alt">Alternative they didn’t go with</span>
         </div>
         <div class="max-w-4xl">
             <div class="card-cf p-4 md:p-6 mb-10 rotate-[-0.5deg] overflow-hidden">
                 <img src="assets/images/container-fix/altlogo.webp" alt="Alternative Container Fix logo concept with RZD railway branding" class="w-full h-auto bg-zinc-100 min-h-[280px] object-contain">
-                <p class="marker-font text-center mt-4 text-sm text-amber-700 uppercase tracking-wider">Railway-focused concept · Not selected</p>
+                <p class="marker-font text-center mt-4 text-sm text-amber-700 uppercase tracking-wider" data-i18n="caption.alt">Railway-focused concept · Not selected</p>
             </div>
             <div class="card-cf p-8 md:p-10 rotate-[0.5deg]">
-                <p class="text-gray-800 text-lg leading-relaxed mb-4">
-                    This alternative Container Fix concept combines a <strong>stylized container with a clamp-like mechanism and rail elements</strong> to emphasize the brand’s railway focus and mechanical innovation. The design nods to <strong>RZD (ОАО «РЖД»)</strong>, Russian railroading, in the background—tying the identity to the real-world context of gondola and freight transport.
+                <p class="text-gray-800 text-lg leading-relaxed mb-4" data-i18n-html="alt.body1_html">
+                    This alternative combines a <strong>stylized container with a clamp-like mechanism and rail elements</strong>, emphasizing railway focus and mechanical innovation. The design nods to <strong>RZD (ОАО «РЖД»)</strong> in the background — real gondola and freight context.
                 </p>
-                <p class="text-gray-800 text-lg leading-relaxed mb-4">
-                    The bold <strong>“CF” lettering</strong> is integrated into the container’s form, visually conveying strength and efficiency. While it clearly highlights the core idea of securing containers during transport, this direction was ultimately not selected for the final brand identity.
+                <p class="text-gray-800 text-lg leading-relaxed mb-4" data-i18n-html="alt.body2_html">
+                    Bold <strong>“CF” lettering</strong> is integrated into the container form. This direction was not selected for the final brand identity.
                 </p>
             </div>
         </div>
     </section>
 
     <footer class="fixed bottom-0 left-0 w-full bg-black border-t-4 border-amber-500 z-[100] p-4 flex flex-wrap justify-center gap-6 md:gap-12">
-        <a href="index.html" class="text-amber-400 inter-black text-lg md:text-xl hover:text-amber-300 uppercase italic">Home</a>
-        <a href="about.html" class="text-amber-400 inter-black text-lg md:text-xl hover:text-amber-300 uppercase italic">About Me</a>
-        <a href="https://www.redbubble.com/people/SoftwareSticker" target="_blank" rel="noopener noreferrer" class="text-amber-400 inter-black text-lg md:text-xl hover:text-amber-300 uppercase italic">Software Stickers</a>
-        <a href="contact.html" class="text-amber-400 inter-black text-lg md:text-xl hover:text-amber-300 uppercase italic">Contact Me</a>
+        <a href="index.html" class="text-amber-400 inter-black text-lg md:text-xl hover:text-amber-300 uppercase italic cursor-pointer" data-i18n="footer.home">Home</a>
+        <a href="about.html" class="text-amber-400 inter-black text-lg md:text-xl hover:text-amber-300 uppercase italic cursor-pointer" data-i18n="footer.about">About Me</a>
+        <a href="https://www.redbubble.com/people/SoftwareSticker" target="_blank" rel="noopener noreferrer" class="text-amber-400 inter-black text-lg md:text-xl hover:text-amber-300 uppercase italic cursor-pointer" data-i18n="footer.stickers">Software Stickers</a>
+        <a href="contact.html" class="text-amber-400 inter-black text-lg md:text-xl hover:text-amber-300 uppercase italic cursor-pointer" data-i18n="footer.contact">Contact Me</a>
     </footer>
 
     <script>
@@ -159,6 +164,7 @@
             });
         })();
     </script>
+    <script src="js/case-study-i18n.js" defer></script>
     <script src="js/lol-enhance.js" defer></script>
 </body>
 </html>
