@@ -118,43 +118,116 @@
         <section class="mb-12 max-w-6xl" aria-labelledby="gen-ai">
             <h2 id="gen-ai" class="about-tag mb-4">Gen AI playground</h2>
             <p class="text-zinc-600 max-w-2xl mb-8 leading-relaxed">
-                A small slice of what’s possible — concept boards, characters, and client-ready scenes. <strong class="text-zinc-800">Click any tile to expand.</strong> Featured short below.
+                A small slice of what’s possible — concept boards, characters, and client-ready scenes. <strong class="text-zinc-800">Click any tile to expand.</strong> Use the arrows for a second grid of 15. Featured clips below.
             </p>
-            <div class="flex flex-col md:flex-row md:items-start gap-10 mb-10">
-                <a href="https://youtube.com/shorts/mIhFF6tkqOE?si=yDfVEsiR7x-bkooe" target="_blank" rel="noopener noreferrer" class="about-youtube rotate-[-1deg] shrink-0 mx-auto md:mx-0" aria-label="Watch Gen AI YouTube Short on YouTube">
-                    <img src="https://img.youtube.com/vi/mIhFF6tkqOE/hqdefault.jpg" alt="" width="480" height="270" loading="lazy" decoding="async">
-                    <div class="about-youtube-play" aria-hidden="true">
-                        <span class="w-14 h-14 rounded-full bg-red-600 flex items-center justify-center shadow-lg">
-                            <svg class="w-7 h-7 text-white ml-0.5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
-                        </span>
+            <div class="about-videos">
+                <div class="about-youtube-stack rotate-[-0.5deg]">
+                    <div class="about-video-item rotate-[-1deg]">
+                        <a href="https://youtube.com/shorts/mIhFF6tkqOE?si=yDfVEsiR7x-bkooe" target="_blank" rel="noopener noreferrer" class="about-youtube" aria-label="Watch YouTube Short on YouTube">
+                            <img src="https://img.youtube.com/vi/mIhFF6tkqOE/hqdefault.jpg" alt="" width="480" height="270" loading="lazy" decoding="async">
+                            <div class="about-youtube-play" aria-hidden="true">
+                                <span class="rounded-full bg-red-600 flex items-center justify-center shadow-lg">
+                                    <svg class="text-white ml-0.5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+                                </span>
+                            </div>
+                        </a>
                     </div>
-                </a>
-                <div class="text-sm text-zinc-600 max-w-md">
-                    <p class="font-semibold text-zinc-800 mb-2">Tools I reach for</p>
-                    <p class="leading-relaxed">Midjourney · Grok · Stable Diffusion · Comfy UI — for fun, for concepts, and for client work when a second photoshoot isn’t in the budget.</p>
+                    <div class="about-video-item rotate-[0.5deg]">
+                        <a href="https://youtube.com/shorts/CfuaDv9DSKg?si=ihv9udYI3Qkbaypb" target="_blank" rel="noopener noreferrer" class="about-youtube" aria-label="Watch YouTube Short on YouTube">
+                            <img src="https://img.youtube.com/vi/CfuaDv9DSKg/hqdefault.jpg" alt="" width="480" height="270" loading="lazy" decoding="async">
+                            <div class="about-youtube-play" aria-hidden="true">
+                                <span class="rounded-full bg-red-600 flex items-center justify-center shadow-lg">
+                                    <svg class="text-white ml-0.5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+                                </span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="about-video-item rotate-[-0.5deg]">
+                        <a href="https://youtu.be/KMOPuk9ue9c?si=TGWf8fh1e8S4hS4E" target="_blank" rel="noopener noreferrer" class="about-youtube" aria-label="Watch YouTube Short on YouTube">
+                            <img src="https://img.youtube.com/vi/KMOPuk9ue9c/hqdefault.jpg" alt="" width="480" height="270" loading="lazy" decoding="async">
+                            <div class="about-youtube-play" aria-hidden="true">
+                                <span class="rounded-full bg-red-600 flex items-center justify-center shadow-lg">
+                                    <svg class="text-white ml-0.5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+                                </span>
+                            </div>
+                        </a>
+                    </div>
+                    <p class="about-video-label">YouTube Shorts</p>
                 </div>
+                <div class="about-tiktok-column rotate-[1deg]">
+                    <div class="about-tiktok-wrap">
+                        <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@widestool/video/7607544381385493774" data-video-id="7607544381385493774" style="max-width:605px;min-width:325px;">
+                            <section>
+                                <a target="_blank" rel="noopener noreferrer" title="@widestool" href="https://www.tiktok.com/@widestool?refer=embed">@widestool</a>
+                                <p>cruising laps at sykart in tigard... insta360 X4 air</p>
+                                <a target="_blank" rel="noopener noreferrer" title="♬ original sound - widestool" href="https://www.tiktok.com/music/original-sound-7607544471378496270?refer=embed">♬ original sound - widestool</a>
+                            </section>
+                        </blockquote>
+                    </div>
+                    <p class="about-video-label">TikTok · @widestool</p>
+                </div>
+            </div>
+            <div class="text-sm text-zinc-600 max-w-2xl mb-10">
+                <p class="font-semibold text-zinc-800 mb-2">Tools I reach for</p>
+                <p class="leading-relaxed">Midjourney · Grok · Stable Diffusion · Comfy UI — for fun, for concepts, and for client work when a second photoshoot isn’t in the budget.</p>
             </div>
 
             <div id="ai-lightbox" role="dialog" aria-modal="true" aria-label="Expanded AI image" aria-hidden="true">
                 <button type="button" class="close" id="ai-lightbox-close" aria-label="Close image">×</button>
                 <img id="ai-lightbox-img" src="" alt="">
             </div>
-            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 md:gap-4" id="ai-gallery">
-                <button type="button" class="gallery-card p-1 overflow-hidden rotate-1 text-left" data-ai-src="assets/images/about/ai-1.png" aria-label="View AI image 1"><img src="assets/images/about/ai-1.png" alt="" class="w-full aspect-square object-cover pointer-events-none" loading="lazy" decoding="async" onerror="this.closest('button').remove()"></button>
-                <button type="button" class="gallery-card p-1 overflow-hidden -rotate-1 text-left" data-ai-src="assets/images/about/ai-2.png" aria-label="View AI image 2"><img src="assets/images/about/ai-2.png" alt="" class="w-full aspect-square object-cover pointer-events-none" loading="lazy" decoding="async" onerror="this.closest('button').remove()"></button>
-                <button type="button" class="gallery-card p-1 overflow-hidden rotate-2 text-left" data-ai-src="assets/images/about/ai-3.png" aria-label="View AI image 3"><img src="assets/images/about/ai-3.png" alt="" class="w-full aspect-square object-cover pointer-events-none" loading="lazy" decoding="async" onerror="this.closest('button').remove()"></button>
-                <button type="button" class="gallery-card p-1 overflow-hidden -rotate-2 text-left" data-ai-src="assets/images/about/ai-4.png" aria-label="View AI image 4"><img src="assets/images/about/ai-4.png" alt="" class="w-full aspect-square object-cover pointer-events-none" loading="lazy" decoding="async" onerror="this.closest('button').remove()"></button>
-                <button type="button" class="gallery-card p-1 overflow-hidden rotate-1 text-left" data-ai-src="assets/images/about/ai-5.png" aria-label="View AI image 5"><img src="assets/images/about/ai-5.png" alt="" class="w-full aspect-square object-cover pointer-events-none" loading="lazy" decoding="async" onerror="this.closest('button').remove()"></button>
-                <button type="button" class="gallery-card p-1 overflow-hidden -rotate-1 text-left" data-ai-src="assets/images/about/ai-6.png" aria-label="View AI image 6"><img src="assets/images/about/ai-6.png" alt="" class="w-full aspect-square object-cover pointer-events-none" loading="lazy" decoding="async" onerror="this.closest('button').remove()"></button>
-                <button type="button" class="gallery-card p-1 overflow-hidden rotate-2 text-left" data-ai-src="assets/images/about/ai-7.png" aria-label="View AI image 7"><img src="assets/images/about/ai-7.png" alt="" class="w-full aspect-square object-cover pointer-events-none" loading="lazy" decoding="async" onerror="this.closest('button').remove()"></button>
-                <button type="button" class="gallery-card p-1 overflow-hidden -rotate-2 text-left" data-ai-src="assets/images/about/ai-8.png" aria-label="View AI image 8"><img src="assets/images/about/ai-8.png" alt="" class="w-full aspect-square object-cover pointer-events-none" loading="lazy" decoding="async" onerror="this.closest('button').remove()"></button>
-                <button type="button" class="gallery-card p-1 overflow-hidden rotate-1 text-left" data-ai-src="assets/images/about/ai-9.png" aria-label="View AI image 9"><img src="assets/images/about/ai-9.png" alt="" class="w-full aspect-square object-cover pointer-events-none" loading="lazy" decoding="async" onerror="this.closest('button').remove()"></button>
-                <button type="button" class="gallery-card p-1 overflow-hidden -rotate-1 text-left" data-ai-src="assets/images/about/ai-10.png" aria-label="View AI image 10"><img src="assets/images/about/ai-10.png" alt="" class="w-full aspect-square object-cover pointer-events-none" loading="lazy" decoding="async" onerror="this.closest('button').remove()"></button>
-                <button type="button" class="gallery-card p-1 overflow-hidden rotate-2 text-left" data-ai-src="assets/images/about/ai-11.png" aria-label="View AI image 11"><img src="assets/images/about/ai-11.png" alt="" class="w-full aspect-square object-cover pointer-events-none" loading="lazy" decoding="async" onerror="this.closest('button').remove()"></button>
-                <button type="button" class="gallery-card p-1 overflow-hidden -rotate-2 text-left" data-ai-src="assets/images/about/ai-12.png" aria-label="View AI image 12"><img src="assets/images/about/ai-12.png" alt="" class="w-full aspect-square object-cover pointer-events-none" loading="lazy" decoding="async" onerror="this.closest('button').remove()"></button>
-                <button type="button" class="gallery-card p-1 overflow-hidden rotate-1 text-left" data-ai-src="assets/images/about/ai-13.png" aria-label="View AI image 13"><img src="assets/images/about/ai-13.png" alt="" class="w-full aspect-square object-cover pointer-events-none" loading="lazy" decoding="async" onerror="this.closest('button').remove()"></button>
-                <button type="button" class="gallery-card p-1 overflow-hidden -rotate-1 text-left" data-ai-src="assets/images/about/ai-14.png" aria-label="View AI image 14"><img src="assets/images/about/ai-14.png" alt="" class="w-full aspect-square object-cover pointer-events-none" loading="lazy" decoding="async" onerror="this.closest('button').remove()"></button>
-                <button type="button" class="gallery-card p-1 overflow-hidden rotate-2 text-left" data-ai-src="assets/images/about/ai-15.png" aria-label="View AI image 15"><img src="assets/images/about/ai-15.png" alt="" class="w-full aspect-square object-cover pointer-events-none" loading="lazy" decoding="async" onerror="this.closest('button').remove()"></button>
+            <div class="ai-gallery-carousel max-w-6xl" id="ai-gallery-carousel" tabindex="0" aria-label="AI image gallery, two pages">
+                <div class="ai-gallery-viewport">
+                    <div class="ai-gallery-track">
+                        <div class="ai-gallery-page" aria-hidden="false">
+                            <div class="ai-gallery-grid">
+                                <button type="button" class="gallery-card p-1 overflow-hidden rotate-1 text-left" data-ai-src="assets/images/about/ai-1.png" aria-label="View AI image 1"><img src="assets/images/about/ai-1.png" alt="" class="w-full aspect-square object-cover pointer-events-none" loading="lazy" decoding="async" onerror="this.closest('button').remove()"></button>
+                                <button type="button" class="gallery-card p-1 overflow-hidden -rotate-1 text-left" data-ai-src="assets/images/about/ai-2.png" aria-label="View AI image 2"><img src="assets/images/about/ai-2.png" alt="" class="w-full aspect-square object-cover pointer-events-none" loading="lazy" decoding="async" onerror="this.closest('button').remove()"></button>
+                                <button type="button" class="gallery-card p-1 overflow-hidden rotate-2 text-left" data-ai-src="assets/images/about/ai-3.png" aria-label="View AI image 3"><img src="assets/images/about/ai-3.png" alt="" class="w-full aspect-square object-cover pointer-events-none" loading="lazy" decoding="async" onerror="this.closest('button').remove()"></button>
+                                <button type="button" class="gallery-card p-1 overflow-hidden -rotate-2 text-left" data-ai-src="assets/images/about/ai-4.png" aria-label="View AI image 4"><img src="assets/images/about/ai-4.png" alt="" class="w-full aspect-square object-cover pointer-events-none" loading="lazy" decoding="async" onerror="this.closest('button').remove()"></button>
+                                <button type="button" class="gallery-card p-1 overflow-hidden rotate-1 text-left" data-ai-src="assets/images/about/ai-5.png" aria-label="View AI image 5"><img src="assets/images/about/ai-5.png" alt="" class="w-full aspect-square object-cover pointer-events-none" loading="lazy" decoding="async" onerror="this.closest('button').remove()"></button>
+                                <button type="button" class="gallery-card p-1 overflow-hidden -rotate-1 text-left" data-ai-src="assets/images/about/ai-6.png" aria-label="View AI image 6"><img src="assets/images/about/ai-6.png" alt="" class="w-full aspect-square object-cover pointer-events-none" loading="lazy" decoding="async" onerror="this.closest('button').remove()"></button>
+                                <button type="button" class="gallery-card p-1 overflow-hidden rotate-2 text-left" data-ai-src="assets/images/about/ai-7.png" aria-label="View AI image 7"><img src="assets/images/about/ai-7.png" alt="" class="w-full aspect-square object-cover pointer-events-none" loading="lazy" decoding="async" onerror="this.closest('button').remove()"></button>
+                                <button type="button" class="gallery-card p-1 overflow-hidden -rotate-2 text-left" data-ai-src="assets/images/about/ai-8.png" aria-label="View AI image 8"><img src="assets/images/about/ai-8.png" alt="" class="w-full aspect-square object-cover pointer-events-none" loading="lazy" decoding="async" onerror="this.closest('button').remove()"></button>
+                                <button type="button" class="gallery-card p-1 overflow-hidden rotate-1 text-left" data-ai-src="assets/images/about/ai-9.png" aria-label="View AI image 9"><img src="assets/images/about/ai-9.png" alt="" class="w-full aspect-square object-cover pointer-events-none" loading="lazy" decoding="async" onerror="this.closest('button').remove()"></button>
+                                <button type="button" class="gallery-card p-1 overflow-hidden -rotate-1 text-left" data-ai-src="assets/images/about/ai-10.png" aria-label="View AI image 10"><img src="assets/images/about/ai-10.png" alt="" class="w-full aspect-square object-cover pointer-events-none" loading="lazy" decoding="async" onerror="this.closest('button').remove()"></button>
+                                <button type="button" class="gallery-card p-1 overflow-hidden rotate-2 text-left" data-ai-src="assets/images/about/ai-11.png" aria-label="View AI image 11"><img src="assets/images/about/ai-11.png" alt="" class="w-full aspect-square object-cover pointer-events-none" loading="lazy" decoding="async" onerror="this.closest('button').remove()"></button>
+                                <button type="button" class="gallery-card p-1 overflow-hidden -rotate-2 text-left" data-ai-src="assets/images/about/ai-12.png" aria-label="View AI image 12"><img src="assets/images/about/ai-12.png" alt="" class="w-full aspect-square object-cover pointer-events-none" loading="lazy" decoding="async" onerror="this.closest('button').remove()"></button>
+                                <button type="button" class="gallery-card p-1 overflow-hidden rotate-1 text-left" data-ai-src="assets/images/about/ai-13.png" aria-label="View AI image 13"><img src="assets/images/about/ai-13.png" alt="" class="w-full aspect-square object-cover pointer-events-none" loading="lazy" decoding="async" onerror="this.closest('button').remove()"></button>
+                                <button type="button" class="gallery-card p-1 overflow-hidden -rotate-1 text-left" data-ai-src="assets/images/about/ai-14.png" aria-label="View AI image 14"><img src="assets/images/about/ai-14.png" alt="" class="w-full aspect-square object-cover pointer-events-none" loading="lazy" decoding="async" onerror="this.closest('button').remove()"></button>
+                                <button type="button" class="gallery-card p-1 overflow-hidden rotate-2 text-left" data-ai-src="assets/images/about/ai-15.png" aria-label="View AI image 15"><img src="assets/images/about/ai-15.png" alt="" class="w-full aspect-square object-cover pointer-events-none" loading="lazy" decoding="async" onerror="this.closest('button').remove()"></button>
+                            </div>
+                        </div>
+                        <div class="ai-gallery-page" aria-hidden="true">
+                            <div class="ai-gallery-grid">
+                                <button type="button" class="gallery-card p-1 overflow-hidden rotate-1 text-left" data-ai-src="assets/images/about/more/ai-more-01.jpeg" aria-label="View AI image 1"><img src="assets/images/about/more/ai-more-01.jpeg" alt="" class="w-full aspect-square object-cover pointer-events-none" loading="lazy" decoding="async" onerror="this.closest('button').remove()"></button>
+                                <button type="button" class="gallery-card p-1 overflow-hidden -rotate-1 text-left" data-ai-src="assets/images/about/more/ai-more-02.jpeg" aria-label="View AI image 2"><img src="assets/images/about/more/ai-more-02.jpeg" alt="" class="w-full aspect-square object-cover pointer-events-none" loading="lazy" decoding="async" onerror="this.closest('button').remove()"></button>
+                                <button type="button" class="gallery-card p-1 overflow-hidden rotate-2 text-left" data-ai-src="assets/images/about/more/ai-more-03.jpeg" aria-label="View AI image 3"><img src="assets/images/about/more/ai-more-03.jpeg" alt="" class="w-full aspect-square object-cover pointer-events-none" loading="lazy" decoding="async" onerror="this.closest('button').remove()"></button>
+                                <button type="button" class="gallery-card p-1 overflow-hidden -rotate-2 text-left" data-ai-src="assets/images/about/more/ai-more-04.jpeg" aria-label="View AI image 4"><img src="assets/images/about/more/ai-more-04.jpeg" alt="" class="w-full aspect-square object-cover pointer-events-none" loading="lazy" decoding="async" onerror="this.closest('button').remove()"></button>
+                                <button type="button" class="gallery-card p-1 overflow-hidden rotate-1 text-left" data-ai-src="assets/images/about/more/ai-more-05.jpeg" aria-label="View AI image 5"><img src="assets/images/about/more/ai-more-05.jpeg" alt="" class="w-full aspect-square object-cover pointer-events-none" loading="lazy" decoding="async" onerror="this.closest('button').remove()"></button>
+                                <button type="button" class="gallery-card p-1 overflow-hidden -rotate-1 text-left" data-ai-src="assets/images/about/more/ai-more-06.jpeg" aria-label="View AI image 6"><img src="assets/images/about/more/ai-more-06.jpeg" alt="" class="w-full aspect-square object-cover pointer-events-none" loading="lazy" decoding="async" onerror="this.closest('button').remove()"></button>
+                                <button type="button" class="gallery-card p-1 overflow-hidden rotate-2 text-left" data-ai-src="assets/images/about/more/ai-more-07.png" aria-label="View AI image 7"><img src="assets/images/about/more/ai-more-07.png" alt="" class="w-full aspect-square object-cover pointer-events-none" loading="lazy" decoding="async" onerror="this.closest('button').remove()"></button>
+                                <button type="button" class="gallery-card p-1 overflow-hidden -rotate-2 text-left" data-ai-src="assets/images/about/more/ai-more-08.jpg" aria-label="View AI image 8"><img src="assets/images/about/more/ai-more-08.jpg" alt="" class="w-full aspect-square object-cover pointer-events-none" loading="lazy" decoding="async" onerror="this.closest('button').remove()"></button>
+                                <button type="button" class="gallery-card p-1 overflow-hidden rotate-1 text-left" data-ai-src="assets/images/about/more/ai-more-09.jpeg" aria-label="View AI image 9"><img src="assets/images/about/more/ai-more-09.jpeg" alt="" class="w-full aspect-square object-cover pointer-events-none" loading="lazy" decoding="async" onerror="this.closest('button').remove()"></button>
+                                <button type="button" class="gallery-card p-1 overflow-hidden -rotate-1 text-left" data-ai-src="assets/images/about/more/ai-more-10.jpeg" aria-label="View AI image 10"><img src="assets/images/about/more/ai-more-10.jpeg" alt="" class="w-full aspect-square object-cover pointer-events-none" loading="lazy" decoding="async" onerror="this.closest('button').remove()"></button>
+                                <button type="button" class="gallery-card p-1 overflow-hidden rotate-2 text-left" data-ai-src="assets/images/about/more/ai-more-11.jpeg" aria-label="View AI image 11"><img src="assets/images/about/more/ai-more-11.jpeg" alt="" class="w-full aspect-square object-cover pointer-events-none" loading="lazy" decoding="async" onerror="this.closest('button').remove()"></button>
+                                <button type="button" class="gallery-card p-1 overflow-hidden -rotate-2 text-left" data-ai-src="assets/images/about/more/ai-more-12.png" aria-label="View AI image 12"><img src="assets/images/about/more/ai-more-12.png" alt="" class="w-full aspect-square object-cover pointer-events-none" loading="lazy" decoding="async" onerror="this.closest('button').remove()"></button>
+                                <button type="button" class="gallery-card p-1 overflow-hidden rotate-1 text-left" data-ai-src="assets/images/about/more/ai-more-13.png" aria-label="View AI image 13"><img src="assets/images/about/more/ai-more-13.png" alt="" class="w-full aspect-square object-cover pointer-events-none" loading="lazy" decoding="async" onerror="this.closest('button').remove()"></button>
+                                <button type="button" class="gallery-card p-1 overflow-hidden -rotate-1 text-left" data-ai-src="assets/images/about/more/ai-more-14.jpeg" aria-label="View AI image 14"><img src="assets/images/about/more/ai-more-14.jpeg" alt="" class="w-full aspect-square object-cover pointer-events-none" loading="lazy" decoding="async" onerror="this.closest('button').remove()"></button>
+                                <button type="button" class="gallery-card p-1 overflow-hidden rotate-2 text-left" data-ai-src="assets/images/about/more/ai-more-15.webp" aria-label="View AI image 15"><img src="assets/images/about/more/ai-more-15.webp" alt="" class="w-full aspect-square object-cover pointer-events-none" loading="lazy" decoding="async" onerror="this.closest('button').remove()"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ai-gallery-nav" role="group" aria-label="Gallery pages">
+                    <button type="button" class="ai-gallery-nav__btn rotate-[-1deg]" data-gallery-prev aria-label="Previous grid page">← Prev</button>
+                    <div class="ai-gallery-nav__dots" role="tablist" aria-label="Gallery page">
+                        <button type="button" class="ai-gallery-nav__dot is-active" data-gallery-dot="0" role="tab" aria-selected="true" aria-label="Page 1"></button>
+                        <button type="button" class="ai-gallery-nav__dot" data-gallery-dot="1" role="tab" aria-selected="false" aria-label="Page 2"></button>
+                    </div>
+                    <span class="ai-gallery-nav__count" data-gallery-count>1 / 2</span>
+                    <button type="button" class="ai-gallery-nav__btn rotate-[1deg]" data-gallery-next aria-label="Next grid page">Next →</button>
+                </div>
             </div>
         </section>
 
@@ -191,6 +264,7 @@
         <a href="contact.html" class="inter-black text-lg md:text-xl hover:text-fuchsia-600 uppercase italic cursor-pointer focus-visible:outline focus-visible:outline-2 focus-visible:outline-fuchsia-600 focus-visible:outline-offset-2">Contact Me</a>
     </footer>
 
+    <script async src="https://www.tiktok.com/embed.js"></script>
     <script>
         (function () {
             if (!window.matchMedia('(min-width: 768px)').matches || !window.matchMedia('(pointer: fine)').matches) return;
@@ -199,47 +273,12 @@
                 cursor.style.left = e.clientX + 'px';
                 cursor.style.top = e.clientY + 'px';
             });
-            document.querySelectorAll('a, button.gallery-card, .about-cta, #ai-lightbox .close').forEach(function (el) {
+            document.querySelectorAll('a, button.gallery-card, .about-cta, .ai-gallery-nav__btn, #ai-lightbox .close').forEach(function (el) {
                 el.addEventListener('mouseenter', function () { cursor.style.transform = 'scale(2.5)'; });
                 el.addEventListener('mouseleave', function () { cursor.style.transform = 'scale(1)'; });
             });
         })();
-        (function () {
-            var lightbox = document.getElementById('ai-lightbox');
-            var lightboxImg = document.getElementById('ai-lightbox-img');
-            var closeBtn = document.getElementById('ai-lightbox-close');
-            var lastFocus = null;
-
-            function openLightbox(src, label) {
-                if (!src) return;
-                lastFocus = document.activeElement;
-                lightboxImg.src = src;
-                lightboxImg.alt = label || 'AI generated artwork (expanded)';
-                lightbox.classList.add('show');
-                lightbox.setAttribute('aria-hidden', 'false');
-                document.body.style.overflow = 'hidden';
-                closeBtn.focus();
-            }
-            function closeLightbox() {
-                lightbox.classList.remove('show');
-                lightbox.setAttribute('aria-hidden', 'true');
-                lightboxImg.src = '';
-                document.body.style.overflow = '';
-                if (lastFocus && lastFocus.focus) lastFocus.focus();
-            }
-            document.getElementById('ai-gallery').querySelectorAll('.gallery-card').forEach(function (btn, i) {
-                btn.addEventListener('click', function () {
-                    var src = btn.getAttribute('data-ai-src');
-                    var img = btn.querySelector('img');
-                    if (src && img && img.naturalWidth) openLightbox(src, 'AI generated artwork ' + (i + 1));
-                });
-            });
-            closeBtn.addEventListener('click', closeLightbox);
-            lightbox.addEventListener('click', function (e) { if (e.target === lightbox) closeLightbox(); });
-            document.addEventListener('keydown', function (e) {
-                if (e.key === 'Escape' && lightbox.classList.contains('show')) closeLightbox();
-            });
-        })();
     </script>
+    <script src="js/ai-gallery.js"></script>
 </body>
 </html>
