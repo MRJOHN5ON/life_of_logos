@@ -1,0 +1,510 @@
+/* Website services — high-impact sales page */
+
+.ws-page { --ws-accent: #ff00ff; --ws-ink: #09090b; }
+
+.ws-index-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: #6b7280;
+    transition: color 0.2s;
+}
+.ws-index-link:hover { color: var(--ws-accent); }
+
+/* Hero */
+.ws-hero-stat {
+    border: 4px solid #000;
+    background: #fef08a;
+    padding: 1.25rem 1.5rem;
+    box-shadow: 10px 10px 0 #000;
+    max-width: 22rem;
+}
+.ws-hero-stat__number {
+    font-family: 'Inter', sans-serif;
+    font-weight: 900;
+    font-size: clamp(2.5rem, 8vw, 4rem);
+    line-height: 1;
+    letter-spacing: -0.04em;
+}
+.ws-hero-stat__label {
+    font-size: 0.8rem;
+    font-weight: 700;
+    line-height: 1.4;
+    margin-top: 0.35rem;
+    color: #1e293b;
+}
+
+.ws-hero-cta {
+    display: inline-block;
+    background: #000;
+    color: #fff;
+    padding: 1rem 2rem;
+    font-weight: 900;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    border: 4px solid #fff;
+    box-shadow: 8px 8px 0 var(--ws-accent);
+    transition: background 0.2s, transform 0.2s;
+}
+.ws-hero-cta:hover {
+    background: var(--ws-accent);
+    transform: rotate(-1deg);
+}
+
+/* Big punch rows */
+.ws-punch {
+    border: 4px solid #000;
+    padding: 2rem 2.25rem;
+    background: #fff;
+    box-shadow: 14px 14px 0 #000;
+    min-height: 100%;
+}
+.ws-punch--money {
+    background: #ff00ff;
+    color: #fff;
+    box-shadow: 14px 14px 0 #000;
+}
+.ws-punch--money .ws-punch__headline { color: #fff; }
+.ws-punch--money p { color: rgba(255,255,255,0.92); }
+.ws-punch--trust {
+    background: #1a3d2e;
+    color: #fff;
+    box-shadow: 14px 14px 0 #fef08a;
+}
+.ws-punch--trust .ws-punch__headline { color: #fef08a; }
+.ws-punch--trust p { color: rgba(255,255,255,0.9); }
+.ws-punch--find {
+    background: #000;
+    color: #fff;
+    box-shadow: 14px 14px 0 #22c55e;
+}
+.ws-punch--find .ws-punch__headline { color: #4ade80; }
+.ws-punch--find p { color: rgba(255,255,255,0.88); }
+
+.ws-punch__headline {
+    font-family: 'Inter', sans-serif;
+    font-weight: 900;
+    font-size: clamp(1.75rem, 5vw, 2.75rem);
+    line-height: 1.05;
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.75rem;
+}
+.ws-punch p {
+    font-size: 1rem;
+    line-height: 1.55;
+    font-weight: 600;
+}
+
+/* Section tags */
+.ws-section-tag {
+    background: #000;
+    color: #fff;
+    padding: 10px 20px;
+    display: inline-block;
+    transform: rotate(-2deg);
+    border: 2px solid white;
+    box-shadow: 4px 4px 0 var(--ws-accent);
+    font-family: 'Permanent Marker', cursive;
+    font-size: 1.15rem;
+    text-transform: uppercase;
+}
+
+/* Money callout */
+.ws-money-banner {
+    border: 4px solid #000;
+    background: linear-gradient(135deg, #fef08a 0%, #facc15 100%);
+    padding: 2.5rem 2rem;
+    text-align: center;
+    box-shadow: 16px 16px 0 #000;
+}
+.ws-money-banner h2 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 900;
+    font-size: clamp(2rem, 6vw, 3.5rem);
+    text-transform: uppercase;
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+}
+
+/* Cred strip — smaller technical proof */
+.ws-cred-strip {
+    border: 4px solid #000;
+    background: #f4f4f5;
+    padding: 1.5rem 1.75rem;
+    font-size: 0.85rem;
+    line-height: 1.55;
+    color: #3f3f46;
+}
+.ws-cred-strip strong { color: #09090b; }
+.ws-cred-strip a {
+    color: #1e40af;
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+/* Project cards */
+.ws-project-card {
+    border: 4px solid black;
+    background: white;
+    transition: box-shadow 0.3s ease;
+}
+.ws-project-card:hover {
+    z-index: 20;
+    box-shadow: 0 0 40px rgba(255, 0, 255, 0.55);
+}
+.ws-impact {
+    margin-top: 0.75rem;
+    padding: 0.85rem 1rem;
+    border: 3px solid #000;
+    background: #fef9c3;
+    font-size: 0.875rem;
+    font-weight: 600;
+    line-height: 1.5;
+    color: #1e293b;
+}
+.ws-impact strong { color: #000; }
+
+.ws-project-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 10;
+    font-size: 0.6rem;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    padding: 5px 10px;
+    border: 2px solid black;
+}
+.ws-project-badge--wip { background: #ff00ff; color: #fff; right: 10px; left: auto; }
+.ws-project-badge--live { background: #22c55e; color: #fff; right: 10px; left: auto; }
+.ws-project-badge--platform { background: #ff00ff; color: #fff; top: auto; bottom: 10px; left: 10px; right: auto; }
+.ws-project-badge--sqsp { background: #000; color: #fff; top: auto; bottom: 10px; left: 10px; }
+
+.ws-mini-compare {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(0.75rem, 3vw, 1.5rem);
+    height: 100%;
+    padding: 0.75rem 1rem;
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d3d32 100%);
+}
+.ws-mini-compare-panel {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 0;
+    max-width: 48%;
+}
+.ws-mini-compare-frame {
+    height: min(100%, 22rem);
+    width: auto;
+    max-width: 100%;
+    aspect-ratio: 390 / 844;
+    border: 3px solid #000;
+    border-radius: 14px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.85);
+}
+.ws-mini-compare-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+}
+.ws-mini-compare-label {
+    margin-top: 0.5rem;
+    font-size: 0.55rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 4px 8px;
+    border: 2px solid #000;
+    background: #fff;
+}
+.ws-mini-compare-vs {
+    flex-shrink: 0;
+    font-size: 0.65rem;
+    font-weight: 900;
+    color: rgba(255, 255, 255, 0.5);
+    text-transform: uppercase;
+}
+
+.ws-project-card-cta { opacity: 1; }
+@media (min-width: 768px) and (pointer: fine) {
+    .ws-project-card-cta { opacity: 0; }
+    .ws-project-card.group:hover .ws-project-card-cta { opacity: 1; }
+}
+
+/* Contact block */
+.ws-contact-wrap {
+    border: 4px solid #000;
+    background: #fff;
+    padding: 2rem 2.25rem;
+    box-shadow: 16px 16px 0 var(--ws-accent);
+}
+.ws-contact-wrap .lol-form-field {
+    width: 100%;
+    border: 4px solid #000;
+    padding: 0.85rem 1rem;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    outline: none;
+}
+.ws-contact-wrap .lol-form-field:focus {
+    box-shadow: 0 0 0 4px rgba(255, 0, 255, 0.35);
+}
+.ws-contact-wrap textarea.lol-form-field {
+    min-height: 140px;
+    resize: vertical;
+}
+.ws-contact-wrap .lol-form-label {
+    display: block;
+    font-size: 0.7rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    margin-bottom: 0.35rem;
+}
+.ws-contact-submit {
+    width: 100%;
+    background: #000;
+    color: #fff;
+    padding: 1rem 2rem;
+    font-weight: 900;
+    font-size: 1.15rem;
+    text-transform: uppercase;
+    border: 4px solid #000;
+    box-shadow: 8px 8px 0 var(--ws-accent);
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.ws-contact-submit:hover:not(:disabled) {
+    background: var(--ws-accent);
+}
+.ws-contact-submit:disabled {
+    opacity: 0.7;
+    cursor: wait;
+}
+
+.ws-logos-note {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #52525b;
+}
+.ws-logos-note a {
+    color: var(--ws-accent);
+    font-weight: 800;
+    text-decoration: underline;
+}
+
+.ws-sqsp-band {
+    border: 4px solid #000;
+    background: #0a0a0a;
+    color: #fff;
+    padding: 1.5rem 1.35rem;
+    box-shadow: 12px 12px 0 #22c55e;
+    margin-bottom: 2.5rem;
+    max-width: 56rem;
+}
+@media (min-width: 768px) {
+    .ws-sqsp-band { padding: 1.75rem 2rem; }
+}
+.ws-sqsp-head {
+    margin-bottom: 1.25rem;
+}
+.ws-sqsp-head h3 {
+    font-family: 'Permanent Marker', cursive;
+    font-size: clamp(1.25rem, 4vw, 1.6rem);
+    color: #4ade80;
+    margin: 0 0 0.35rem;
+    line-height: 1.15;
+}
+.ws-sqsp-head p {
+    margin: 0;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.8);
+    max-width: 36rem;
+    line-height: 1.45;
+}
+
+.ws-sqsp-compare {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 0.5rem;
+    align-items: stretch;
+    margin-bottom: 1.25rem;
+}
+@media (max-width: 520px) {
+    .ws-sqsp-compare {
+        grid-template-columns: 1fr;
+        gap: 0.65rem;
+    }
+    .ws-sqsp-card--custom {
+        display: none;
+    }
+}
+.ws-sqsp-card {
+    border: 3px solid #000;
+    padding: 1rem 1.1rem;
+    min-height: 6.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.15rem;
+}
+.ws-sqsp-card--stock {
+    background: #fef2f2;
+    color: #7f1d1d;
+    box-shadow: 5px 5px 0 #b91c1c;
+}
+.ws-sqsp-card--mine {
+    background: #ecfdf5;
+    color: #14532d;
+    box-shadow: 5px 5px 0 #22c55e;
+}
+.ws-sqsp-card--custom {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+    min-height: 0;
+    align-items: center;
+    justify-content: center;
+}
+.ws-sqsp-card__arrow {
+    font-size: 1.75rem;
+    font-weight: 900;
+    color: #4ade80;
+}
+.ws-sqsp-card__label {
+    font-size: 0.65rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 0.35rem;
+}
+.ws-sqsp-card__line {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 800;
+    line-height: 1.25;
+}
+
+.ws-sqsp-kicker {
+    text-align: center;
+    font-size: 0.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #4ade80;
+    margin: 0 0 0.85rem;
+    line-height: 1.4;
+}
+.ws-sqsp-kicker__sub {
+    display: block;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: none;
+    color: rgba(255, 255, 255, 0.55);
+    margin-top: 0.2rem;
+}
+
+.ws-sqsp-tiles {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    margin-bottom: 1.15rem;
+}
+@media (min-width: 640px) {
+    .ws-sqsp-tiles {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.65rem;
+    }
+}
+.ws-sqsp-tile {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    padding: 0.75rem 0.85rem;
+    border: 2px solid rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.05);
+    font-size: 0.8rem;
+    font-weight: 600;
+    line-height: 1.35;
+    color: rgba(255, 255, 255, 0.88);
+}
+.ws-sqsp-tile__tag {
+    font-size: 0.7rem;
+    font-weight: 900;
+    letter-spacing: 0.1em;
+    color: #fef08a;
+}
+
+.ws-sqsp-close {
+    margin: 0;
+    text-align: center;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.4;
+}
+
+/* Platform cost table — ~3 year totals as the wake-up call */
+.ws-page .savings-table .savings-years-head {
+    background: #7f1d1d;
+    color: #fecaca;
+}
+.ws-page .savings-table .savings-years {
+    color: #b91c1c;
+    font-weight: 900;
+    font-size: 0.95rem;
+    background: #fef2f2;
+}
+
+.ws-footer-min {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #fef08a;
+    border-top: 8px solid #000;
+    z-index: 100;
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem 2.5rem;
+}
+
+/* Details / technical — collapsed feel */
+.ws-details {
+    border: 3px dashed #a1a1aa;
+    padding: 1.25rem 1.5rem;
+    background: #fafafa;
+    font-size: 0.8rem;
+    line-height: 1.55;
+    color: #52525b;
+}
+.ws-details summary {
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    cursor: pointer;
+    color: #18181b;
+    font-size: 0.75rem;
+}
+.ws-details[open] summary { margin-bottom: 0.75rem; }
