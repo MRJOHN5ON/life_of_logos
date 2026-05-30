@@ -131,6 +131,12 @@ body {
     object-position: top center;
     display: block;
 }
+.phone-compare--randy .phone-compare-frame {
+    aspect-ratio: 519 / 1024;
+}
+.phone-compare--randy .phone-compare-frame img {
+    object-fit: fill;
+}
 .phone-compare-tag {
     margin-top: 0.65rem;
     font-size: 0.55rem;

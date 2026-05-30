@@ -113,6 +113,13 @@
             color: rgba(255, 255, 255, 0.5);
             text-transform: uppercase;
         }
+        /* Randy mobile captures are 519×1024 — match frame so nothing gets cropped */
+        .mini-compare--randy .mini-compare-frame {
+            aspect-ratio: 519 / 1024;
+        }
+        .mini-compare--randy .mini-compare-frame img {
+            object-fit: fill;
+        }
         .service-intro { max-width: 52rem; line-height: 1.65; }
         .project-card-cta {
             opacity: 1;
@@ -216,16 +223,43 @@
     <section id="platform-escapes" class="mb-16 max-w-[1400px] mx-auto lol-reveal">
         <div class="mb-6 flex flex-wrap items-end gap-4">
             <div class="section-tag text-xl uppercase tracking-widest" style="background: #ff00ff;">Platform Escapes</div>
-            <p class="text-xs font-bold uppercase tracking-widest text-gray-600">Revamps in progress</p>
+            <p class="text-xs font-bold uppercase tracking-widest text-gray-600">One live escape · revamps in progress</p>
         </div>
         <p class="service-intro text-gray-800 font-medium mb-6 text-sm md:text-base">
-            Not just a visual upgrade — I help clients <strong>get off Weebly, Wix, Webador, and WordPress.com</strong> with sites they actually own. Stop paying annually for a template you can't take with you.
+            Not just a visual upgrade — I help clients <strong>get off Weebly, Wix, Flickr Pro, Webador, and WordPress.com</strong> with sites they actually own. Stop paying annually for a template you can't take with you.
         </p>
         <p class="mb-10">
             <a href="website-services.html" class="inline-block text-xs font-bold uppercase tracking-widest text-fuchsia-700 hover:text-black border-b-2 border-fuchsia-600 hover:border-black transition-colors">Get off Weebly / Wix — before &amp; after proof →</a>
         </p>
 
         <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10">
+            <div class="project-card revamp-card p-4 rotate-1 shadow-[10px_10px_0px_0px_rgba(255,0,132,1)] ring-2 ring-[#ff0084] ring-offset-2 ring-offset-transparent group cursor-pointer">
+                <div class="aspect-[4/3] mb-4 border-2 border-black overflow-hidden relative">
+                    <span class="project-badge project-badge--live">Live site</span>
+                    <span class="project-badge project-badge--platform">Flickr</span>
+                    <div class="mini-compare mini-compare--randy h-full" aria-label="Randy's Photography Flickr before and after mobile">
+                        <div class="mini-compare-panel">
+                            <div class="mini-compare-frame">
+                                <img src="assets/images/randy-photos/randy-before-mobile.png" alt="R J Flickr profile before" width="519" height="1024" decoding="async">
+                            </div>
+                            <span class="mini-compare-label mini-compare-label--before">Before</span>
+                        </div>
+                        <span class="mini-compare-vs" aria-hidden="true">vs</span>
+                        <div class="mini-compare-panel">
+                            <div class="mini-compare-frame">
+                                <img src="assets/images/randy-photos/randy-after-mobile.png" alt="Randy's Photography owned gallery after" width="519" height="1024" decoding="async">
+                            </div>
+                            <span class="mini-compare-label mini-compare-label--after" style="background:#0a0a0f;">After</span>
+                        </div>
+                    </div>
+                    <a href="randy-photography.html" class="project-card-cta absolute inset-0 bg-black/60 flex items-center justify-center transition-opacity duration-200">
+                        <span class="marker-font text-white text-lg border-2 border-white p-2 rotate-[-5deg]">VIEW CASE STUDY</span>
+                    </a>
+                </div>
+                <h2 class="marker-font text-xl text-[#ff0084]">Randy's Photography</h2>
+                <p class="text-xs font-bold text-gray-500 mt-1">Flickr Pro escape · 121 photos · lightbox · free hosting</p>
+            </div>
+
             <div class="project-card revamp-card p-4 -rotate-1 shadow-[10px_10px_0px_0px_rgba(26,61,46,1)] group cursor-pointer">
                 <div class="aspect-[4/3] mb-4 border-2 border-black overflow-hidden relative">
                     <span class="project-badge project-badge--wip">Work in progress</span>

@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Randy's Photography | Flickr Platform Escape</title>
+    <meta name="description" content="Moved 121 photos from Flickr Pro to a gallery he owns. Lightbox, albums, free static hosting.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Inter:wght@400;600;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/revamp-case-study.css">
+    <style>
+        :root {
+            --rj-pink: #ff0084;
+            --rj-ink: #0a0a0f;
+            --rj-slate: #1a1a24;
+            --rj-accent: #8b9eff;
+        }
+        body {
+            background-color: #e5e5e5;
+            background-image: url("https://www.transparenttextures.com/patterns/concrete-wall.png");
+            overflow-x: hidden;
+            font-family: 'Inter', sans-serif;
+        }
+        @media (min-width: 768px) and (pointer: fine) {
+            body { cursor: none; }
+        }
+        .marker-font { font-family: 'Permanent Marker', cursive; }
+        .inter-black { font-family: 'Inter', sans-serif; font-weight: 900; }
+        .splatter { position: fixed; border-radius: 50%; filter: blur(80px); z-index: -1; opacity: 0.28; pointer-events: none; }
+        #custom-cursor { display: none !important; width: 24px; height: 24px; background: var(--rj-pink); border-radius: 50%; position: fixed; pointer-events: none; z-index: 9999; mix-blend-mode: exclusion; transition: transform 0.15s ease-out; }
+        @media (min-width: 768px) and (pointer: fine) {
+            #custom-cursor { display: block !important; }
+        }
+        .rj-card {
+            border: 4px solid black;
+            background: var(--rj-slate);
+            color: #f4f4f8;
+            box-shadow: 12px 12px 0 var(--rj-pink);
+        }
+        .admin-shot-wrap {
+            border: 4px solid black;
+            background: #111;
+            box-shadow: 10px 10px 0 var(--rj-pink);
+            overflow: hidden;
+        }
+        .admin-shot-wrap img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .admin-shot-label {
+            background: #000;
+            color: #fff;
+            text-align: center;
+            font-size: 0.65rem;
+            font-weight: 800;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            padding: 0.5rem 0.75rem;
+            border-top: 2px solid #000;
+        }
+        .live-desktop-shot {
+            display: block;
+            width: 100%;
+            height: auto;
+            vertical-align: middle;
+        }
+    </style>
+<link rel="stylesheet" href="css/randy-lightbox-demo.css">
+<link rel="stylesheet" href="css/lol-enhance.css">
+</head>
+<body class="revamp-page p-6 md:p-16 pb-40" style="--accent: var(--rj-pink); --primary: var(--rj-ink); --shadow: var(--rj-pink);">
+    <div id="custom-cursor"></div>
+    <div class="splatter bg-[#ff0084] w-[500px] h-[500px] -top-20 -left-20"></div>
+    <div class="splatter bg-[#8b9eff] w-[400px] h-[400px] top-1/2 right-0"></div>
+
+    <a href="index.html#platform-escapes" class="inline-block mb-12 bg-black text-white px-6 py-2 marker-font rotate-[-2deg] hover:bg-[var(--rj-pink)] transition-colors shadow-[4px_4px_0px_var(--rj-accent)] cursor-pointer">← BACK TO GALLERY</a>
+
+    <header class="mb-12 md:mb-16">
+        <div class="flex flex-wrap items-center gap-3 mb-4">
+            <span class="bg-green-600 text-white px-4 py-1 text-xs font-bold uppercase tracking-widest border-2 border-black">Live site</span>
+            <span class="bg-black text-white px-4 py-1 text-xs font-bold uppercase tracking-widest border-2 border-white">Flickr → owned gallery</span>
+        </div>
+        <h1 class="inter-black text-[9vw] md:text-[5.5vw] leading-[0.9] uppercase italic text-black">
+            Randy's <span class="text-[var(--rj-pink)] marker-font lowercase block -mt-2 rotate-[-2deg]">Photography</span>
+        </h1>
+        <p class="mt-6 text-lg md:text-xl text-gray-800 max-w-3xl font-medium leading-relaxed">
+            My dad's work lived on <strong>Flickr since 2011</strong> — 121 photos, albums, captions, and a Pro subscription just to keep the archive healthy. I migrated the full library into a <strong>custom gallery he owns</strong>, on hosting that costs nothing beyond a domain.
+        </p>
+    </header>
+
+    <section class="mb-20">
+        <div class="rj-card p-6 md:p-10 rotate-[0.5deg]">
+            <h2 class="inter-black text-2xl md:text-3xl uppercase mb-2 text-[var(--rj-accent)]">Before & after</h2>
+            <p class="text-white/80 mb-6 max-w-2xl text-sm md:text-base">
+                <strong>Flickr profile and photostream</strong> on the left, his <strong>owned gallery</strong> on the right. Same 121 photos, his URL.
+            </p>
+
+            <div class="phone-compare phone-compare--randy mb-6" role="group" aria-label="Flickr vs owned gallery on mobile">
+                <div class="phone-compare-panel">
+                    <div class="phone-compare-frame">
+                        <img src="assets/images/randy-photos/randy-before-mobile.png" alt="R J Flickr profile on mobile" width="519" height="1024" decoding="async">
+                    </div>
+                    <span class="phone-compare-tag phone-compare-tag--before">Before · Flickr Pro</span>
+                </div>
+                <span class="phone-compare-vs" aria-hidden="true">vs</span>
+                <div class="phone-compare-panel">
+                    <div class="phone-compare-frame">
+                        <img src="assets/images/randy-photos/randy-after-mobile.png" alt="Randy's Photography custom gallery on mobile" width="519" height="1024" decoding="async">
+                    </div>
+                    <span class="phone-compare-tag phone-compare-tag--after" style="background:var(--rj-ink);">After · live</span>
+                </div>
+            </div>
+
+            <div class="case-study-links">
+                <a href="https://www.flickr.com/photos/whatdidyouexpect" target="_blank" rel="noopener noreferrer" class="case-study-link case-study-link--legacy group bg-white border-4 border-black px-4 py-4 sm:px-5 hover:bg-gray-100 transition-colors cursor-pointer shadow-[6px_6px_0_#111]">
+                    <div>
+                        <p class="case-study-link__cta">See the old Flickr home</p>
+                        <p class="text-[10px] font-bold uppercase tracking-widest text-gray-500 mt-1">flickr.com/photos/whatdidyouexpect</p>
+                    </div>
+                    <span class="case-study-arrow text-xl sm:text-2xl font-black group-hover:translate-x-1 transition-transform" aria-hidden="true">→</span>
+                </a>
+                <a href="https://rjphotos.netlify.app/" target="_blank" rel="noopener noreferrer" class="case-study-link case-study-link--upgrade group bg-[var(--rj-ink)] text-white border-4 border-black px-4 py-4 sm:px-5 hover:bg-black transition-colors cursor-pointer shadow-[6px_6px_0_#111]">
+                    <div>
+                        <p class="case-study-link__cta">Visit the live gallery</p>
+                        <p class="text-[10px] font-bold uppercase tracking-widest text-white/60 mt-1">rjphotos.netlify.app</p>
+                    </div>
+                    <span class="case-study-arrow text-xl sm:text-2xl font-black group-hover:translate-x-1 transition-transform" aria-hidden="true">→</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="mb-20 border-4 border-black overflow-hidden rotate-[-0.5deg] shadow-[14px_14px_0_#111]">
+        <img
+            src="assets/images/randy-photos/randy-live-desktop.png"
+            alt="Randy's Photography live gallery: album filters, masonry grid, lightbox on desktop"
+            class="live-desktop-shot"
+            width="1400"
+            height="860"
+            decoding="async"
+            fetchpriority="high"
+            sizes="(min-width: 1400px) 1400px, 100vw">
+        <p class="bg-black text-white text-center text-xs font-bold uppercase tracking-widest py-3 px-4">Live site · album filters · masonry grid · shareable lightbox</p>
+    </section>
+
+    <section class="mb-20 border-4 border-black p-8 md:p-10 rotate-1" style="background: linear-gradient(135deg, var(--rj-ink) 0%, #1a1030 100%); color: #fff; box-shadow: 14px 14px 0 var(--rj-pink);">
+        <h2 class="inter-black text-3xl md:text-4xl uppercase mb-4 text-[var(--rj-accent)]">Platform escape</h2>
+        <p class="text-lg text-white/90 max-w-3xl mb-6 leading-relaxed">
+            Flickr was the right place to share for years — but it's still <strong>their product</strong>, their ads, their Pro upsell, and another subscription if you want the archive treated seriously. This build is about <strong>owning the gallery</strong>: same photos, a presentation that matches the work, and hosting that doesn't bill monthly for the privilege of staying online.
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm font-semibold">
+            <div class="border-2 border-white/30 rounded-lg p-5 bg-black/25">
+                <p class="text-[var(--rj-accent)] uppercase tracking-widest text-xs mb-2">Before</p>
+                <p>Flickr Pro, generic photostream, platform lock-in, "Get Pro" nags</p>
+            </div>
+            <div class="border-2 border-white/30 rounded-lg p-5 bg-black/25">
+                <p class="text-[var(--rj-accent)] uppercase tracking-widest text-xs mb-2">After</p>
+                <p>Custom gallery · album filters · lightbox · shareable photo URLs · free static hosting</p>
+            </div>
+            <div class="border-2 border-[var(--rj-pink)] rounded-lg p-5 bg-white text-black">
+                <p class="uppercase tracking-widest text-xs mb-2 text-[var(--rj-ink)]">Client impact</p>
+                <p>He can let Flickr Pro lapse. The gallery and links stay on his side.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="mb-20">
+        <div class="case-card p-6 md:p-8 rotate-[0.5deg]" style="--card-bg: #f4f4f8; --shadow: var(--rj-pink);">
+            <h2 class="inter-black text-2xl md:text-3xl uppercase mb-2 text-[var(--rj-ink)]">What years on Flickr Pro cost</h2>
+            <p class="text-gray-700 mb-4 text-sm md:text-base max-w-3xl">
+                Rough subscription math from public list prices (2025–2026). He was on <strong>Flickr Pro</strong> (highlighted row).
+            </p>
+            <div class="overflow-x-auto -mx-2 px-2 sm:mx-0 sm:px-0">
+                <table class="savings-table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Platform</th>
+                            <th scope="col">Typical plan (approx.)</th>
+                            <th scope="col">~3 years of subscriptions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="savings-highlight">
+                            <th scope="row">Flickr Pro <span class="font-normal normal-case tracking-normal">· this client</span></th>
+                            <td>~$7–$12/mo</td>
+                            <td>~$250–$430+</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Weebly</th>
+                            <td>~$10–$26/mo</td>
+                            <td>~$360–$940+</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Wix</th>
+                            <td>~$17–$36/mo</td>
+                            <td>~$610–$1,300+</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Squarespace</th>
+                            <td>~$16–$27/mo</td>
+                            <td>~$575–$975+</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="savings-disclaimer">
+                Figures are ballpark only — annual billing and promos change the total. The point: recurring platform fees add up while you never own the experience.
+            </p>
+            <div class="savings-owned-intro">
+                <div class="savings-owned-card">
+                    <h3>One-time build</h3>
+                    <p>One project fee, then he runs the gallery. After launch: a <strong>domain</strong> (~$20/year) and free static hosting, no Flickr Pro.</p>
+                </div>
+                <div class="savings-owned-card">
+                    <h3>His archive · his URLs</h3>
+                    <p>He sends people to <strong>rjphotos.netlify.app</strong> (or his domain when he points one), not flickr.com/photos/….</p>
+                </div>
+                <div class="savings-owned-card">
+                    <h3>Built to maintain</h3>
+                    <p>He uploads and removes shots himself. No Flickr login, no monthly CMS, no call to me for every change.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="mb-20 grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+        <div class="border-4 border-black bg-white p-8 shadow-[10px_10px_0_#111] -rotate-1">
+            <h3 class="marker-font text-2xl text-red-800 mb-4">What wasn't working</h3>
+            <ul class="space-y-3 text-gray-800 text-sm md:text-base font-medium">
+                <li class="flex gap-2"><span class="text-red-600 font-black shrink-0">×</span> Flickr's feed layout: fine for social, weak as a portfolio</li>
+                <li class="flex gap-2"><span class="text-red-600 font-black shrink-0">×</span> Pro subscription to keep a serious archive online</li>
+                <li class="flex gap-2"><span class="text-red-600 font-black shrink-0">×</span> No control over first impression, typography, or lightbox UX</li>
+                <li class="flex gap-2"><span class="text-red-600 font-black shrink-0">×</span> Platform chrome, ads, and upsells around the work</li>
+                <li class="flex gap-2"><span class="text-red-600 font-black shrink-0">×</span> Sending clients to flickr.com/photos/… instead of his own home</li>
+            </ul>
+        </div>
+        <div class="border-4 border-black bg-[var(--rj-slate)] text-white p-8 shadow-[10px_10px_0_var(--rj-pink)] rotate-1">
+            <h3 class="marker-font text-2xl text-[var(--rj-accent)] mb-4">What the gallery delivers</h3>
+            <ul class="space-y-3 text-sm md:text-base font-medium text-white/90">
+                <li class="flex gap-2"><span class="text-[var(--rj-pink)] font-black shrink-0">✓</span> Full library moved over: 121 photos, 14 albums, captions and dates kept</li>
+                <li class="flex gap-2"><span class="text-[var(--rj-pink)] font-black shrink-0">✓</span> Masonry grid with album filter chips and paginated browsing</li>
+                <li class="flex gap-2"><span class="text-[var(--rj-pink)] font-black shrink-0">✓</span> Lightbox with prev/next, captions, and shareable deep links</li>
+                <li class="flex gap-2"><span class="text-[var(--rj-pink)] font-black shrink-0">✓</span> Dark editorial UI: hero banner, handwritten title, Portland story</li>
+                <li class="flex gap-2"><span class="text-[var(--rj-pink)] font-black shrink-0">✓</span> Free static hosting, no monthly builder bill</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="mb-20">
+        <div class="border-4 border-black bg-black p-6 md:p-8 shadow-[12px_12px_0_var(--rj-pink)] randy-lb-section">
+            <h2 class="inter-black text-2xl md:text-3xl uppercase mb-4 text-white">Lightbox</h2>
+            <p class="text-white/75 text-sm md:text-base max-w-2xl mb-6">
+                Click a photo on his site and you get full screen, caption, and date. Share hands off one image, not the whole grid. Below: arrows, swipe on mobile, or keyboard. Share copies the link visitors get.
+            </p>
+            <div
+                class="randy-lb-demo"
+                id="randy-lb-demo"
+                tabindex="0"
+                role="region"
+                aria-label="Interactive lightbox demo">
+                <button type="button" class="randy-lb-demo__nav randy-lb-demo__nav--prev" aria-label="Previous photo">&#8249;</button>
+                <div class="randy-lb-demo__stage">
+                    <img class="randy-lb-demo__img" id="randy-lb-demo-img" src="" alt="">
+                    <p class="randy-lb-demo__date" id="randy-lb-demo-date" hidden></p>
+                    <p class="randy-lb-demo__caption" id="randy-lb-demo-caption"></p>
+                    <button type="button" class="randy-lb-demo__share" id="randy-lb-demo-share">
+                        <svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                            <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M16 6l-4-4-4 4M12 2v13" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span class="randy-lb-demo__share-label">Share photo</span>
+                    </button>
+                    <p class="randy-lb-demo__hint">Photo <span id="randy-lb-demo-index">1</span> of 4</p>
+                </div>
+                <button type="button" class="randy-lb-demo__nav randy-lb-demo__nav--next" aria-label="Next photo">&#8250;</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="mb-24">
+        <span class="bg-black text-white px-4 py-2 marker-font text-xl inline-block uppercase tracking-widest shadow-[4px_4px_0_var(--rj-pink)] mb-6">Keeping the gallery updated</span>
+        <p class="text-gray-800 font-medium max-w-2xl mb-8 text-sm md:text-base">
+            He adds or removes photos without calling me, opening Flickr, or paying for a CMS. Upload: drop the file, pick albums, caption it. Remove: select it, confirm, gone from the live site in a couple minutes.
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            <figure class="admin-shot-wrap -rotate-1">
+                <img src="assets/images/randy-photos/admin-upload.png" alt="Upload screen: add a photo, pick albums, write a caption" width="800" height="600" decoding="async">
+                <figcaption class="admin-shot-label">Upload · add to gallery</figcaption>
+            </figure>
+            <figure class="admin-shot-wrap rotate-1">
+                <img src="assets/images/randy-photos/admin-remove.png" alt="Remove screen: pick a photo and confirm delete" width="800" height="600" decoding="async">
+                <figcaption class="admin-shot-label">Remove · delete from gallery</figcaption>
+            </figure>
+        </div>
+    </section>
+
+    <section class="text-center mb-32">
+        <a href="https://rjphotos.netlify.app/" target="_blank" rel="noopener noreferrer" class="inline-block bg-[var(--rj-pink)] text-white px-10 py-4 inter-black text-xl uppercase border-4 border-black shadow-[8px_8px_0_#111] hover:bg-black transition-colors cursor-pointer mb-6">Visit live gallery →</a>
+        <br>
+        <a href="contact.html" class="inline-block bg-fuchsia-600 text-white px-10 py-4 inter-black text-xl uppercase border-4 border-black shadow-[8px_8px_0_#111] hover:bg-black transition-colors cursor-pointer">Stuck on Flickr, Weebly, or Wix? Let's talk →</a>
+    </section>
+
+    <footer class="fixed bottom-0 left-0 w-full bg-[var(--rj-ink)] border-t-8 border-black z-[100] p-4 flex flex-wrap justify-center gap-6 md:gap-12">
+        <a href="index.html" class="text-white inter-black text-lg md:text-xl hover:text-[var(--rj-pink)] uppercase italic cursor-pointer">Home</a>
+        <a href="about.html" class="text-white inter-black text-lg md:text-xl hover:text-[var(--rj-pink)] uppercase italic cursor-pointer">About Me</a>
+        <a href="contact.html" class="text-white inter-black text-lg md:text-xl hover:text-[var(--rj-pink)] uppercase italic cursor-pointer">Contact Me</a>
+    </footer>
+
+    <script>
+        (function() {
+            if (!window.matchMedia('(min-width: 768px)').matches || !window.matchMedia('(pointer: fine)').matches) return;
+            var cursor = document.getElementById('custom-cursor');
+            document.addEventListener('mousemove', function(e) {
+                cursor.style.left = e.clientX + 'px';
+                cursor.style.top = e.clientY + 'px';
+            });
+            document.querySelectorAll('a').forEach(function(el) {
+                el.addEventListener('mouseenter', function() { cursor.style.transform = 'scale(2)'; });
+                el.addEventListener('mouseleave', function() { cursor.style.transform = 'scale(1)'; });
+            });
+        })();
+    </script>
+    <script src="js/randy-lightbox-demo.js" defer></script>
+    <script src="js/lol-enhance.js" defer></script>
+</body>
+</html>
