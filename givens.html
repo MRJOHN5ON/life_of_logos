@@ -3,137 +3,272 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Givens Fire & Forestry | Website & Brand Case Study</title>
+    <title>Givens Fire & Forestry | Website, Lead Tools & Android App</title>
+    <meta name="description" content="Montana wildfire contractor: full website from a business plan and job photos, owned code, free tools that bring leads, and a field app — built by Ryley Johnson.">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Inter:wght@400;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Inter:wght@400;600;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/revamp-case-study.css">
     <style>
-        body { background-color: #e5e5e5; background-image: url("https://www.transparenttextures.com/patterns/concrete-wall.png"); overflow-x: hidden; font-family: 'Inter', sans-serif; }
+        :root {
+            --gv-forest: #064e3b;
+            --gv-emerald: #22c55e;
+            --gv-ink: #0f1a0f;
+            --gv-fire: #e8531a;
+        }
+        body {
+            background-color: #e5e5e5;
+            background-image: url("https://www.transparenttextures.com/patterns/concrete-wall.png");
+            overflow-x: hidden;
+            font-family: 'Inter', sans-serif;
+        }
         @media (min-width: 768px) and (pointer: fine) {
             body { cursor: none; }
         }
         .marker-font { font-family: 'Permanent Marker', cursive; }
         .inter-black { font-family: 'Inter', sans-serif; font-weight: 900; }
-        .splatter { position: fixed; border-radius: 50%; filter: blur(80px); z-index: -1; opacity: 0.25; pointer-events: none; }
-        #custom-cursor { display: none !important; width: 24px; height: 24px; background: #22c55e; border-radius: 50%; position: fixed; pointer-events: none; z-index: 9999; mix-blend-mode: exclusion; transition: transform 0.15s ease-out; }
+        .splatter { position: fixed; border-radius: 50%; filter: blur(80px); z-index: -1; opacity: 0.28; pointer-events: none; }
+        #custom-cursor { display: none !important; width: 24px; height: 24px; background: var(--gv-emerald); border-radius: 50%; position: fixed; pointer-events: none; z-index: 9999; mix-blend-mode: exclusion; transition: transform 0.15s ease-out; }
         @media (min-width: 768px) and (pointer: fine) {
             #custom-cursor { display: block !important; }
         }
+        .gv-card {
+            border: 4px solid black;
+            background: var(--gv-forest);
+            color: #ecfdf5;
+            box-shadow: 12px 12px 0 var(--gv-emerald);
+        }
+        .gv-tool-card {
+            border: 4px solid black;
+            background: #fef9c3;
+            box-shadow: 10px 10px 0 var(--gv-forest);
+        }
+        .gv-app-card {
+            border: 4px solid black;
+            background: var(--gv-ink);
+            color: #f4f4f8;
+            box-shadow: 12px 12px 0 var(--gv-fire);
+        }
+        .gv-shot {
+            border: 4px solid black;
+            background: #111;
+            box-shadow: 10px 10px 0 var(--gv-emerald);
+            overflow: hidden;
+        }
+        .gv-shot img { width: 100%; height: auto; display: block; }
     </style>
 <link rel="stylesheet" href="css/lol-enhance.css">
 </head>
-<body class="p-6 md:p-16 pb-40">
+<body class="revamp-page p-6 md:p-16 pb-40" style="--accent: var(--gv-emerald); --primary: var(--gv-forest); --shadow: var(--gv-emerald);">
     <div id="custom-cursor"></div>
     <div class="splatter bg-green-900 w-[600px] h-[600px] -top-20 -right-20"></div>
     <div class="splatter bg-emerald-600 w-[400px] h-[400px] bottom-0 left-0"></div>
 
-    <a href="index.html" class="inline-block mb-12 bg-black text-white px-6 py-2 marker-font rotate-[-2deg] hover:bg-fuchsia-600 transition-colors shadow-[4px_4px_0px_#22c55e]">← BACK TO GALLERY</a>
+    <a href="index.html#websites" class="inline-block mb-12 bg-black text-white px-6 py-2 marker-font rotate-[-2deg] hover:bg-emerald-700 transition-colors shadow-[4px_4px_0px_#22c55e] cursor-pointer">← BACK TO GALLERY</a>
 
-    <header class="mb-20">
-        <p class="text-xs font-bold uppercase tracking-[0.3em] text-emerald-800 mb-3">Website build · Logo & field identity</p>
-        <h1 class="inter-black text-[8vw] md:text-[6vw] leading-none uppercase italic text-black">Givens <span class="text-emerald-700 marker-font lowercase block -mt-4 rotate-[-2deg]">Fire & Forestry</span></h1>
+    <header class="mb-12 md:mb-16">
+        <div class="flex flex-wrap items-center gap-3 mb-4">
+            <span class="bg-green-600 text-white px-4 py-1 text-xs font-bold uppercase tracking-widest border-2 border-black">Live site</span>
+            <span class="bg-black text-white px-4 py-1 text-xs font-bold uppercase tracking-widest border-2 border-white">He owns it · not Squarespace</span>
+            <span class="bg-[var(--gv-fire)] text-white px-4 py-1 text-xs font-bold uppercase tracking-widest border-2 border-black">Android app</span>
+        </div>
+        <p class="text-xs font-bold uppercase tracking-[0.3em] text-emerald-800 mb-3">Logo · full website · lead magnets · mobile app</p>
+        <h1 class="inter-black text-[9vw] md:text-[5.5vw] leading-[0.9] uppercase italic text-black">
+            Givens <span class="text-emerald-700 marker-font lowercase block -mt-2 rotate-[-2deg]">Fire & Forestry</span>
+        </h1>
+        <p class="mt-6 text-lg md:text-xl text-gray-800 max-w-3xl font-medium leading-relaxed">
+            Samuel runs wildfire and forestry work out of Three Forks. He gave me <strong>job photos and a five-page business plan</strong>. I built everything else: logo, truck-ready branding, the whole website, <strong>every page written from scratch</strong>, and custom code where Squarespace ran out of room. Then I moved him to <strong>a site he actually owns</strong>, added four free tools that pull in leads before anyone calls, wired up Google and AI search, and shipped a <strong>free Android app</strong> his crew can use in the field.
+        </p>
     </header>
 
-    <section class="mb-24">
-        <div class="bg-emerald-900 border-8 border-black p-10 rotate-1 shadow-[20px_20px_0px_0px_rgba(0,0,0,1)]">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
-                <div>
-                    <h2 class="inter-black text-white text-4xl mb-6 underline decoration-yellow-400 uppercase">The Digital Build</h2>
-                    <p class="text-emerald-100 text-lg mb-6 leading-relaxed">
-                        I utilized <strong>Squarespace with heavy Custom CSS & JS Injection</strong> to move beyond the platform's standard constraints. I bypassed design limitations to create a professional UI that reflects the <strong>massive scale</strong> of forestry work, engineered specifically to help this company <strong>explode in client acquisition and market reach.</strong>
-                    </p>
-                    <ul class="text-white font-bold space-y-2 mb-8 uppercase text-sm tracking-widest">
-                        <li>⚡ Custom CSS Layout Overrides</li>
-                        <li>⚡ Advanced SEO & Meta-Tagging Architecture</li>
-                        <li>⚡ AI-FAQ Backcoding for Gemini/ChatGPT</li>
-                    </ul>
-                    <a href="https://www.givensfireandforestry.com/" class="inline-block bg-yellow-400 text-black px-10 py-5 inter-black text-2xl hover:bg-white transition-all border-4 border-black">VISIT LIVE SITE →</a>
-                </div>
-                <div class="border-4 border-black rotate-2 bg-white p-2"><img src="assets/images/givens-web-full.png" class="w-full"></div>
+    <section class="mb-20">
+        <div class="bg-white border-4 border-black p-8 md:p-10 rotate-[-0.5deg] shadow-[12px_12px_0_#22c55e] max-w-4xl">
+            <span class="bg-black text-white px-3 py-1 text-[10px] font-bold uppercase tracking-widest border-2 border-black inline-block mb-4">Where it started</span>
+            <h2 class="inter-black text-2xl md:text-3xl uppercase mb-4">From a business plan to a real brand</h2>
+            <p class="text-gray-800 font-medium leading-relaxed mb-4">
+                No agency deck. No brand guide. Samuel had photos from the job and a short plan describing what he does and who he serves. That's it.
+            </p>
+            <p class="text-gray-800 font-medium leading-relaxed mb-6">
+                I turned that into a business that <strong>looks like it belongs on the side of a truck and at the top of Google</strong>: shield logo and decals, a Squarespace site that doesn't read like a template, all the text on every page (services, about, how to get a quote, what Google reads), custom code where the drag-and-drop editor quit, and AI-generated visuals when we needed a scene his photos didn't cover. His work is in the photos. The brand, the writing, and the site are mine.
+            </p>
+            <ul class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 text-sm font-bold text-gray-700">
+                <li>→ What he gave me: job photos + biz plan</li>
+                <li>→ Logo, decals, full web identity</li>
+                <li>→ Website design + custom code</li>
+                <li>→ Every page written from scratch</li>
+                <li>→ AI imagery where stock fell short</li>
+                <li>→ Then: owned site, tools, app, SEO</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="mb-20">
+        <div class="gv-card p-6 md:p-10 rotate-[0.5deg]">
+            <h2 class="inter-black text-2xl md:text-3xl uppercase mb-2 text-yellow-300">Same look · site he owns</h2>
+            <p class="text-emerald-100/90 mb-6 max-w-2xl text-sm md:text-base">
+                Customers didn't see a rebrand. Same URL, same hero, same professional face I built from his plan. Under the hood I moved him off Squarespace so <strong>he owns the website files</strong>, stops renting a builder subscription, and can run tools and apps Squarespace would never allow. The business looks unchanged. The leverage changed completely.
+            </p>
+
+            <div class="border-4 border-black bg-white p-2 mb-6 rotate-[0.5deg] shadow-[10px_10px_0_#000]">
+                <img src="assets/images/givens-web-full.png" alt="Givens Fire and Forestry live website" class="w-full h-auto block" decoding="async">
+            </div>
+
+            <div class="case-study-links">
+                <a href="https://www.givensfireandforestry.com/" target="_blank" rel="noopener noreferrer" class="case-study-link case-study-link--upgrade group bg-emerald-950 text-white border-4 border-black px-4 py-4 sm:px-5 hover:bg-emerald-900 transition-colors cursor-pointer shadow-[6px_6px_0_#111]">
+                    <div>
+                        <p class="case-study-link__cta">Visit live site</p>
+                        <p class="text-[10px] font-bold uppercase tracking-widest text-emerald-200/80 mt-1">givensfireandforestry.com</p>
+                    </div>
+                    <span class="case-study-arrow text-2xl" aria-hidden="true">→</span>
+                </a>
+                <a href="https://www.givensfireandforestry.com/toolbox" target="_blank" rel="noopener noreferrer" class="case-study-link case-study-link--legacy group bg-yellow-300 border-4 border-black px-4 py-4 sm:px-5 hover:bg-yellow-200 transition-colors cursor-pointer shadow-[6px_6px_0_#111]">
+                    <div>
+                        <p class="case-study-link__cta">Open the toolbox</p>
+                        <p class="text-[10px] font-bold uppercase tracking-widest text-gray-600 mt-1">Free tools · download the app</p>
+                    </div>
+                    <span class="case-study-arrow text-2xl" aria-hidden="true">→</span>
+                </a>
             </div>
         </div>
     </section>
 
+    <section class="mb-20">
+        <div class="mb-8">
+            <span class="bg-black text-white px-4 py-2 marker-font text-2xl rotate-[-2deg] inline-block uppercase tracking-widest shadow-[4px_4px_0px_#22c55e]">What we added after</span>
+        </div>
+        <div class="bg-white border-4 border-black p-8 md:p-10 rotate-[-1deg] shadow-[12px_12px_0_#064e3b] max-w-4xl">
+            <h2 class="inter-black text-2xl uppercase mb-4">More calls, more trust, less platform rent</h2>
+            <p class="text-gray-700 font-medium mb-6 leading-relaxed">Once he owned the site, I stopped fighting Squarespace and built what actually grows a contractor business:</p>
+            <ul class="space-y-3 text-sm font-semibold text-gray-800">
+                    <li>⚡ <strong>Online booking and quote forms</strong> — Jobber scheduling, lead capture, Nominate a Neighbor community campaign</li>
+                    <li>⚡ <strong>Four free tools on the website</strong> — people find Givens on Google before they ever dial; every tool ends with a hire-us path</li>
+                    <li>⚡ <strong>Flat-rate tree removal page</strong> with built-in calculators so quotes start with real numbers, not guesswork</li>
+                    <li>⚡ <strong>Google Analytics, Ads, and Search Console</strong> — know what's working, track who converts</li>
+                    <li>⚡ <strong>Built for AI search too</strong> — structured so ChatGPT and Perplexity can recommend his tools (yes, that's a thing now; I wired it on purpose)</li>
+                    <li>⚡ <strong>6,000+ lines of custom styling</strong> — mobile-perfect, conversion-focused, pulsing Get a Quote in the nav</li>
+                    <li>⚡ <strong>Wildfire risk engine</strong> — real federal fuel data + live weather + fire-behavior math (LANDFIRE, Rothermel — the stuff insurers wish they had this local)</li>
+                </ul>
+        </div>
+    </section>
 
-    <section class="mt-32 mb-48 w-full">
-        
-        <div class="mb-20">
-            <span class="bg-black text-white px-6 py-3 marker-font text-3xl rotate-1 inline-block uppercase shadow-[4px_4px_0px_#22c55e]">
-                The Brand Identity
-            </span>
+    <section class="mb-20">
+        <div class="mb-10">
+            <span class="bg-yellow-400 text-black px-4 py-2 marker-font text-2xl rotate-[1deg] inline-block uppercase tracking-widest shadow-[4px_4px_0px_#064e3b]">Free tools = free marketing</span>
+            <p class="mt-4 text-gray-800 font-medium max-w-2xl">Four calculators and a plant ID tool — free, no login, no account. Homesteaders, firewood sellers, and landowners use them; Givens gets the call when they're ready to hire. Each one is its own Google landing page with a quote button at the bottom.</p>
         </div>
 
-        <div class="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12">
-            
-            <div class="w-full lg:w-1/3 flex justify-center lg:justify-start">
-                <div class="border-4 border-black p-2 bg-white rotate-[-2deg] shadow-2xl max-w-[380px] transition-transform hover:rotate-0">
-                    <img src="assets/images/givens-truck-decal.png" alt="Truck Decal" class="w-full h-auto">
-                    <p class="marker-font text-center mt-3 text-sm text-emerald-800 uppercase tracking-tighter">Field Application // Vehicle</p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+            <div class="gv-tool-card p-0 -rotate-1 overflow-hidden group">
+                <div class="border-b-4 border-black overflow-hidden">
+                    <img src="assets/images/givens/tool-cord-calc.png" alt="Firewood cord calculator" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500" decoding="async">
+                </div>
+                <div class="p-6">
+                    <h3 class="inter-black text-2xl mb-3 uppercase">Firewood cord calculator</h3>
+                    <p class="text-sm font-bold text-emerald-900 mb-4 leading-relaxed">How much firewood is actually in that pile? Measures real tapered logs, not a fantasy 4×4×8 stack. Cord counts, stack diagrams, and plain-English guides — the kind of tool people bookmark and share. <span class="text-emerald-700/80">(Under the hood: frustum volume math, not a generic widget.)</span></p>
+                    <a href="https://www.givensfireandforestry.com/firewood-cord-calculator" target="_blank" rel="noopener noreferrer" class="inline-block bg-black text-white px-5 py-2.5 inter-black text-sm hover:bg-white hover:text-black border-4 border-black transition-all">VIEW LIVE TOOL →</a>
                 </div>
             </div>
 
-            <div class="w-full lg:w-1/3 flex justify-center">
-                <div class="bg-white border-4 border-black p-8 rotate-1 shadow-[12px_12px_0px_0px_#22c55e] max-w-[420px] z-10">
-                    <p class="text-lg leading-relaxed text-gray-900 italic font-medium">
-                        "I brought the vision to life with a bold, shield-style emblem. I engineered the brand to be high-contrast, ensuring it remains legible on <strong>vehicle decals, equipment, and digital platforms</strong>."
+            <div class="gv-tool-card p-0 rotate-1 overflow-hidden group">
+                <div class="border-b-4 border-black overflow-hidden">
+                    <img src="assets/images/givens/tool-tree-calc.png" alt="Tree height calculator" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500" decoding="async">
+                </div>
+                <div class="p-6">
+                    <h3 class="inter-black text-2xl mb-3 uppercase">Tree height calculator</h3>
+                    <p class="text-sm font-bold text-emerald-900 mb-4 leading-relaxed">Measure a tree from the ground — five different field methods, metric or imperial, print or save the result. Landowners figure out clearance and removal tier before Samuel rolls up. <span class="text-emerald-700/80">(Angle, shadow, clinometer, triangulation — full surveyor toolkit in one page.)</span></p>
+                    <a href="https://www.givensfireandforestry.com/tree-height-calculator" target="_blank" rel="noopener noreferrer" class="inline-block bg-black text-white px-5 py-2.5 inter-black text-sm hover:bg-white hover:text-black border-4 border-black transition-all">VIEW LIVE TOOL →</a>
+                </div>
+            </div>
+
+            <div class="gv-tool-card p-0 rotate-1 overflow-hidden group">
+                <div class="border-b-4 border-black overflow-hidden">
+                    <img src="assets/images/givens/app-tool-wildfire.png" alt="Wildfire risk calculator" class="w-full h-48 object-cover object-top group-hover:scale-105 transition-transform duration-500" decoding="async">
+                </div>
+                <div class="p-6">
+                    <h3 class="inter-black text-2xl mb-3 uppercase">Wildfire risk calculator</h3>
+                    <p class="text-sm font-bold text-emerald-900 mb-4 leading-relaxed">Type an address, get a wildfire risk score for that property — fuel on the ground, slope, live weather, 16-day outlook. Built by a Montana contractor who actually does defensible-space work, not a generic insurance map. Leads straight into a consult. <span class="text-emerald-700/80">(Powered by LANDFIRE federal data + Rothermel fire-behavior modeling.)</span></p>
+                    <a href="https://www.givensfireandforestry.com/wildfire-risk-calculator" target="_blank" rel="noopener noreferrer" class="inline-block bg-black text-white px-5 py-2.5 inter-black text-sm hover:bg-white hover:text-black border-4 border-black transition-all">VIEW LIVE TOOL →</a>
+                </div>
+            </div>
+
+            <div class="gv-tool-card p-0 -rotate-1 overflow-hidden group">
+                <div class="border-b-4 border-black overflow-hidden">
+                    <img src="assets/images/givens/app-tool-plant.png" alt="Plant and tree identifier" class="w-full h-48 object-cover object-top group-hover:scale-105 transition-transform duration-500" decoding="async">
+                </div>
+                <div class="p-6">
+                    <h3 class="inter-black text-2xl mb-3 uppercase">Plant & tree identifier</h3>
+                    <p class="text-sm font-bold text-emerald-900 mb-4 leading-relaxed">Snap a photo, get species matches plus Montana-specific fire-risk notes — which plants are trouble near the house, which belong in defensible space planning. High-risk hits nudge the user to call Givens. <span class="text-emerald-700/80">(Pl@ntNet ID + 80+ local species notes I wrote.)</span></p>
+                    <a href="https://www.givensfireandforestry.com/plant-identifier" target="_blank" rel="noopener noreferrer" class="inline-block bg-black text-white px-5 py-2.5 inter-black text-sm hover:bg-white hover:text-black border-4 border-black transition-all">VIEW LIVE TOOL →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="mb-20">
+        <div class="gv-app-card p-8 md:p-10 -rotate-[0.5deg]">
+            <div class="grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-10 items-center">
+                <div>
+                    <p class="text-[var(--gv-fire)] text-xs font-bold uppercase tracking-[0.25em] mb-3">Free Android app</p>
+                    <h2 class="inter-black text-3xl md:text-4xl uppercase mb-4">Givens Field Tools</h2>
+                    <p class="text-white/85 mb-6 leading-relaxed max-w-xl">
+                        All four tools in one app Samuel can hand to crew or customers — <strong>free download, no account, no monthly fee</strong>. Cord and tree-height work offline in the field; wildfire risk and plant ID need cell service. Same calculators as the website, in your pocket. I built it in React Native with 29 automated tests so the numbers stay honest.
                     </p>
+                    <ul class="text-sm font-bold space-y-2 mb-8 text-emerald-100/90 uppercase tracking-wide">
+                        <li>📱 Free · v1.1.0 · download from the website</li>
+                        <li>📱 Works offline for cord & height tools</li>
+                        <li>📱 Privacy policy built in — no creepy tracking</li>
+                    </ul>
+                    <a href="https://www.givensfireandforestry.com/toolbox" target="_blank" rel="noopener noreferrer" class="inline-block bg-[var(--gv-fire)] text-white px-8 py-4 inter-black text-lg hover:bg-white hover:text-black border-4 border-black transition-all">GET THE APP FROM HIS SITE →</a>
+                </div>
+                <div class="flex flex-col items-center gap-4">
+                    <div class="border-4 border-black bg-white p-3 rotate-[2deg] shadow-[8px_8px_0_#22c55e]">
+                        <img src="assets/images/givens/app-icon.png" alt="Givens Field Tools app icon" width="256" height="256" class="w-40 h-40 md:w-48 md:h-48" decoding="async">
+                    </div>
+                    <p class="marker-font text-sm text-emerald-200/80 uppercase tracking-tighter text-center">Givens Field Tools</p>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <div class="w-full lg:w-1/3 flex justify-center lg:justify-end">
-                <div class="border-4 border-black p-6 bg-white rotate-[3deg] shadow-2xl max-w-[400px] transition-transform hover:rotate-0">
-                    <img src="assets/images/givens-primary-logo.png" alt="Primary Logo" class="w-full h-auto">
-                    <p class="marker-font text-center mt-3 text-sm text-emerald-800 uppercase tracking-tighter">Master Identity // Shield</p>
-                </div>
-            </div>
-
+    <section class="mb-20">
+        <div class="mb-8">
+            <span class="bg-black text-white px-4 py-2 marker-font text-xl rotate-[-1deg] inline-block uppercase tracking-widest shadow-[4px_4px_0px_#22c55e]">Found on Google · found by AI</span>
+        </div>
+        <div class="bg-white border-4 border-black p-8 rotate-[0.5deg] shadow-[10px_10px_0_#22c55e] max-w-3xl">
+            <p class="text-gray-800 font-medium leading-relaxed mb-4">Most web guys stop at "we'll add meta tags." I built this site so <strong>Google ranks the tool pages</strong>, <strong>ChatGPT recommends Givens when someone asks about Montana wildfire risk or firewood math</strong>, and every share on social looks professional (Open Graph previews, the works).</p>
+            <ul class="space-y-2 text-sm font-bold text-gray-700">
+                <li>→ Separate landing pages for each tool — each one targets real searches people actually type</li>
+                <li>→ Google Analytics and Ads hooked up so Samuel sees what's driving calls</li>
+                <li>→ <strong>llms.txt</strong> — a file that tells AI assistants exactly which Givens page to suggest (most businesses don't know this exists; his does)</li>
+                <li>→ Long helpful articles tucked behind clean calculator UIs — Google loves depth, users love simplicity</li>
+                <li>→ Every tool page ends with a clear path to get a quote</li>
+            </ul>
         </div>
     </section>
 
     <section class="mb-48">
         <div class="mb-12">
-            <span class="bg-black text-white px-4 py-2 marker-font text-2xl rotate-[-2deg] inline-block uppercase tracking-widest shadow-[4px_4px_0px_#22c55e]">
-                Custom Interactive Engineering
-            </span>
+            <span class="bg-black text-white px-6 py-3 marker-font text-3xl rotate-1 inline-block uppercase shadow-[4px_4px_0px_#22c55e]">Brand identity</span>
         </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-            
-            <div class="bg-yellow-400 border-8 border-black p-0 -rotate-1 shadow-[15px_15px_0px_0px_#064e3b] overflow-hidden group">
-                <div class="border-b-8 border-black overflow-hidden relative">
-                    <img src="assets/images/tool-cord-calc.png" alt="Firewood Calculator UI" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500">
-                    <div class="absolute bottom-2 right-2 bg-black/70 text-[10px] text-emerald-400 font-mono px-2 py-1 uppercase tracking-tighter">
-                        Prompt Engineered // Gen-AI
-                    </div>
-                </div>
-                <div class="p-8">
-                    <h3 class="inter-black text-3xl mb-4 uppercase tracking-tighter">Firewood Cord Calculator</h3>
-                    <p class="text-sm font-bold mb-6 text-emerald-900 leading-relaxed">
-                        I developed a custom JS formula (L x W x H / 128) that provides instant transparency for cord volume estimates, directly integrated into the client-facing UI.
-                    </p>
-                    <a href="https://www.givensfireandforestry.com/firewood-cord-calculator" target="_blank" class="inline-block bg-black text-white px-6 py-3 inter-black hover:bg-white hover:text-black border-4 border-black transition-all">
-                        VIEW LIVE TOOL →
-                    </a>
+        <div class="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12">
+            <div class="w-full lg:w-1/3 flex justify-center lg:justify-start">
+                <div class="border-4 border-black p-2 bg-white rotate-[-2deg] shadow-2xl max-w-[380px] transition-transform hover:rotate-0">
+                    <img src="assets/images/givens-truck-decal.png" alt="Givens truck decal" class="w-full h-auto" decoding="async">
+                    <p class="marker-font text-center mt-3 text-sm text-emerald-800 uppercase tracking-tighter">Field application · vehicle</p>
                 </div>
             </div>
-
-            <div class="bg-yellow-400 border-8 border-black p-0 rotate-1 shadow-[15px_15px_0px_0px_#064e3b] overflow-hidden group">
-                <div class="border-b-8 border-black overflow-hidden relative">
-                    <img src="assets/images/tool-tree-calc.png" alt="Tree Height Calculator UI" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500">
-                    <div class="absolute bottom-2 right-2 bg-black/70 text-[10px] text-emerald-400 font-mono px-2 py-1 uppercase tracking-tighter">
-                        Prompt Engineered // Gen-AI
-                    </div>
-                </div>
-                <div class="p-8">
-                    <h3 class="inter-black text-3xl mb-4 uppercase tracking-tighter">Tree Height Calculator</h3>
-                    <p class="text-sm font-bold mb-6 text-emerald-900 leading-relaxed">
-                        Leveraging trigonometry (tangent functions), I developed an interactive tool for field surveying, allowing clients to estimate clearance before the crew arrives.
+            <div class="w-full lg:w-1/3 flex justify-center">
+                <div class="bg-white border-4 border-black p-8 rotate-1 shadow-[12px_12px_0px_0px_#22c55e] max-w-[420px] z-10">
+                    <p class="text-lg leading-relaxed text-gray-900 italic font-medium">
+                        Designed to read from fifty feet on a truck door and on a phone screen in bright sun. Samuel's job photos show the work; I built the brand and site that make people <strong>trust him enough to call</strong>.
                     </p>
-                    <a href="https://www.givensfireandforestry.com/tree-height-calculator" target="_blank" class="inline-block bg-black text-white px-6 py-3 inter-black hover:bg-white hover:text-black border-4 border-black transition-all">
-                        VIEW LIVE TOOL →
-                    </a>
                 </div>
             </div>
-
+            <div class="w-full lg:w-1/3 flex justify-center lg:justify-end">
+                <div class="border-4 border-black p-6 bg-white rotate-[3deg] shadow-2xl max-w-[400px] transition-transform hover:rotate-0">
+                    <img src="assets/images/givens-primary-logo.png" alt="Givens primary logo" class="w-full h-auto" decoding="async">
+                    <p class="marker-font text-center mt-3 text-sm text-emerald-800 uppercase tracking-tighter">Master identity · shield</p>
+                </div>
+            </div>
         </div>
     </section>
 
