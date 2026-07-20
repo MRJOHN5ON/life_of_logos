@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Randy's Photography | Flickr Platform Escape</title>
-    <meta name="description" content="Moved 121 photos from Flickr Pro to a gallery he owns. Lightbox, albums, free static hosting.">
+    <meta name="description" content="Moved 121 photos from Flickr Pro to a gallery he owns — plus a passworded admin so he uploads, edits, and reorders without calling a developer.">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Inter:wght@400;600;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/revamp-case-study.css">
@@ -80,12 +80,13 @@
         <div class="flex flex-wrap items-center gap-3 mb-4">
             <span class="bg-green-600 text-white px-4 py-1 text-xs font-bold uppercase tracking-widest border-2 border-black">Live site</span>
             <span class="bg-black text-white px-4 py-1 text-xs font-bold uppercase tracking-widest border-2 border-white">Flickr → owned gallery</span>
+            <span class="bg-[var(--rj-accent)] text-black px-4 py-1 text-xs font-bold uppercase tracking-widest border-2 border-black">Self-serve admin</span>
         </div>
         <h1 class="inter-black text-[9vw] md:text-[5.5vw] leading-[0.9] uppercase italic text-black">
             Randy's <span class="text-[var(--rj-pink)] marker-font lowercase block -mt-2 rotate-[-2deg]">Photography</span>
         </h1>
         <p class="mt-6 text-lg md:text-xl text-gray-800 max-w-3xl font-medium leading-relaxed">
-            My dad's work lived on <strong>Flickr since 2011</strong> — 121 photos, albums, captions, and a Pro subscription just to keep the archive healthy. I migrated the full library into a <strong>custom gallery he owns</strong>, on hosting that costs nothing beyond a domain.
+            My dad's work lived on <strong>Flickr since 2011</strong> — 121 photos, albums, captions, and a Pro subscription just to keep the archive healthy. I migrated the full library into a <strong>custom gallery he owns</strong>, then built a <strong>passworded admin</strong> so he can upload, caption, reorder, and rewrite the bio himself — no CMS bill, no “hey can you add this one?” texts forever.
         </p>
     </header>
 
@@ -156,11 +157,11 @@
             </div>
             <div class="border-2 border-white/30 rounded-lg p-5 bg-black/25">
                 <p class="text-[var(--rj-accent)] uppercase tracking-widest text-xs mb-2">After</p>
-                <p>Custom gallery · album filters · lightbox · shareable photo URLs · free static hosting</p>
+                <p>Custom gallery · album filters · lightbox · self-serve admin · free static hosting</p>
             </div>
             <div class="border-2 border-[var(--rj-pink)] rounded-lg p-5 bg-white text-black">
                 <p class="uppercase tracking-widest text-xs mb-2 text-[var(--rj-ink)]">Client impact</p>
-                <p>He can let Flickr Pro lapse. The gallery and links stay on his side.</p>
+                <p>Flickr Pro can lapse — and he runs day-to-day edits without a developer in the loop.</p>
             </div>
         </div>
     </section>
@@ -218,7 +219,7 @@
                 </div>
                 <div class="savings-owned-card">
                     <h3>Built to maintain</h3>
-                    <p>He uploads and removes shots himself. No Flickr login, no monthly CMS, no call to me for every change.</p>
+                    <p>Passworded admin for upload, delete, captions, albums, order, bio, and banner. No Flickr login, no monthly CMS, no call to me for every change.</p>
                 </div>
             </div>
         </div>
@@ -242,6 +243,7 @@
                 <li class="flex gap-2"><span class="text-[var(--rj-pink)] font-black shrink-0">✓</span> Masonry grid with album filter chips and paginated browsing</li>
                 <li class="flex gap-2"><span class="text-[var(--rj-pink)] font-black shrink-0">✓</span> Lightbox with prev/next, captions, and shareable deep links</li>
                 <li class="flex gap-2"><span class="text-[var(--rj-pink)] font-black shrink-0">✓</span> Dark editorial UI: hero banner, handwritten title, Portland story</li>
+                <li class="flex gap-2"><span class="text-[var(--rj-pink)] font-black shrink-0">✓</span> Self-serve admin so he stays independent after launch</li>
                 <li class="flex gap-2"><span class="text-[var(--rj-pink)] font-black shrink-0">✓</span> Free static hosting, no monthly builder bill</li>
             </ul>
         </div>
@@ -279,18 +281,54 @@
     </section>
 
     <section class="mb-24">
-        <span class="bg-black text-white px-4 py-2 marker-font text-xl inline-block uppercase tracking-widest shadow-[4px_4px_0_var(--rj-pink)] mb-6">Keeping the gallery updated</span>
-        <p class="text-gray-800 font-medium max-w-2xl mb-8 text-sm md:text-base">
-            He adds or removes photos without calling me, opening Flickr, or paying for a CMS. Upload: drop the file, pick albums, caption it. Remove: select it, confirm, gone from the live site in a couple minutes.
+        <span class="bg-black text-white px-4 py-2 marker-font text-xl inline-block uppercase tracking-widest shadow-[4px_4px_0_var(--rj-pink)] mb-6">Designed for self-sufficiency</span>
+        <h2 class="inter-black text-3xl md:text-4xl uppercase mb-4 text-black max-w-3xl">The admin is the product too</h2>
+        <p class="text-gray-800 font-medium max-w-3xl mb-6 text-sm md:text-base leading-relaxed">
+            A pretty gallery that still needs me for every caption change is just a prettier dependency. So I built a <strong>passworded admin</strong> aimed at a non-technical client: big photo cards, album chips, drag-to-reorder, and clear save states — not a developer dashboard.
         </p>
+        <p class="text-gray-800 font-medium max-w-3xl mb-10 text-sm md:text-base leading-relaxed">
+            He logs in, makes the change, hits save. The gallery updates without a developer in the loop — no Flickr, no WordPress, no monthly CMS.
+        </p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-10 max-w-5xl">
+            <div class="border-4 border-black bg-white p-5 shadow-[6px_6px_0_#111]">
+                <p class="text-[10px] font-black uppercase tracking-widest text-[var(--rj-pink)] mb-2">Photos</p>
+                <p class="text-sm font-semibold text-gray-800">Upload, delete, captions, dates — with album checkboxes and EXIF date fill when the camera embeds it.</p>
+            </div>
+            <div class="border-4 border-black bg-white p-5 shadow-[6px_6px_0_#111]">
+                <p class="text-[10px] font-black uppercase tracking-widest text-[var(--rj-pink)] mb-2">Albums &amp; order</p>
+                <p class="text-sm font-semibold text-gray-800">Filter chips like the public site. Drag to reorder <em>All</em> or a single album — each album keeps its own order.</p>
+            </div>
+            <div class="border-4 border-black bg-white p-5 shadow-[6px_6px_0_#111]">
+                <p class="text-[10px] font-black uppercase tracking-widest text-[var(--rj-pink)] mb-2">Main page</p>
+                <p class="text-sm font-semibold text-gray-800">Edit bio paragraphs with character limits so the hero card doesn’t break, plus cover banner pick with ~3:1 crop guidance.</p>
+            </div>
+            <div class="border-4 border-black bg-white p-5 shadow-[6px_6px_0_#111]">
+                <p class="text-[10px] font-black uppercase tracking-widest text-[var(--rj-pink)] mb-2">Safety</p>
+                <p class="text-sm font-semibold text-gray-800">Clear busy states while saving and confirmations before delete — so he doesn’t double-tap into a mess.</p>
+            </div>
+            <div class="border-4 border-black bg-white p-5 shadow-[6px_6px_0_#111]">
+                <p class="text-[10px] font-black uppercase tracking-widest text-[var(--rj-pink)] mb-2">No CMS bill</p>
+                <p class="text-sm font-semibold text-gray-800">No rented page builder, no plugin zoo. After launch it’s basically domain + hosting — he keeps editing without another monthly product.</p>
+            </div>
+            <div class="border-4 border-black bg-[var(--rj-ink)] text-white p-5 shadow-[6px_6px_0_var(--rj-pink)]">
+                <p class="text-[10px] font-black uppercase tracking-widest text-[var(--rj-accent)] mb-2">Why it matters</p>
+                <p class="text-sm font-semibold text-white/90">Launch isn’t the handoff. Self-serve means the site still looks good six months later without me as the bottleneck.</p>
+            </div>
+        </div>
+
+        <figure class="admin-shot-wrap max-w-5xl mx-auto mb-8">
+            <img src="assets/images/randy-photos/admin-main.png" alt="Gallery admin home: album chips, search, and drag-to-reorder photo grid" width="1280" height="800" decoding="async">
+            <figcaption class="admin-shot-label">Admin · main screen</figcaption>
+        </figure>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             <figure class="admin-shot-wrap -rotate-1">
-                <img src="assets/images/randy-photos/admin-upload.png" alt="Upload screen: add a photo, pick albums, write a caption" width="800" height="600" decoding="async">
-                <figcaption class="admin-shot-label">Upload · add to gallery</figcaption>
+                <img src="assets/images/randy-photos/admin-edit-site.png" alt="Edit main page: title, location, bio paragraphs with character limits" width="800" height="900" decoding="async">
+                <figcaption class="admin-shot-label">Admin · edit site (bio &amp; banner)</figcaption>
             </figure>
             <figure class="admin-shot-wrap rotate-1">
-                <img src="assets/images/randy-photos/admin-remove.png" alt="Remove screen: pick a photo and confirm delete" width="800" height="600" decoding="async">
-                <figcaption class="admin-shot-label">Remove · delete from gallery</figcaption>
+                <img src="assets/images/randy-photos/admin-edit-photo.png" alt="Edit photo: caption, date, album checkboxes, and delete" width="800" height="900" decoding="async">
+                <figcaption class="admin-shot-label">Admin · edit a photo</figcaption>
             </figure>
         </div>
     </section>
