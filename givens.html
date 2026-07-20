@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Givens Fire & Forestry | Website, Lead Tools & Android App</title>
-    <meta name="description" content="Montana wildfire contractor: full website from a business plan and job photos, owned code, free tools that bring leads, and a field app — built by Ryley Johnson.">
+    <title>Givens Fire & Forestry | Website, Lead Tools, 3D Crest & Android App</title>
+    <meta name="description" content="Montana wildfire contractor: full website from a business plan and job photos, owned code, free tools that bring leads, a 3D hero crest, and a field app — built by Ryley Johnson.">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Inter:wght@400;600;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/revamp-case-study.css">
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
     <style>
         :root {
             --gv-forest: #064e3b;
@@ -55,6 +56,27 @@
             overflow: hidden;
         }
         .gv-shot img { width: 100%; height: auto; display: block; }
+        .gv-crest-stage {
+            border: 4px solid black;
+            background: radial-gradient(circle at 40% 30%, #2a1a12 0%, #0f1a0f 55%, #050805 100%);
+            box-shadow: 12px 12px 0 var(--gv-emerald);
+            min-height: 320px;
+            display: grid;
+            place-items: center;
+        }
+        model-viewer.gv-crest {
+            width: min(100%, 22rem);
+            height: min(70vw, 22rem);
+            background: transparent;
+            --poster-color: transparent;
+            --progress-bar-height: 0px;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+        model-viewer.gv-crest.is-ready { opacity: 1; }
+        model-viewer.gv-crest::part(default-progress-bar),
+        model-viewer.gv-crest::part(default-progress-mask),
+        model-viewer.gv-crest::part(default-poster) { display: none; }
     </style>
 <link rel="stylesheet" href="css/lol-enhance.css">
 </head>
@@ -71,12 +93,12 @@
             <span class="bg-black text-white px-4 py-1 text-xs font-bold uppercase tracking-widest border-2 border-white">He owns it · not Squarespace</span>
             <span class="bg-[var(--gv-fire)] text-white px-4 py-1 text-xs font-bold uppercase tracking-widest border-2 border-black">Android app</span>
         </div>
-        <p class="text-xs font-bold uppercase tracking-[0.3em] text-emerald-800 mb-3">Logo · full website · lead magnets · mobile app</p>
+        <p class="text-xs font-bold uppercase tracking-[0.3em] text-emerald-800 mb-3">Logo · 3D crest · full website · lead magnets · mobile app</p>
         <h1 class="inter-black text-[9vw] md:text-[5.5vw] leading-[0.9] uppercase italic text-black">
             Givens <span class="text-emerald-700 marker-font lowercase block -mt-2 rotate-[-2deg]">Fire & Forestry</span>
         </h1>
         <p class="mt-6 text-lg md:text-xl text-gray-800 max-w-3xl font-medium leading-relaxed">
-            Samuel runs wildfire and forestry work out of Three Forks. He gave me <strong>job photos and a five-page business plan</strong>. I built everything else: logo, truck-ready branding, the whole website, <strong>every page written from scratch</strong>, and custom code where Squarespace ran out of room. Then I moved him to <strong>a site he actually owns</strong>, added four free tools that pull in leads before anyone calls, wired up Google and AI search, and shipped a <strong>free Android app</strong> his crew can use in the field.
+            Samuel runs wildfire and forestry work out of Three Forks. He gave me <strong>job photos and a five-page business plan</strong>. I built everything else: logo, truck-ready branding, the whole website, <strong>every page written from scratch</strong>, and custom code where Squarespace ran out of room. Then I moved him to <strong>a site he actually owns</strong>, added four free tools that pull in leads before anyone calls, wired up Google and AI search, extruded the shield into a <strong>rotating 3D crest</strong> for the homepage hero, and shipped a <strong>free Android app</strong> his crew can use in the field.
         </p>
     </header>
 
@@ -96,6 +118,7 @@
                 <li>→ Website design + custom code</li>
                 <li>→ Every page written from scratch</li>
                 <li>→ AI imagery where stock fell short</li>
+                <li>→ 3D crest extruded for the live hero</li>
                 <li>→ Then: owned site, tools, app, SEO</li>
             </ul>
         </div>
@@ -245,7 +268,7 @@
         </div>
     </section>
 
-    <section class="mb-48">
+    <section class="mb-20">
         <div class="mb-12">
             <span class="bg-black text-white px-6 py-3 marker-font text-3xl rotate-1 inline-block uppercase shadow-[4px_4px_0px_#22c55e]">Brand identity</span>
         </div>
@@ -272,6 +295,50 @@
         </div>
     </section>
 
+    <section class="mb-48">
+        <div class="mb-8">
+            <span class="bg-[var(--gv-fire)] text-white px-4 py-2 marker-font text-2xl rotate-[-1deg] inline-block uppercase tracking-widest shadow-[4px_4px_0px_#064e3b]">Same shield · now 3D</span>
+        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-10 items-stretch max-w-6xl">
+            <div class="gv-crest-stage p-4 md:p-8 -rotate-[0.5deg]">
+                <model-viewer
+                    class="gv-crest"
+                    src="assets/models/givens-logo.glb"
+                    alt="Givens Fire and Forestry 3D crest"
+                    auto-rotate
+                    auto-rotate-delay="0"
+                    rotation-per-second="18deg"
+                    interaction-prompt="none"
+                    shadow-intensity="0"
+                    environment-image="neutral"
+                    exposure="1.15"
+                    camera-orbit="0deg 90deg 110%"
+                    field-of-view="26deg"
+                    disable-zoom
+                    disable-pan
+                    touch-action="none"
+                    loading="eager"
+                ></model-viewer>
+            </div>
+            <div class="bg-white border-4 border-black p-8 md:p-10 rotate-[0.5deg] shadow-[12px_12px_0_#064e3b]">
+                <h2 class="inter-black text-2xl md:text-3xl uppercase mb-4">From flat mark to hero crest</h2>
+                <p class="text-gray-800 font-medium leading-relaxed mb-4">
+                    The shield started as a 2D logo for trucks and print. For the owned homepage I took that same artwork into Blender, extruded the metal face, built a cut-log wood backing that sits under the rim, and shipped it as a real <strong>GLB</strong> that rotates in the browser with <strong>model-viewer</strong>.
+                </p>
+                <p class="text-gray-800 font-medium leading-relaxed mb-6">
+                    No stock badge pack. Same brand Samuel already has on the truck — just with depth, material, and a little presence when the page loads.
+                </p>
+                <ul class="space-y-2 text-sm font-bold text-gray-700 mb-8">
+                    <li>→ Exact logo outline extruded in Blender</li>
+                    <li>→ Cast-iron rim + steel faces + end-grain wood core</li>
+                    <li>→ Wood fitted under the outer rim (no halo, no gaps)</li>
+                    <li>→ Fades in when ready — no flash of the old 2D poster</li>
+                </ul>
+                <a href="https://www.givensfireandforestry.com/" target="_blank" rel="noopener noreferrer" class="inline-block bg-black text-white px-6 py-3 inter-black text-sm hover:bg-emerald-800 border-4 border-black transition-all">SEE IT ON THE LIVE SITE →</a>
+            </div>
+        </div>
+    </section>
+
     <footer class="fixed bottom-0 left-0 w-full bg-emerald-900 border-t-8 border-black z-[100] p-4 flex flex-wrap justify-center gap-6 md:gap-12">
         <a href="index.html" class="text-white inter-black text-lg md:text-xl hover:text-yellow-400 uppercase italic">Home</a>
         <a href="about.html" class="text-white inter-black text-lg md:text-xl hover:text-yellow-400 uppercase italic">About Me</a>
@@ -284,6 +351,16 @@
             if (!window.matchMedia('(min-width: 768px)').matches || !window.matchMedia('(pointer: fine)').matches) return;
             const cursor = document.getElementById('custom-cursor');
             document.addEventListener('mousemove', (e) => { cursor.style.left = e.clientX + 'px'; cursor.style.top = e.clientY + 'px'; });
+        })();
+        (function () {
+            var crest = document.querySelector('model-viewer.gv-crest');
+            if (!crest) return;
+            if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                crest.removeAttribute('auto-rotate');
+            }
+            function showCrest() { crest.classList.add('is-ready'); }
+            if (crest.loaded) showCrest();
+            else crest.addEventListener('load', showCrest, { once: true });
         })();
     </script>
     <script src="js/lol-enhance.js" defer></script>
